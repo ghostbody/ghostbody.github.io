@@ -96,8 +96,12 @@ Note that, in practice computers always represent “white” via the pixel valu
 
 To 32 gray levels:
 
-<img class="img-responsive"  src="https://github.com/ghostbody/Image-Processing/blob/master/project1/code/14.png?raw=true">
+<img class="img-responsive"  src="https://github.com/ghostbody/Image-Processing/blob/master/project1/code/quantization32.png?raw=true">
 
 To 2 gray levels:
 
 <img class="img-responsive"  src="https://github.com/ghostbody/Image-Processing/blob/master/project1/code/quantization2.png?raw=true">
+
+## Github:
+
+[https://github.com/ghostbody/Image-Processing](https://github.com/ghostbody/Image-Processing)

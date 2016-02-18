@@ -20,9 +20,13 @@ link of the dissertation: [sinew](http://dl.acm.org/citation.cfm?id=2612183&CFID
 ## Team Members
 
 Lingli Wu
+
 Hang Xu
+
 Li Xu
+
 Jaiqi Ye
+
 Tingting Zhang
 
 <br>
@@ -46,9 +50,11 @@ Simplely complete the two function modules Catalog and Serializer.
 3. complete command "find A = B" which will print the found result in the format of json. If there is no result, print None.
 
 ### Experimental Data
+
 We use nobench to generate the test data we need.
 
 ### Implementation requirements
+
 1. for each json data record, translate it into the format describing in the dissertation "sinew" as the following:
 
 ![image](https://cloud.githubusercontent.com/assets/8371330/13001555/001462d8-d1a2-11e5-8124-56a2622447c3.png)
@@ -60,6 +66,7 @@ notice that you should store all of the data in binary format.
 3. all int type data is required to be 32 bit.
 
 ### Optimization
+
 build a file index to reduce the time cost for querying.you can also use binary chop algorithm to speed up
 
 <br>
