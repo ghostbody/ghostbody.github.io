@@ -15,7 +15,7 @@ excerpt: "Stereo Matching is the task of estimating the disparity map from pre-p
 <img class="img-responsive" src="https://github.com/ghostbody/Image-Processing/blob/master/final/disp1.png?raw=true">
 
 
-##Basic Task
+## Basic Task
 
 **1. Implement a test program to evaluate the quality of your disparity maps. Your program should output the percentage of bad pixels in each of your disparity maps, where bad pixels are those whose errors are greater than one when comparing to ground truths (without multiplication).**
 
@@ -249,7 +249,8 @@ NCC add constant 10
 </pre>
 
 >SSD method has a higher computational complexity compared to SAD algorithm as it involves numerous multiplication operations. Normally, two areas which consist of exactly the same pixel values would yield a score of zero. However, these measures will no longer yield the correct results in the case of radiometric distortion, i.e., where the pixel values in one image differ from those in the other image by a constant offset and/or gain factor.
-NCC algorithm is robust to the linear variation in the brightness due to different illumination conditions to the cameras. But it can be seen that due to more complex calculations of division, multiplication and square root its computational time is more than SAD, SSD. Hence it could only be used for real time application only if we are able to develop more efficient algorithm to speed up matching process.
+
+>NCC algorithm is robust to the linear variation in the brightness due to different illumination conditions to the cameras. But it can be seen that due to more complex calculations of division, multiplication and square root its computational time is more than SAD, SSD. Hence it could only be used for real time application only if we are able to develop more efficient algorithm to speed up matching process.
 
 *From Papper :Comparison of Various Stereo Vision Cost Aggregation Methods*
 
@@ -433,18 +434,23 @@ $$
 ### Advantages:
 
 The matching method can make a better result than both SSD and NCC. It can use a detail method to define the matching cost in a good way. Using the definition of color difference and the “adptive weight” is truly a good approach.
-It’s a landmark works in local stereo matching algorithm(maybe but i think it’s not good, maybe it’s my problem). From CVPR and PAMI you can see its component. AdaptiveWeight method has been proposed, formally declared in the matching accuracy, the adaptive Adaptive out algorithm (Window)(This method is unscientific at all i think). And later became popular.
+
+It’s a landmark works in local stereo matching algorithm(maybe but i think it’s not good, maybe it’s my problem). From CVPR and PAMI you can see its component.
+
+AdaptiveWeight method has been proposed, formally declared in the matching accuracy, the adaptive Adaptive out algorithm (Window)(This method is unscientific at all i think). And later became popular.
 
 ### Disadvantage:
 
 Too many formulas :<. They are supposed to give an example program but didn’t. :<
 The algorithm is so slow that i can not stand it, and my computer can not afford a argument of window size of 33. :<
+
 Locally approach can not do as well as global one. But there is so many projects for me to finish, i do not have time to do it. :<
 
 
 ### Conclusion:
 
 This project is in fact very boring and seems that it’s irrelevant to what we have learnt. I have many unsolved questions:
+
 1. Why my program is so slow(not a bit slow)? How can I improve it?
 I used python as program language for the last 4 homework project. But this time i use c++ for programming, I think it should be quicker because c++ is a basic high level language and is known to be 10 times faster than python. But thep processing speed is stiil very slow.
 2. Why my picture is so ugly compare to the ground truth?
