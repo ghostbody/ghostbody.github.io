@@ -1,6 +1,7 @@
 <div class="page-header">
   <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
   <div class="date">
+
     <span>{{ page.date | date_to_long_string }}</span>
   </div>
 </div>
@@ -11,6 +12,7 @@
     <div class="content">
       {{ content }}
     </div>
+
 
   {% unless page.categories == empty %}
     <br>
@@ -47,6 +49,10 @@
       </ul>
     </div>
     <hr>
+    <meta property="wb:webmaster" content="c09b0e546fa83dfa" />
+    <html xmlns:wb="http://open.weibo.com/wb">
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=appkey" type="text/javascript" charset="utf-8"></script>
+    <wb:comments url="auto" fontsize="12" width="auto" skin="silver" ></wb:comments>
     <!-- {% include JB/comments %} -->
   </div>
 </div>
