@@ -36,41 +36,39 @@ Wechat : yejq08
 
 ## Introduction
 
-I am Jiaqi Ye, and I am a grade-three student in software school of SYSU. I have great passion for software development. I am interesting in web developing and had did some medium projects. And I am also interesting in Embedded Software which makes me have a deeper understanding of the overall structure of the computer.
+I am Jiaqi Ye, and I am a grade-three student in software school of SYSU. I have great passion for software development.
+C++ is my favourite because I think it's a difficult language. And I am now trying to figure out the kernel of linux.
+Also, I am interested in Modern Web technology and have an OJ(online judge system) which is built by my self running on a server in our school.
 
-<span class="label label-primary">Web DevelopmentFront</span>
-<span class="label label-primary">End DevelopmentServert</span>
-
-<span class="label label-success">Image Process Researching</span>
-<span class="label label-info">Fast Learning</span>
+<span class="label label-primary">C/C++</span>
 <span class="label label-info">Thinking Oriented Programming</span>
+<span class="label label-primary">Web Development</span>
+<span class="label label-info">Fast Learning</span>
 
 <br>
 
 ## Experience
-July 2014: Participation in Software Engineering Training with Case "Agenda Meeting Management System"(c++)
+July 2014: Participation in Software Engineering Training with Case "Agenda Meeting Management System"(C++ project)
 
-Jan. 2015 - Future: Design and process YOJ system.
+Jan. 2015 - Future: Design and process YOJ system which is an online judge system based on python.
 
-June 2015 - July 2015: Participation in Database Course Project, simple sinew
+June 2015 - July 2015: Leadership in Database Course Project named simple sinew which is a simple no-sql system based on pure C language.
 
-May 2015 - June 2015: Participation in Project Activitee, responsible for the front end and backstage of the system's main function
+May 2015 - June 2015: Participation in Project Activitee, which is a web application for student groups to manage Activities, responsible for the front end and backstage of the system's main function with nodejs, jade, grunt, mongodb and other modern web technology.
 
 July 2015 - Sept. 8, 2015: Participation in IGEM team SYSU-Software as a front page programmer. I am the wiki programmer, responsible for editing and posting of wiki contents as well as resolving other technical problems about CS.
 
-July 2015: Teaching Assistant in Software Engineering Training, responsible for the machine test scripts.
+July 2015: Act as a teaching Assistant in Software Engineering Training, responsible for the machine test scripts using Google C++ test(G-test).
 
-Aug. 2015: Participation in Software Engineering Training with Case "GridWorld"(Java)
+Aug. 2015: Participation in Software Engineering Training with Case "GridWorld"(Java Project)
 
-Aug. 2015 - Future: Vinzor Cloud Computing Developer, responsible for its software maintenance, the supporting documentation website as well as its test scripts for homework.
+Aug. 2015 - Jan. 2016: Act as a Vinzor Cloud Computing Developer, who is responsible for running and maintaining the YOJ system.
 
-Aug. 2015 - Jan. 2016: Vinzor Cloud Computing Developer, responsible for running and maintaining the YOJ system.
+Sept. 2015 - Jan. 2015: Act as a teaching Assistant for C language programming for semester 2015 fall.
 
-Sept. 2015 - Jan. 2015: Teaching Assistant in C language programming for semester 2015 fall.
+Jan. 2015 - Future: Responsible for the project Mebo, responsible for the whole team as a leader and also maintain the image processing part.
 
-Jan. 2015 - Future: Responsible for the project Mebo, responsible for the whole team, as a leader maintaining the image processing part.
-
-Feb. 2015 - Future: Teaching Assistant in C++ language programming for semester 2016 spring.
+Feb. 2015 - Future: Act as a teaching Assistant in C++ language programming for semester 2016 spring.
 
 <br>
 
@@ -89,7 +87,7 @@ Feb. 2015 - Future: Teaching Assistant in C++ language programming for semester 
 
 ## Job Intention
 **Embedded Engineer**
-Adaptability: I am good at c/c++ programming and Linux/Unix sytem(shelland linux kernel). Also, I am very interested in Micro controllers. I have knowledge about ARM, and have many projects with raspberry pi, ARDUINO.
+Adaptability: I am good at c/c++ programming and Linux/Unix sytem. Also, I am very interested in Micro controllers. I have knowledge about ARM, and have some projects with raspberry pi, ARDUINO.
 
 **Front End Engineer**
 Adaptability: Have abundant experience about Web page design with thep roject above. I am Familiar with the web development tools, e.g. Html,jade, CSS, SASS, Less, JS, LiveScript.
