@@ -17,17 +17,11 @@ tagline: Enthusiasm&Passion&Dreams
 
 <br>
 
-## Contact Me
+## Github
+[https://github.com/ghostbody/](https://github.com/ghostbody/)
 
-Email : yejq8@mail2.sysu.edu.cn
-
-手机 : +86-18819473230
-
-Github : [https://github.com/ghostbody/](https://github.com/ghostbody/)
-
-Technology Blog : [http://ghostbody.github.io/](http://ghostbody.github.io/)
-
-**我的志向是全端工程师！**
+## Technology Blog
+[http://ghostbody.github.io/](http://ghostbody.github.io/)
 
 <br>
 
