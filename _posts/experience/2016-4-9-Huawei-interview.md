@@ -3,7 +3,7 @@ layout: post
 title: "Huawei Internship Interview Questions Summary"
 tagline: "interview"
 description: "The experience of Huawei Internship"
-category: notes
+category: experience
 tags: [interview,c]
 excerpt: "I went to the internship interview of Huawei and this is my summary. I think I almost answer the questions but still have a lot of knowledge to learn anyway"
 ---
@@ -26,18 +26,17 @@ Answer:
 Summary: Observe that which is nearer to p, * or const. If * is nearer, than this is the latter. Otherwise, the former.
 
 **2. Tell the what's wrong with the following c program:**
-```c
-int countAs(char s[]) {
-   int length = sizeof(s) / sizeof(char);
-   int i, result = 0;
-   for(i = 0; i < length; i++) {
-     if(s[i] == 'A' || s[i] == 'a') {
-       result++;
-     }
-   }
-  return result;
-}
-```
+
+    int countAs(char s[]) {
+       int length = sizeof(s) / sizeof(char);
+       int i, result = 0;
+       for(i = 0; i < length; i++) {
+         if(s[i] == 'A' || s[i] == 'a') {
+           result++;
+         }
+       }
+      return result;
+    }
 
 Answer: sizeof(s) does not work, because you lost the length of the array in C when you passing it as an parameter. It becomes a pointer. sizeof(s) is a unchanged value.
 

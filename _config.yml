@@ -80,7 +80,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    duoshuo : intensedebate
     disqus :
       short_name : jekyllbootstrap
     livefyre :

@@ -3,8 +3,8 @@ layout: post
 title: "Memory Error Summary in C++"
 tagline: "interview"
 description: "Memory Error Summary in C++"
-category: notes
-tags: [interview,c]
+category: experience
+tags: [c++]
 excerpt: "Many students from class 2015 c++ complain about the error of memory when they are doing homework. I summarize some kinds of errors in the system which appear very often"
 ---
 
@@ -46,12 +46,12 @@ Also you will get runtime error in this case.
 This means that some of your conditional statements, i.e. for loop, if statement or etc. use uninitialized variables.
 
 For example:
-```cpp
-int * a = new int[5]();
-if(a[0] == '0') {
-  cout << "Bad Ta!" << endl;
-}
-```
+
+    int * a = new int[5]();
+    if(a[0] == '0') {
+      cout << "Bad Ta!" << endl;
+    }
+
 First of all, if the programmer forget to call `delete a`, it will cause a memory leak error.
 Well, the if statement above uses a[0], which has not been initialized. Then valgrind will detect and report the error for you.
 
@@ -59,10 +59,10 @@ Well, the if statement above uses a[0], which has not been initialized. Then val
 As we all know, when you are writing c++ code using dynamic memory allocation, you are supposed to manage the heap memory by your self. New and delete are "paired operators" which means that when you call 3 of new, you should call 3 of delete after that.
 
 For a mismatch example:(Tecent recruitment examination)
-```cpp
-int * a = new int[10];
-free(a);
-```
+
+    int * a = new int[10];
+    free(a);
+
 This will cause a mismatched error in valgrind.
 Why?Think about what's difference between new and malloc as well as delete and free? (hint: constructor and destructor)
 
