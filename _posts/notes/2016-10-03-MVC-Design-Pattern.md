@@ -1,91 +1,17 @@
-Ghost 0.10.1 is available! Hot Damn. Click here to upgrade.
+---
+layout: post
+title: "Model-View-Controller Design Pattern"
+tagline: "MVC Design Pattern"
+description: "Model-View-Controller Design Pattern"
+category: notes
+tags: [Design]
+excerpt: "MVC是一种“用户交互”软件的构架方法。它把一个应用软件分为三个互相关联的部分，分别是Model、View和Controller。如今，在Web应用开发的时候很经常被使用。"
+---
 
-Ghost 0.11.1 is available! Hot Damn. Click here to upgrade.
 
-Matrix
-Jiaqi Ye
+# Model-View-Controller
 
-Search
- 
-Search
-New Post
-Content
-Team
-Subscribers
-SETTINGS
-General
-Navigation
-Tags
-Code Injection
-Apps
-Labs
-VIEW BLOG
-Content
-NEW POST
-更好用的C++静态检查工具——cppcheck
-sickcatsickcat Draft
-(Untitled)
-Jiaqi YeJiaqi Ye Draft
-(Untitled)
-KarikoKariko Draft
-(Untitled)
-KarikoKariko Draft
-XSS和CSRF那些事（下篇）
-JunoJuno Draft
-滚动条
-EugeneLeeEugeneLee Draft
-promise的实现与函数的promise化
-William.D.KingWilliam.D.King Published 23 days ago
-python 中线程同步机制
-langzi989langzi989 Published a month ago
-Know this,use this!
-KarikoKariko Published a month ago
-Agenda魔改之旅——管道通信
-DaddyTrapDaddyTrap Published a month ago
-Python 单例模式学习
-HsuHsu Published a month ago
-不只是gdb
-longjlongj Published a month ago
-C++11初级篇
-DaddyTrapDaddyTrap Published a month ago
-java静态代码检查工具——pmd的使用笔记
-longjlongj Published 2 months ago
-Linux 命令初探
-HsuHsu Published 2 months ago
-Google Test 简介与基本用法
-ToooommyToooommy Published 2 months ago
-Model-View-Controller
-Jiaqi YeJiaqi Ye Published 2 months ago
-Makefile的使用
-DaddyTrapDaddyTrap Published 2 months ago
-XSS和CSRF那些事（上篇）
-JunoJuno Published 2 months ago
-JavaScript状态模式(State in JavaScript)
-GongJunningGongJunning Published 2 months ago
-javascript职责链模式
-EugeneLeeEugeneLee Published 2 months ago
-Node的c/c++扩展模块
-William.D.KingWilliam.D.King Published 2 months ago
-JS的异步编程的解决方案
-returnGirlreturnGirl Published 2 months ago
-Javascript函数节流
-William.D.KingWilliam.D.King Published 2 months ago
-Use C++11 Inheritance Control Keywords to Prevent Inconsistencies in Class Hierarchies
-longjlongj Published 2 months ago
-使用Sublime3+Chrome搭建可视化Markdown编写环境（无需浏览器插件）
-JunoJuno Published 2 months ago
-About Matrix
-KarikoKariko Page
-与文件相关的Blob、File、ArrayBuffer等对象
-William.D.KingWilliam.D.King Published 2 months ago
-留言板
-KarikoKariko Page
-TAGS
-KarikoKariko Page
-ARCHIVES
-KarikoKariko Page
-Model-View-Controller
-简介
+## 简介
 MVC是一种“用户交互”软件的构架方法。它把一个应用软件分为三个互相关联的部分，分别是Model、View和Controller。如今，在Web应用开发的时候很经常被使用。
 
 然而，不少人对于这种软件设计的方法有误解。现在我以个人的理解方式来谈一谈这种设计模式。
