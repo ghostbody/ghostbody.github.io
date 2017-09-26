@@ -11,5 +11,5 @@ Software Engineer
 ## Contact Me
 
 - Email : [423093883@qq.com](mailto:423093883@qq.com)
-- Github: [yejqjiaqi@github](https://github.com/ghostbody/)
+- Github: [yejiaqi@github](https://github.com/ghostbody/)
 - 知乎: [知乎主页](https://www.zhihu.com/people/xie-jia-qi-97-85/activities)

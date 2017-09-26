@@ -1,11 +1,16 @@
 site_name: Ye Jiaqi Site
 pages:
   - 主页: 'index.md'
+  - 大前端:
+    - javasctipt:
+        - JS原型链什么鬼: 'posts/front-end/javascript/JS原型链什么鬼.md'
+        # - JS闭包什么鬼: 'posts/front-end/javascript/JS闭包什么鬼.md'
 theme: 'material'
 markdown_extensions:
+  - admonition
   - markdown.extensions.toc:
-      slugify: !!python/name:pymdownx.slugs.uslugify
-      permalink: "\ue157"
+      permalink: true
+      separator: '_'
   - markdown.extensions.admonition:
   - markdown.extensions.smarty:
       smart_quotes: false
@@ -58,3 +63,6 @@ extra:
   social:
     - type: github
       link: https://github.com/ghostbody
+
+extra-css:
+    - /assets/css/style.css
