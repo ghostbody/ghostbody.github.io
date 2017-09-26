@@ -1,12 +1,3 @@
----
-layout: post
-title: "Scaling and Quantization"
-tagline: "DIP HW1"
-description: "Scaling a picture to different size"
-category: notes
-tags: [DIP,python]
-excerpt: "Quantization and Scaling are basic operations in digital image processing. In this article I will discuss it detailedly."
----
 
 ## Scaling
 

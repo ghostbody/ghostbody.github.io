@@ -1,12 +1,3 @@
----
-layout: post
-title: "Histogram Equalization"
-tagline: "DIP HW2"
-description: "Filter an image"
-category: notes
-tags: [DIP,python]
-excerpt: "Histogram equalization is a method in image processing of contrast adjustment using the image's histogram."
----
 
 Image filtering, in as much as possible to retain the details of image under the target image noise suppression, is indispensable in image preprocessing operation, the treatment effect is good or bad will directly affect the validity and reliability of the subsequent image processing and analysis.
 

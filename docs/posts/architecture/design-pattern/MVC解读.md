@@ -1,13 +1,3 @@
----
-layout: post
-title: "Model-View-Controller Design Pattern"
-tagline: "MVC Design Pattern"
-description: "Model-View-Controller Design Pattern"
-category: notes
-tags: [Design]
-excerpt: "MVC是一种“用户交互”软件的构架方法。它把一个应用软件分为三个互相关联的部分，分别是Model、View和Controller。如今，在Web应用开发的时候很经常被使用。"
----
-
 
 # Model-View-Controller
 
@@ -743,4 +733,4 @@ MVC在存在着不少观点的争论，在这些争论的背后的实质其实�
 综合来讲，只要是实用于自己的项目的设计模式就是好的。
 
 主要参考资料
-MVC Wikipedia
+MVC Wikipedia   

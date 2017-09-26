@@ -1,13 +1,4 @@
----
-layout: post
-title: "Yejq Online Judge"
-tagline: "An Online Judge System Base On Python"
-description: "An Online Judge System that the users who is learning programming language or algorithm can submit code to the system which will judge the code and tell the user the result with some other extend functions"
-category: projects
-tags: [web,python,tornado]
-excerpt: "An Online Judge System that the users who is learning programming language or algorithm can submit code to the system which will judge the code and tell the user the result with some other extend functions."
----
-{% include JB/setup %}
+
 
 ### Inspiration
 

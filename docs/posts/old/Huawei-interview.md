@@ -1,12 +1,4 @@
----
-layout: post
-title: "Huawei Internship Interview Questions Summary"
-tagline: "interview"
-description: "The experience of Huawei Internship"
-category: experience
-tags: [interview,c]
-excerpt: "I went to the internship interview of Huawei and this is my summary. I think I almost answer the questions but still have a lot of knowledge to learn anyway"
----
+
 
 Well, I think I am very lucky to have some simple technology questions this time.
 

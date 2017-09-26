@@ -1,12 +1,4 @@
----
-layout: post
-title: "Stero Matching"
-tagline: "DIP Course Project"
-description: "Stereo Matching is the task of estimating the disparity map from pre-processed left- and right-eyeimages (stereo images) and it is one of the most fundamental problems in computer vision."
-category: projects
-tags: [c/c++,DIP]
-excerpt: "Stereo Matching is the task of estimating the disparity map from pre-processed left- and right-eyeimages (stereo images) and it is one of the most fundamental problems in computer vision."
----
+
 
 <img class="img-responsive" src="https://github.com/ghostbody/Image-Processing/blob/master/final/view1.png?raw=true">
 

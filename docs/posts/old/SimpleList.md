@@ -1,10 +1,3 @@
----
-layout: page
-title: Simple List
-tagline: Happy coding
----
-
-{% include JB/setup %}
 
 ## Introduction
 

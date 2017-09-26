@@ -1,13 +1,4 @@
----
-layout: post
-title: "Simple Sinew System"
-tagline: "Database Curriculum Design"
-description: "A simple nosql system"
-category: projects
-tags: [database,c/c++,json]
-excerpt: We are going to do a project base on a dissertation named "Sinew" for a deeper understanding of mordern database system. This is a no-sql database system referring to the papper "sinew".
----
-{% include JB/setup %}
+
 
 ## Overview
 

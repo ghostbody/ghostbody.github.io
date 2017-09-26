@@ -1,12 +1,3 @@
----
-layout: post
-title: "FlowChart and PseudoCode"
-tagline: "interview"
-description: "Memory Error Summary in C++"
-category: homework-design
-tags: [c,homework design]
-excerpt: "Many students from class 2015 c++ complain about the error of memory when they are doing homework. I summarize some kinds of errors in the system which appear very often"
----
 
 ## 实验二：程序流程图和伪代码
 

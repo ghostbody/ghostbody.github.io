@@ -1,12 +1,3 @@
----
-layout: post
-title: "Filtering(2)"
-tagline: "DIP HW2 & 3 & 4"
-description: "Filtering(spatial and Frequency Domain)"
-category: notes
-tags: [DIP,python]
-excerpt: "Image filtering, in as much as possible to retain the details of image under the target image noise suppression, is indispensable in image preprocessing operation, the treatment effect is good or bad will directly affect the validity and reliability of the subsequent image processing and analysis."
----
 
 ## Filtering in Frequency Domain
 

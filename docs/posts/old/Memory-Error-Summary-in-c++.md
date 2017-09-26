@@ -1,13 +1,3 @@
----
-layout: post
-title: "Memory Error Summary in C++"
-tagline: "interview"
-description: "Memory Error Summary in C++"
-category: experience
-tags: [c++]
-excerpt: "Many students from class 2015 c++ complain about the error of memory when they are doing homework. I summarize some kinds of errors in the system which appear very often"
----
-
 
 # A small summary for 15 C++ learning
 

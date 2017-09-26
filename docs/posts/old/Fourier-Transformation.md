@@ -1,12 +1,3 @@
----
-layout: post
-title: "Fourier Transformation"
-tagline: "DIP HW3"
-description: "Fourier Transformation"
-category: notes
-tags: [DIP,python]
-excerpt: "The Fourier transform decomposes a function of time (a signal) into the frequencies that make it up, similarly to how a musical chord can be expressed as the amplitude (or loudness) of its constituent notes. We are going to use Fourier transform to do digital image processing"
----
 
 **The steps for calculate Fourier transform :**
 
