@@ -1,0 +1,1509 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
+    
+    
+      
+        <title>简单链表 - Ye Jiaqi Site</title>
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-769c285a91.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/style.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../../.." title="Ye Jiaqi Site" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  旧文档
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  出过的习题
+                </span>
+              
+            
+            简单链表
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Ye Jiaqi Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      架构相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        架构相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      设计模式
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        设计模式
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/design-pattern/MVC%E8%A7%A3%E8%AF%BB/" title="MVC解读" class="md-nav__link">
+      MVC解读
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      大前端
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        大前端
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      javasctipt
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        javasctipt
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/javascript/JS%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS原型链什么鬼" class="md-nav__link">
+      JS原型链什么鬼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/javascript/JS%E9%97%AD%E5%8C%85%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS闭包什么鬼" class="md-nav__link">
+      JS闭包什么鬼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/javascript/JS%E7%9A%84this%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS的this什么鬼" class="md-nav__link">
+      JS的this什么鬼
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/share/React%E6%8A%80%E6%9C%AF%E7%94%9F%E6%80%81%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93/" title="React技术生态和服务端渲染" class="md-nav__link">
+      React技术生态和服务端渲染
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      旧文档
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        旧文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      数图作业
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        数图作业
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Quantization-and-Scaling/" title="Quantization and Scaling" class="md-nav__link">
+      Quantization and Scaling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Filtering%281%29/" title="Filtering1" class="md-nav__link">
+      Filtering1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Filtering%282%29/" title="Filtering2" class="md-nav__link">
+      Filtering2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Histogram-Equalization/" title="Histogram Equalization" class="md-nav__link">
+      Histogram Equalization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fourier-Transformation/" title="Fourier Transformation" class="md-nav__link">
+      Fourier Transformation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stero-matching/" title="Stero Matching" class="md-nav__link">
+      Stero Matching
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      以前的项目
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        以前的项目
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../YOJ/" title="YOJ" class="md-nav__link">
+      YOJ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../simple-sinew/" title="Simple Sinew" class="md-nav__link">
+      Simple Sinew
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Floater/" title="Floater" class="md-nav__link">
+      Floater
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Asentence/" title="Asentence" class="md-nav__link">
+      Asentence
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3">
+      出过的习题
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        出过的习题
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FlowChart-and-PseudoCode/" title="程序流程图和伪代码" class="md-nav__link">
+      程序流程图和伪代码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Memory-Error-Summary-in-c%2B%2B/" title="内存错误总结" class="md-nav__link">
+      内存错误总结
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        简单链表
+      </label>
+    
+    <a href="./" title="简单链表" class="md-nav__link md-nav__link--active">
+      简单链表
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list_operation" title="List Operation" class="md-nav__link">
+    List Operation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_insert" title="1. Insert" class="md-nav__link">
+    1. Insert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2deletion" title="2.Deletion" class="md-nav__link">
+    2.Deletion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_element_access" title="3. Element Access" class="md-nav__link">
+    3. Element Access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some_contracts" title="Some Contracts" class="md-nav__link">
+    Some Contracts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_position_for_insertion" title="1. Position for Insertion" class="md-nav__link">
+    1. Position for Insertion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_position_for_deletion" title="2. Position for Deletion" class="md-nav__link">
+    2. Position for Deletion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some_knowledge_in_c_for_last_semester" title="Some Knowledge In C for Last Semester" class="md-nav__link">
+    Some Knowledge In C for Last Semester
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_memory_distribution_map_for_a_runtime_program_very_important_for_your_4-year_study" title="1. Memory distribution map for a runtime program (very important for your 4-year study)" class="md-nav__link">
+    1. Memory distribution map for a runtime program (very important for your 4-year study)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_malloc_to_get_memory_from_the_heap" title="2. Malloc() to get memory from the heap" class="md-nav__link">
+    2. Malloc() to get memory from the heap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_memory_leak" title="3. Memory Leak" class="md-nav__link">
+    3. Memory Leak
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consequences" title="Consequences" class="md-nav__link">
+    Consequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_list" title="3. List（链表或线性表）" class="md-nav__link">
+    3. List（链表或线性表）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an_introduction_to_list" title="An introduction to List" class="md-nav__link">
+    An introduction to List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep_thinking120pts_20_for_each" title="Deep Thinking(120pts, 20 for each)" class="md-nav__link">
+    Deep Thinking(120pts, 20 for each)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      面经
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        面经
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tencent-interview/" title="腾讯实习面试" class="md-nav__link">
+      腾讯实习面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Huawei-interview/" title="华为实习面试" class="md-nav__link">
+      华为实习面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Netease-interview/" title="网易实习面试" class="md-nav__link">
+      网易实习面试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list_operation" title="List Operation" class="md-nav__link">
+    List Operation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_insert" title="1. Insert" class="md-nav__link">
+    1. Insert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2deletion" title="2.Deletion" class="md-nav__link">
+    2.Deletion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_element_access" title="3. Element Access" class="md-nav__link">
+    3. Element Access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some_contracts" title="Some Contracts" class="md-nav__link">
+    Some Contracts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_position_for_insertion" title="1. Position for Insertion" class="md-nav__link">
+    1. Position for Insertion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_position_for_deletion" title="2. Position for Deletion" class="md-nav__link">
+    2. Position for Deletion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some_knowledge_in_c_for_last_semester" title="Some Knowledge In C for Last Semester" class="md-nav__link">
+    Some Knowledge In C for Last Semester
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_memory_distribution_map_for_a_runtime_program_very_important_for_your_4-year_study" title="1. Memory distribution map for a runtime program (very important for your 4-year study)" class="md-nav__link">
+    1. Memory distribution map for a runtime program (very important for your 4-year study)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_malloc_to_get_memory_from_the_heap" title="2. Malloc() to get memory from the heap" class="md-nav__link">
+    2. Malloc() to get memory from the heap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_memory_leak" title="3. Memory Leak" class="md-nav__link">
+    3. Memory Leak
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consequences" title="Consequences" class="md-nav__link">
+    Consequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_list" title="3. List（链表或线性表）" class="md-nav__link">
+    3. List（链表或线性表）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an_introduction_to_list" title="An introduction to List" class="md-nav__link">
+    An introduction to List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep_thinking120pts_20_for_each" title="Deep Thinking(120pts, 20 for each)" class="md-nav__link">
+    Deep Thinking(120pts, 20 for each)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>简单链表</h1>
+                
+                <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>List a a kind of data structure that is a linear collection of data elements, called nodes pointing to the next node by means of pointer. It is a data structure consisting of a group of nodes which together represent a sequence. Under the simplest form, each node is composed of data and a reference (in other words, a link) to the next node in the sequence; more complex variants add additional links. This structure allows for efficient insertion or removal of elements from any position in the sequence.</p>
+<p><img alt="list" src="https://cloud.githubusercontent.com/assets/8371330/13672466/e488c9cc-e70f-11e5-94c7-4f2a491d5a9b.png" /></p>
+<h2 id="list_operation">List Operation<a class="headerlink" href="#list_operation" title="Permanent link">&para;</a></h2>
+<h3 id="1_insert">1. Insert<a class="headerlink" href="#1_insert" title="Permanent link">&para;</a></h3>
+<p><img alt="insert" src="https://cloud.githubusercontent.com/assets/8371330/13672988/136f8076-e712-11e5-9ccf-4712edc2c145.png" /></p>
+<h3 id="2deletion">2.Deletion<a class="headerlink" href="#2deletion" title="Permanent link">&para;</a></h3>
+<p><img alt="deletion" src="https://cloud.githubusercontent.com/assets/8371330/13673049/56fbc124-e712-11e5-88c6-3b1264b3be5b.png" /></p>
+<h2 id="3_element_access">3. Element Access<a class="headerlink" href="#3_element_access" title="Permanent link">&para;</a></h2>
+<p><img alt="access" src="https://cloud.githubusercontent.com/assets/8371330/13673155/bec04f6e-e712-11e5-8b44-87bdf655aa0d.png" /></p>
+<h2 id="some_contracts">Some Contracts<a class="headerlink" href="#some_contracts" title="Permanent link">&para;</a></h2>
+<h3 id="1_position_for_insertion">1. Position for Insertion<a class="headerlink" href="#1_position_for_insertion" title="Permanent link">&para;</a></h3>
+<p><img alt="insert position" src="https://cloud.githubusercontent.com/assets/8371330/13672841/7846145c-e711-11e5-88c0-78706a3c7ce3.png" /></p>
+<h3 id="2_position_for_deletion">2. Position for Deletion<a class="headerlink" href="#2_position_for_deletion" title="Permanent link">&para;</a></h3>
+<p><img alt="delete" src="https://cloud.githubusercontent.com/assets/8371330/13672864/8cb0cfe0-e711-11e5-881f-2cd572b5532d.png" /></p>
+<h2 id="some_knowledge_in_c_for_last_semester">Some Knowledge In C for Last Semester<a class="headerlink" href="#some_knowledge_in_c_for_last_semester" title="Permanent link">&para;</a></h2>
+<h3 id="1_memory_distribution_map_for_a_runtime_program_very_important_for_your_4-year_study">1. Memory distribution map for a runtime program (very important for your 4-year study)<a class="headerlink" href="#1_memory_distribution_map_for_a_runtime_program_very_important_for_your_4-year_study" title="Permanent link">&para;</a></h3>
+<p><img alt="image" src="https://cloud.githubusercontent.com/assets/8371330/11582981/d162d666-9a8f-11e5-810c-c394d0b5318c.png" />
+<em>From Professor Wan Hai's courseWare</em></p>
+<p>This is an overview for a program when it's loaded into the memory of the computer. There are totally 4 area for it, Code area, Static area, Heap and stack.
+Code area: This area is used to store program codes(instructions for cpu to execute)
+Static area: This area is for the ralatively ‘static’ variables. Global variables, static local variables, static global variables are allocated in the static storage area.
+Heap: This area is management by the operating system and it's shared by other programs. You can get dynamic memory allocations in this area. <strong>This is the area we need to use in list</strong>
+Stack: The stack is a area of memory that allocated by the compile. All variables declared in stack.
+<strong>Notice that stack and heap in operating system are totally different in data structure</strong>
+(注意：这里所说的堆和栈是操作系统的概念，跟数据结构中的堆和栈不同)</p>
+<p>For example:</p>
+<div class="codehilite"><pre><span></span>#include &lt;malloc.h&gt;
+int main() {
+   int a;  // allocated in stack
+   int * b = (int *)malloc(sizeof(int));  // allocated in heap
+   free(b);
+   return;
+}
+```
+</pre></div>
+
+<p>Notice that we have a operation before the program end. <code>free(b)</code>. Because we use the memory in the heap which means that these memory should be managed by the programmer. Even though the memory will be free by a mordern operating system, we should prevent memory lost (memory leak).
+For example:</p>
+<div class="codehilite"><pre><span></span>```c
+int main() {
+   int * a = (int *)malloc(sizeof(int));  // allocated in heap, memory area1
+   int * a = (int *)malloc(sizeof(int));  // allocated in heap, memory area2
+   return;
+}
+</pre></div>
+
+<p>The example above cause a memory leak problem because pointer point to another memory area and the previous memory area1 is lost.</p>
+<h3 id="2_malloc_to_get_memory_from_the_heap">2. Malloc() to get memory from the heap<a class="headerlink" href="#2_malloc_to_get_memory_from_the_heap" title="Permanent link">&para;</a></h3>
+<p>The two examples above show how to get memory in heap. In fact, we it's a serial of functions.
+C language with the memory of the functions are mainly calloc, alloca, malloc, free, realloc and so on.
+&lt;1&gt; alloca is the application of the stack to the memory, so there is no need to release.
+&lt;2&gt; malloc allocates memory is located in the heap, and there is no memory of the contents of the initial memory, so after the basic malloc, call the function memset to initialize this part of the memory space.
+&lt;3&gt; calloc will initialize this part of the memory, set to 0
+&lt;4&gt; realloc is the size of the memory of the malloc application.
+&lt;5&gt; The heap needs to be released by the function free.</p>
+<p>Notice that everytime you apply memory from heap, you should remember it and delete it(free) when your use of it is end.</p>
+<div class="codehilite"><pre><span></span>int main() {
+   int * a = malloc(sizeof(int));
+
+   // code using a
+
+   free(a);
+}
+</pre></div>
+
+<p>Function Prototype</p>
+<div class="codehilite"><pre><span></span>extern void *malloc(unsigned int num_bytes);
+</pre></div>
+
+<p>注意，对于一个函数，一定要看函数原型，函数原型里面包含了这个函数接口功能的很多信息。
+这个函数的名称是malloc，动态分配内存
+参数是unsigned int num_bytes，意思是分配的内存的字节数。
+返回值是void 指针，理论是就是应该指向被分配的内存。</p>
+<p>由于返回的指针是一种泛型编程思想中的无类型指针，所以应该强制转换为你需要的类型。</p>
+<p><strong>注意：在一次malloc函数调用中，返回的一段内存是连续的</strong></p>
+<h3 id="3_memory_leak">3. Memory Leak<a class="headerlink" href="#3_memory_leak" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>From Wikipedia, the free encyclopedia
+In computer science, a memory leak is a type of resource leak that occurs when a computer program incorrectly manages memory allocations[1] in such a way that memory which is no longer needed is not released. In object-oriented programming, a memory leak may happen when an object is stored in memory but cannot be accessed by the running code.[2] A memory leak has symptoms similar to a number of other problems (see below) and generally can only be diagnosed by a programmer with access to the program's source code.</p>
+<p>Because they can exhaust available system memory as an application runs, memory leaks are often the cause of or a contributing factor to software aging.</p>
+</blockquote>
+<h3 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">&para;</a></h3>
+<p>A memory leak can diminish the performance of the computer by reducing the amount of available memory. Eventually, in the worst case, too much of the available memory may become allocated and all or part of the system or device stops working correctly, the application fails, or the system slows down vastly due to thrashing.</p>
+<p>Memory leaks may not be serious or even detectable by normal means. In modern operating systems, normal memory used by an application is released when the application terminates. This means that a memory leak in a program that only runs for a short time may not be noticed and is rarely serious.</p>
+<p>Much more serious leaks include those:</p>
+<p>where the program runs for an extended time and consumes additional memory over time, such as background tasks on servers, but especially in embedded devices which may be left running for many years
+where new memory is allocated frequently for one-time tasks, such as when rendering the frames of a computer game or animated video
+where the program can request memory — such as shared memory — that is not released, even when the program terminates
+where memory is very limited, such as in an embedded system or portable device
+where the leak occurs within the operating system or memory manager
+when a system device driver causes the leak
+running on an operating system that does not automatically release memory on program termination. Often on such machines if memory is lost, it can only be reclaimed by a reboot, an example of such a system being AmigaOS.[citation neede</p>
+<blockquote>
+<p>From 百度百科</p>
+<p>内存泄漏也称作“存储渗漏”，用动态存储分配函数动态开辟的空间，在使用完毕后未释放，结果导致一直占据该内存单元。直到程序结束。（其实说白了就是该内存空间使用完毕之后未回收）即所谓内存泄漏。</p>
+<p>内存泄漏形象的比喻是“操作系统可提供给所有进程的存储空间正在被某个进程榨干”，最终结果是程序运行时间越长，占用存储空间越来越多，最终用尽全部存储空间，整个系统崩溃。所以“内存泄漏”是从操作系统的角度来看的。这里的存储空间并不是指物理内存，而是指虚拟内存大小，这个虚拟内存大小取决于磁盘交换区设定的大小。由程序申请的一块内存，如果没有任何一个指针指向它，那么这块内存就泄漏了。</p>
+<p>从用户使用程序的角度来看，内存泄漏本身不会产生什么危害，作为一般的用户，根本感觉不到内存泄漏的存在。真正有危害的是内存泄漏的堆积，这会最终消耗尽系统所有的内存。从这个角度来说，一次性内存泄漏并没有什么危害，因为它不会堆积，而隐式内存泄漏危害性则非常大，因为较之于常发性和偶发性内存泄漏它更难被检测到。</p>
+</blockquote>
+<p><strong>简单来讲，内存泄露就是动态分配的内存没有在使用完之后进行释放，导致内存垃圾堆积。</strong></p>
+<p><strong>这样的危害有可能直接让你的操作系统崩溃掉（可以自己做下实验）</strong></p>
+<p>For example:</p>
+<div class="codehilite"><pre><span></span>int main() {
+    int * c = (int *)malloc(sizeof(int) * 100);
+    c = NULL;
+    while(1);
+}
+</pre></div>
+
+<p>上述代码分配了100个int类型大小的<strong>连续</strong>内存单元，我们可以通过这个方式分配动态数组。上述代码分配的就是可以理解成100个int的数组。</p>
+<p>运行上述程序，在运行到while(1)时候发生了内存泄露，因为原来动态分配的内存地址丢失了！你的程序无法再获得那100个在堆中申请的内存单元。可是这些内存单元仍然占据着内存，也就是内存垃圾。在编写动态分配的程序时，很容易出现这样的错误。正确做法是在这个指针不用的情况下，将其free。</p>
+<div class="codehilite"><pre><span></span>int main() {
+    int * c = (int *)malloc(sizeof(int) * 100);
+    free(c);
+    c = NULL;
+    while(1);
+}
+</pre></div>
+
+<p>有时候有些内存泄露是自己看不出来的，特别当函数变得复杂起来的时候。
+下列程序为<strong>死亡程序</strong>，可以试试运行看看自己电脑的内存变化。</p>
+<div class="codehilite"><pre><span></span>#include &lt;stdio.h&gt;
+#include &lt;malloc.h&gt;
+int main() {
+ while(1) {
+    malloc(100);
+  }
+  return 0; 
+}
+</pre></div>
+
+<h3 id="3_list">3. List（链表或线性表）<a class="headerlink" href="#3_list" title="Permanent link">&para;</a></h3>
+<h4 id="an_introduction_to_list">An introduction to List<a class="headerlink" href="#an_introduction_to_list" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>In computer science, a list or sequence is an abstract data type that represents an ordered sequence of values, where the same value may occur more than once. An instance of a list is a computer representation of the mathematical concept of a finite sequence; the (potentially) infinite analog of a list is a stream.[1]:§3.5 Lists are a basic example of containers, as they contain other values. If the same value occurs multiple times, each occurrence is considered a distinct item.
+<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Singly_linked_list.png/220px-Singly_linked_list.png" /></p>
+<p>A singly linked list structure, implementing a list with 3 integer elements.
+The name list is also used for several concrete data structures that can be used to implement abstract lists, especially linked lists.</p>
+<p>Many programming languages provide support for list data types, and have special syntax and semantics for lists and list operations. A list can often be constructed by writing the items in sequence, separated by commas, semicolons, or spaces, within a pair of delimiters such as parentheses '()', brackets '[]', braces '{}', or angle brackets '&lt;&gt;'. Some languages may allow list types to be indexed or sliced like array types, in which case the data type is more accurately described as an array. In object-oriented programming languages, lists are usually provided as instances of subclasses of a generic "list" class, and traversed via separate iterators. List data types are often implemented using array data structures or linked lists of some sort, but other data structures may be more appropriate for some applications. In some contexts, such as in Lisp programming, the term list may refer specifically to a linked list rather than an array.</p>
+<p>In type theory and functional programming, abstract lists are usually defined inductively by two operations: nil that yields the empty list, and cons, which adds an item at the beginning of a list.[2]</p>
+</blockquote>
+<p><em>From wikipedia</em></p>
+<p>The operations about list are appending, deleting, modifying, querying.</p>
+<p>we use this simple list again:
+<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Singly_linked_list.png/220px-Singly_linked_list.png" /></p>
+<ol>
+<li>
+<p>If delete the second node:</p>
+<p>node* save = head-&gt;next;
+head-&gt;next = head-&gt;next-&gt;next;
+free(save);</p>
+</li>
+</ol>
+<p>2.If append a node at the end of the list</p>
+<div class="codehilite"><pre><span></span>node* last = head;
+while(last-&gt;next != NULL) {
+    last = last-&gt;next;
+}
+
+last-&gt;next = (node*)malloc(sizeof(node));
+last-&gt;next-&gt;data = data;
+last-&gt;next-&gt;next = NULL;
+</pre></div>
+
+<p>3.Traversal</p>
+<div class="codehilite"><pre><span></span>node * temp = head;
+while(temp != NULL) {
+    Traversal(temp);
+    temp = temp-&gt;next;
+}
+</pre></div>
+
+<h3 id="deep_thinking120pts_20_for_each">Deep Thinking(120pts, 20 for each)<a class="headerlink" href="#deep_thinking120pts_20_for_each" title="Permanent link">&para;</a></h3>
+<p><strong>1.Look at the following function:</strong></p>
+<div class="codehilite"><pre><span></span>static void myFunction() { int a; }
+</pre></div>
+
+<p><strong>(1) Which area in memory does the function store? And which dose the variable <code>int a</code>?</strong>
+function store : Code Area
+variable 'int a': (function) stack
+<strong>(2) What's the advantages of using static functions?</strong></p>
+<blockquote>
+<p>static says the function has internal linkage. This means it will not be linked with other uses of the same identifier in other files (translation units).
+For example, suppose in Tree.c I have a function that operates on Tree structures, and I have some local subroutine called UpdateNode that operates on part of the Tree. Further suppose that in List.c, I have a function that operates on List structures, and it also has some local subroutine called UpdateNode that is just for List structures, not for Tree structures.
+If I left both of these subroutines with external linkage, the linker would complain about multiple definitions. By marking them with internal linkage with static, this problem is avoided.
+<em>From stack overflow</em></p>
+</blockquote>
+<p><strong>2. Look at the following program which is attempt to allocate a dynamic array.</strong></p>
+<div class="codehilite"><pre><span></span>#include &lt;malloc.h&gt;
+
+int main() {
+    char ** strs;
+    int n ,m;
+    int i;
+
+    scanf(&quot;%d%d&quot;, &amp;n, &amp;m);
+
+    strs = (char **)malloc(sizeof(char *) * n);
+
+    for(i = 0; i &lt; n; i++) {
+    strs[i] = (char *)malloc(sizeof(char) * m);
+    }
+
+
+   // code for the 2d array
+   // free operations omited
+    return 0;
+}
+</pre></div>
+
+<p><strong>Can we create an 2D array in the heap using this way? Give your explanations and give another way that can allocate a dynamic 2D array</strong>
+No, the 2D dynamic array is discontinuous in 1D memory space which does not fit the accurate 2D array definition.</p>
+<p>issues:
+1. When call <code>memset</code> or other memory operation on the whole block of memory, you can not get your expected result.
+2. When pass the array into a function as parameter.
+Look at the following program:</p>
+<div class="codehilite"><pre><span></span>#include &lt;malloc.h&gt;
+
+void test(char strs[][20], int m, int n) {
+    int i, j;
+    for(i = 0; i &lt; m; i++) {
+    for(j = 0; j &lt; n; j++) {
+        printf(&quot;%p &quot;, &amp;strs[i][j]);
+    }
+    printf(&quot;\n&quot;);
+    }
+}
+
+int main() {
+    char ** strs;
+    int n ,m;
+    int i, j;
+
+    scanf(&quot;%d%d&quot;, &amp;n, &amp;m);
+
+    strs = (char **)malloc(sizeof(char *) * n);
+
+    printf(&quot;%p\n&quot;, strs);
+
+    for(i = 0; i &lt; n; i++) {
+    strs[i] = (char *)malloc(sizeof(char) * m);
+    }
+
+    for(i = 0; i &lt; n; i++) {
+    for(j = 0; j &lt; m; j++) {
+        printf(&quot;%p &quot;, &amp;strs[i][j]);
+    }
+    printf(&quot;\n&quot;);
+    }
+
+    printf(&quot;\n&quot;);
+
+    test(strs, 10, 20);
+
+    printf(&quot;\n&quot;);
+
+
+
+   // free operations omited
+    return 0;
+}
+</pre></div>
+
+<p>Result:</p>
+<div class="codehilite"><pre><span></span>10 20
+0xe04010
+0xe04070 0xe04071 0xe04072 0xe04073 0xe04074 0xe04075 0xe04076 0xe04077 0xe04078 0xe04079 0xe0407a 0xe0407b 0xe0407c 0xe0407d 0xe0407e 0xe0407f 0xe04080 0xe04081 0xe04082 0xe04083 
+0xe04090 0xe04091 0xe04092 0xe04093 0xe04094 0xe04095 0xe04096 0xe04097 0xe04098 0xe04099 0xe0409a 0xe0409b 0xe0409c 0xe0409d 0xe0409e 0xe0409f 0xe040a0 0xe040a1 0xe040a2 0xe040a3 
+0xe040b0 0xe040b1 0xe040b2 0xe040b3 0xe040b4 0xe040b5 0xe040b6 0xe040b7 0xe040b8 0xe040b9 0xe040ba 0xe040bb 0xe040bc 0xe040bd 0xe040be 0xe040bf 0xe040c0 0xe040c1 0xe040c2 0xe040c3 
+0xe040d0 0xe040d1 0xe040d2 0xe040d3 0xe040d4 0xe040d5 0xe040d6 0xe040d7 0xe040d8 0xe040d9 0xe040da 0xe040db 0xe040dc 0xe040dd 0xe040de 0xe040df 0xe040e0 0xe040e1 0xe040e2 0xe040e3 
+0xe040f0 0xe040f1 0xe040f2 0xe040f3 0xe040f4 0xe040f5 0xe040f6 0xe040f7 0xe040f8 0xe040f9 0xe040fa 0xe040fb 0xe040fc 0xe040fd 0xe040fe 0xe040ff 0xe04100 0xe04101 0xe04102 0xe04103 
+0xe04110 0xe04111 0xe04112 0xe04113 0xe04114 0xe04115 0xe04116 0xe04117 0xe04118 0xe04119 0xe0411a 0xe0411b 0xe0411c 0xe0411d 0xe0411e 0xe0411f 0xe04120 0xe04121 0xe04122 0xe04123 
+0xe04130 0xe04131 0xe04132 0xe04133 0xe04134 0xe04135 0xe04136 0xe04137 0xe04138 0xe04139 0xe0413a 0xe0413b 0xe0413c 0xe0413d 0xe0413e 0xe0413f 0xe04140 0xe04141 0xe04142 0xe04143 
+0xe04150 0xe04151 0xe04152 0xe04153 0xe04154 0xe04155 0xe04156 0xe04157 0xe04158 0xe04159 0xe0415a 0xe0415b 0xe0415c 0xe0415d 0xe0415e 0xe0415f 0xe04160 0xe04161 0xe04162 0xe04163 
+0xe04170 0xe04171 0xe04172 0xe04173 0xe04174 0xe04175 0xe04176 0xe04177 0xe04178 0xe04179 0xe0417a 0xe0417b 0xe0417c 0xe0417d 0xe0417e 0xe0417f 0xe04180 0xe04181 0xe04182 0xe04183 
+0xe04190 0xe04191 0xe04192 0xe04193 0xe04194 0xe04195 0xe04196 0xe04197 0xe04198 0xe04199 0xe0419a 0xe0419b 0xe0419c 0xe0419d 0xe0419e 0xe0419f 0xe041a0 0xe041a1 0xe041a2 0xe041a3
+
+0xe04010 0xe04011 0xe04012 0xe04013 0xe04014 0xe04015 0xe04016 0xe04017 0xe04018 0xe04019 0xe0401a 0xe0401b 0xe0401c 0xe0401d 0xe0401e 0xe0401f 0xe04020 0xe04021 0xe04022 0xe04023 
+0xe04024 0xe04025 0xe04026 0xe04027 0xe04028 0xe04029 0xe0402a 0xe0402b 0xe0402c 0xe0402d 0xe0402e 0xe0402f 0xe04030 0xe04031 0xe04032 0xe04033 0xe04034 0xe04035 0xe04036 0xe04037 
+0xe04038 0xe04039 0xe0403a 0xe0403b 0xe0403c 0xe0403d 0xe0403e 0xe0403f 0xe04040 0xe04041 0xe04042 0xe04043 0xe04044 0xe04045 0xe04046 0xe04047 0xe04048 0xe04049 0xe0404a 0xe0404b 
+0xe0404c 0xe0404d 0xe0404e 0xe0404f 0xe04050 0xe04051 0xe04052 0xe04053 0xe04054 0xe04055 0xe04056 0xe04057 0xe04058 0xe04059 0xe0405a 0xe0405b 0xe0405c 0xe0405d 0xe0405e 0xe0405f 
+0xe04060 0xe04061 0xe04062 0xe04063 0xe04064 0xe04065 0xe04066 0xe04067 0xe04068 0xe04069 0xe0406a 0xe0406b 0xe0406c 0xe0406d 0xe0406e 0xe0406f 0xe04070 0xe04071 0xe04072 0xe04073 
+0xe04074 0xe04075 0xe04076 0xe04077 0xe04078 0xe04079 0xe0407a 0xe0407b 0xe0407c 0xe0407d 0xe0407e 0xe0407f 0xe04080 0xe04081 0xe04082 0xe04083 0xe04084 0xe04085 0xe04086 0xe04087 
+0xe04088 0xe04089 0xe0408a 0xe0408b 0xe0408c 0xe0408d 0xe0408e 0xe0408f 0xe04090 0xe04091 0xe04092 0xe04093 0xe04094 0xe04095 0xe04096 0xe04097 0xe04098 0xe04099 0xe0409a 0xe0409b 
+0xe0409c 0xe0409d 0xe0409e 0xe0409f 0xe040a0 0xe040a1 0xe040a2 0xe040a3 0xe040a4 0xe040a5 0xe040a6 0xe040a7 0xe040a8 0xe040a9 0xe040aa 0xe040ab 0xe040ac 0xe040ad 0xe040ae 0xe040af 
+0xe040b0 0xe040b1 0xe040b2 0xe040b3 0xe040b4 0xe040b5 0xe040b6 0xe040b7 0xe040b8 0xe040b9 0xe040ba 0xe040bb 0xe040bc 0xe040bd 0xe040be 0xe040bf 0xe040c0 0xe040c1 0xe040c2 0xe040c3 
+0xe040c4 0xe040c5 0xe040c6 0xe040c7 0xe040c8 0xe040c9 0xe040ca 0xe040cb 0xe040cc 0xe040cd 0xe040ce 0xe040cf 0xe040d0 0xe040d1 0xe040d2 0xe040d3 0xe040d4 0xe040d5 0xe040d6 0xe040d7
+</pre></div>
+
+<p>This is the Problem.</p>
+<p>One possible way:</p>
+<div class="codehilite"><pre><span></span>strs=(char (*)[10])malloc(n*10*sizeof(int)); // n rows and 10 cols
+</pre></div>
+
+<p><strong>3.Why use a list instead of an array? What's the advantages and disadvantages of them respectively?</strong>
+Both store a sequence of elements, but using different techniques.
+An array stores elements in successive order in memory, i.e. it looks like follows:</p>
+<div class="codehilite"><pre><span></span>--------------------------------------------------------------------------------------
+|  item 1  |  item 2  |  item 3  |  ...  ...  |  item x  | //here comes other stuff
+--------------------------------------------------------------------------------------
+</pre></div>
+
+<p>This means, elements are one after another consecutive in memory.</p>
+<p>A ((doubly) linked) list, on the other hand, stores the items the following way: It creates an own "list item" for each element; this "list item" holds the actual element and a pointer/reference/hint/etc to the next "list item". If it is doubly linked, it also contains a pointer/reference/hint/etc to the previous "list item":</p>
+<div class="codehilite"><pre><span></span>                             ------------
+------------        ----------    |  item 4  |
+|  item 1  |        | item 2 |    |  next ---+----...
+|  next ---+-------&gt;| next   |    ------------
+------------        ---+------      ^
+                   |            |
+                   |            |
+                   v            |
+                   ----------   |
+                   | item 3 |   |
+                   | next --+---+
+                   ----------
+</pre></div>
+
+<p>Both store a sequence of elements, but using different techniques.</p>
+<p>An array stores elements in successive order in memory, i.e. it looks like follows:</p>
+<div class="codehilite"><pre><span></span>--------------------------------------------------------------------------------------
+|  item 1  |  item 2  |  item 3  |  ...  ...  |  item x  | //here comes other stuff
+--------------------------------------------------------------------------------------
+</pre></div>
+
+<p>This means, elements are one after another consecutive in memory.</p>
+<p>A ((doubly) linked) list, on the other hand, stores the items the following way: It creates an own "list item" for each element; this "list item" holds the actual element and a pointer/reference/hint/etc to the next "list item". If it is doubly linked, it also contains a pointer/reference/hint/etc to the previous "list item":</p>
+<div class="codehilite"><pre><span></span>                              ------------
+------------        ----------    |  item 4  |
+|  item 1  |        | item 2 |    |  next ---+----...
+|  next ---+-------&gt;| next   |    ------------
+------------        ---+------      ^
+                   |            |
+                   |            |
+                   v            |
+                   ----------   |
+                   | item 3 |   |
+                   | next --+---+
+                   ----------
+</pre></div>
+
+<p>This means, the elements can be spread all over the memory and are not stored at specific memory locations.</p>
+<p>Now that we know this, we can compare some usual operations on sequences of elements:</p>
+<ul>
+<li>
+<p><strong>Accessing an element</strong> at a specific index: Using an array, we simply compute the offset for this index and have the element at the index. This is very cheap. With a list on the other hand, we do not know a priori where the element at index is stored (since all elements can be anywhere in memory), so we have to walk the list item by item until we find the element at the index. This is an expensive operation.</p>
+</li>
+<li>
+<p><strong>Adding a new element</strong> at the end of the sequence: Using an array this can lead to the following problem: Arrays are usually of fixed size, so if we have the situation that our array is already completely filled (see //here comes other stuff), we probably cant put the new element there because there might already be something else. So, maybe we have to copy the whole array. However, if the array is not filled, we can simply put the element there. Using a list, we have to generate a new "list item", put the element into it and set the next pointer of the currently last element to this new list item. Usually, we store a reference to the currently last element so that we don't have to search through the whole list to find it. Thus, inserting a new element is no real problem with lists.</p>
+</li>
+<li>
+<p><strong>Adding a new element</strong> somewhere in the middle: Let's first consider arrays: here, we might get into the following situation: We have an array with elements 1 to 1000:</p>
+<p>1 | 2 | 3 | 4 | 5 | 6 | &hellip; | 999 | 1000 | free | free</p>
+</li>
+</ul>
+<p>Now, we want to insert <code>4.5</code> between <code>4</code> and <code>5</code>: This means, we have to move all elements from <code>5</code> to <code>1000</code> one position right in order to make space for the <code>4.5</code>:</p>
+<div class="codehilite"><pre><span></span> 1 | 2 | 3 | 4 | free | 5 | 6 | ... | 999 | 1000 | free
+              ||
+              vv
+ 1 | 2 | 3 | 4 | 4.5  | 5 | 6 | ... | 999 | 1000 | free
+</pre></div>
+
+<p>Moving all these elements, is a very expensive operation. So better don't do this too often.
+Now we consider, how a list can perform this task: Let's say we have currently the following list:</p>
+<div class="codehilite"><pre><span></span> 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; ... -&gt; 999 -&gt; 1000
+</pre></div>
+
+<p>Again, we want to insert <code>4.5</code> between <code>4</code> and <code>5</code>. This can be done very easily: We generate a new list item and update the pointers/references:</p>
+<div class="codehilite"><pre><span></span> 1 -&gt; 2 -&gt; 3 -&gt; 4        5 -&gt; ... -&gt; 999 -&gt; 1000
+            |        ^
+            +-&gt; 4.5 -+
+</pre></div>
+
+<p>We have simply created a new list element and generated sort of "bypass" to insert it - very cheap (as long as we have a pointer/reference to the list item the new element will be inserted after).</p>
+<p>So, let's sum up: Linked lists are really nice when it comes to inserting at random positions (as long as you have a pointer to the adequate list item). If your operation involves adding lots of elements dynamically and traversing all elements anyway, a list might be a good choice.</p>
+<p>An array is very good when it comes to index accesses. If your application needs to access elements at specific positions very often, you should rather use an array.</p>
+<p>Notable things:</p>
+<ul>
+<li>
+<p>Solving the fixed-size problem for arrays: As mentioned before, (raw) arrays are usually of fixed size. However, this problem is nowadays no real point anymore, since almost all programming languages provide mechanisms to generate arrays that grow (and possibly shrink) dynamically - just as needed. This growing and shrinking can be implemented such that we have amortized runtime of O(1) for inserting and removing elements (at the end of the array) and such that the programmer doesn't have to call grow and shrink explicitly.</p>
+</li>
+<li>
+<p>Since lists provide such nice properties for insertions, they can be used as underlying data structures for search trees, etc. I.e. you construct a search tree, whose lowest level consists of the linked list.</p>
+</li>
+</ul>
+<p><strong>4.</strong> 
+(1)Why is it necessary to have a heap, i.e. why not use stack only?
+The stack is the memory set aside as scratch space for a thread of execution. When a function is called, a block is reserved on the top of the stack for local variables and some bookkeeping data. When that function returns, the block becomes unused and can be used the next time a function is called. The stack is always reserved in a LIFO (last in first out) order; the most recently reserved block is always the next block to be freed. This makes it really simple to keep track of the stack; freeing a block from the stack is nothing more than adjusting one pointer.</p>
+<p>The heap is memory set aside for dynamic allocation. Unlike the stack, there's no enforced pattern to the allocation and deallocation of blocks from the heap; you can allocate a block at any time and free it at any time. This makes it much more complex to keep track of which parts of the heap are allocated or free at any given time; there are many custom heap allocators available to tune heap performance for different usage patterns.</p>
+<p>Each thread gets a stack, while there's typically only one heap for the application (although it isn't uncommon to have multiple heaps for different types of allocation).</p>
+<p>To answer your questions directly:</p>
+<ul>
+<li>
+<p>To what extent are they controlled by the OS or language runtime?
+The OS allocates the stack for each system-level thread when the thread is created. Typically the OS is called by the language runtime to allocate the heap for the application.</p>
+</li>
+<li>
+<p>What is their scope?
+The stack is attached to a thread, so when the thread exits the stack is reclaimed. The heap is typically allocated at application startup by the runtime, and is reclaimed when the application (technically process) exits.</p>
+</li>
+<li>
+<p>What determines the size of each of them?
+The size of the stack is set when a thread is created. The size of the heap is set on application startup, but can grow as space is needed (the allocator requests more memory from the operating system).</p>
+</li>
+<li>
+<p>What makes one faster?
+The stack is faster because the access pattern makes it trivial to allocate and deallocate memory from it (a pointer/integer is simply incremented or decremented), while the heap has much more complex bookkeeping involved in an allocation or free. Also, each byte in the stack tends to be reused very frequently which means it tends to be mapped to the processor's cache, making it very fast. Another performance hit for the heap is that the heap, being mostly a global resource, typically has to be multi-threading safe, i.e. each allocation and deallocation needs to be - typically - synchronized with "all" other heap accesses in the program.</p>
+</li>
+</ul>
+<p>(2)What's the max size of the stack or the heap for a c program in your computer? Can you revise it?
+In linux,</p>
+<div class="codehilite"><pre><span></span>xinyuan@xinyuan-pc:~/Desktop/testAll$ ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 15333
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 15333
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+</pre></div>
+
+<p>revise stack example</p>
+<div class="codehilite"><pre><span></span>ulimit -s 1000
+</pre></div>
+
+<p>max heap size is usually the virtual memory of your computer.</p>
+<p>(3)Will deep recursive program really lead to stack overflow?Why? (The answer is no)
+No, not really. The following program will cause stack overflow in normal mode compile.
+But if we add compile parameter <code>gcc -O1 -foptimize-sibling-calls recursion.c</code>, there will not be stack overflow.</p>
+<div class="codehilite"><pre><span></span>#include &lt;stdio.h&gt;
+
+typedef unsigned long long int RES;
+
+RES recursion(RES a) {
+  if(a == 1000000000) {
+    return a;
+  } else {
+    return recursion(a+1);
+  }
+}
+
+int main(int argc, char const *argv[]) {
+  recursion(0);
+  return 0;
+}
+</pre></div>
+
+<p>Also we can calculate how large is it in one function stack, think about it.</p>
+<p><strong>5.(optional) How to use an array to create a list know as a static list in logic?</strong>
+For example:</p>
+<div class="codehilite"><pre><span></span>node a[100];
+head = a[0];
+a[0]-&gt;next = 2;   // an array index
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Memory-Error-Summary-in-c%2B%2B/" title="内存错误总结" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                内存错误总结
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Tencent-interview/" title="腾讯实习面试" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                腾讯实习面试
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/ghostbody" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

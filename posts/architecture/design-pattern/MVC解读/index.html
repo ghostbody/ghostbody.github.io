@@ -1,0 +1,1430 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
+    
+    
+      
+        <title>MVC解读 - Ye Jiaqi Site</title>
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application-769c285a91.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../../assets/css/style.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../../../.." title="Ye Jiaqi Site" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  架构相关
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  设计模式
+                </span>
+              
+            
+            MVC解读
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Ye Jiaqi Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      架构相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        架构相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      设计模式
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        设计模式
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        MVC解读
+      </label>
+    
+    <a href="./" title="MVC解读" class="md-nav__link md-nav__link--active">
+      MVC解读
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="简介" class="md-nav__link">
+    简介
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      大前端
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        大前端
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      javasctipt
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        javasctipt
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../front-end/javascript/JS%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS原型链什么鬼" class="md-nav__link">
+      JS原型链什么鬼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../front-end/javascript/JS%E9%97%AD%E5%8C%85%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS闭包什么鬼" class="md-nav__link">
+      JS闭包什么鬼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../front-end/javascript/JS%E7%9A%84this%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS的this什么鬼" class="md-nav__link">
+      JS的this什么鬼
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../front-end/share/React%E6%8A%80%E6%9C%AF%E7%94%9F%E6%80%81%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93/" title="React技术生态和服务端渲染" class="md-nav__link">
+      React技术生态和服务端渲染
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      旧文档
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        旧文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      数图作业
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        数图作业
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Quantization-and-Scaling/" title="Quantization and Scaling" class="md-nav__link">
+      Quantization and Scaling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Filtering%281%29/" title="Filtering1" class="md-nav__link">
+      Filtering1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Filtering%282%29/" title="Filtering2" class="md-nav__link">
+      Filtering2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Histogram-Equalization/" title="Histogram Equalization" class="md-nav__link">
+      Histogram Equalization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Fourier-Transformation/" title="Fourier Transformation" class="md-nav__link">
+      Fourier Transformation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/stero-matching/" title="Stero Matching" class="md-nav__link">
+      Stero Matching
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      以前的项目
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        以前的项目
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/YOJ/" title="YOJ" class="md-nav__link">
+      YOJ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/simple-sinew/" title="Simple Sinew" class="md-nav__link">
+      Simple Sinew
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Floater/" title="Floater" class="md-nav__link">
+      Floater
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Asentence/" title="Asentence" class="md-nav__link">
+      Asentence
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      出过的习题
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        出过的习题
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/FlowChart-and-PseudoCode/" title="程序流程图和伪代码" class="md-nav__link">
+      程序流程图和伪代码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Memory-Error-Summary-in-c%2B%2B/" title="内存错误总结" class="md-nav__link">
+      内存错误总结
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/SimpleList/" title="简单链表" class="md-nav__link">
+      简单链表
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      面经
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        面经
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Tencent-interview/" title="腾讯实习面试" class="md-nav__link">
+      腾讯实习面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Huawei-interview/" title="华为实习面试" class="md-nav__link">
+      华为实习面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Netease-interview/" title="网易实习面试" class="md-nav__link">
+      网易实习面试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="简介" class="md-nav__link">
+    简介
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="model-view-controller">Model-View-Controller<a class="headerlink" href="#model-view-controller" title="Permanent link">&para;</a></h1>
+<h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>MVC是一种“用户交互”软件的构架方法。它把一个应用软件分为三个互相关联的部分，分别是Model、View和Controller。如今，在Web应用开发的时候很经常被使用。</p>
+<p>然而，不少人对于这种软件设计的方法有误解。现在我以个人的理解方式来谈一谈这种设计模式。</p>
+<p>老师讲的MVC
+系统分析与设计上课的时候，老师会讲MVC的软件设计模式。</p>
+<p>老师会在黑板上熟练地画出边界类、控制器、数据模型，然后告诉我们下面这个图。</p>
+<p>老师讲的系统流程：</p>
+<p>用户在前端操作view触发一个事件，假设按了一个button
+Controller将处理这一个事件，并且会修改model实体的“状态”
+Model的修改放回到Controller，然后Controller修改View
+在这个过程中：</p>
+<p>View: 负责显示用户交互的界面
+Controller: 处理用户在界面中触发的事件（或者是其他事件，比如定时器触发的），然后根据这个事件的类型、用户输入的参数、用户本身的信息，对model数据实体的状态进行修改，最后再操作View进行修改。
+Model: 数据实体，保存着这个系统里面所有关键抽象的实体对象。（所谓的“实体对象”就是“实体类是用于对必须存储的信息和相关行为建模的类的实例”）
+三个部分之间既有关系，又相对独立，是一种很好设计模式。各个部分各司其职，配合工作，构建出一个逻辑清晰的软件系统。</p>
+<p>老师会跟你强调一点，Model和View之间是没有之间关联的，那样画图是要扣分的。</p>
+<p>实际上这种观点并不是完全正确的。</p>
+<p>Web 应用中的MVC
+Although originally developed for desktop computing, model–view–controller has been widely adopted as an architecture for World Wide Web applications in major programming languages. Several commercial and noncommercial web frameworks have been created that enforce the pattern. These software frameworks vary in their interpretations, mainly in the way that the MVC responsibilities are divided between the client and server.[14]</p>
+<p>Early web MVC frameworks took a thin client approach that placed almost the entire model, view and controller logic on the server. This is still reflected in popular frameworks such as Ruby on Rails, Django, ASP.NET MVC and Express. In this approach, the client sends either hyperlink requests or form input to the controller and then receives a complete and updated web page (or other document) from the view; the model exists entirely on the server.[14] As client technologies have matured, frameworks such as AngularJS, EmberJS, JavaScriptMVC and Backbone have been created that allow the MVC components to execute partly on the client (also see Ajax).</p>
+<p>From Wikipedia</p>
+<p>维基百科这段话讲的我很认同，大概的意思是，传统的MVC设计模式是对于“桌面型”应用的，但是随时Web的发展，很多Web应用会选择使用MVC作为其架构。</p>
+<p>在讨论web应用的MVC框架的时候，应该分为“服务端”和“客户端”来讨论。</p>
+<p>对于传统的Web应用
+这种Web应用可以说只有服务端，所谓的前端都是事先写好的html页面。整个请求过程就是：</p>
+<p>用户在浏览器发起Http Get/Post 请求
+服务端接受到请求
+服务端根据用户请求的数据，“计算”出要输出的html页面
+服务端响应用户请求
+页面渲染，本次请求结束
+在这个过程中有太多知识涉及，我们现在讨论服务端处理请求的过程。</p>
+<p>传统的Web应用就在这层服务端上做了MVC的架构。Ruby on Rails, Django, ASP.NET MVC and Express 纷纷中枪。</p>
+<p>这里拿一个python tornado的项目莉子：</p>
+<p>.
+├── doc   存放项目需求、分工、项目汇报等文档
+├── db    存放数据库表结构
+└── src   项目的代码
+   ├── handlers   controller
+   ├── model      model
+   ├── templates  view
+   ├── static     静态资源
+   ├── application.py  系统应用设置
+   ├── server.py   服务器启动脚本
+   └── urls.py     路由规则
+这个是系统分析与设计的作业，大概的功能就是提供用户购票的功能，非常简单的功能。但是麻雀虽小，五脏俱全。</p>
+<p>online ticket system</p>
+<p>MVC各个层次在这个项目的分工：</p>
+<p>model : 实体对象，存储了user、ticket这两个业务中的关键实体类，并且提供了对于mysql数据库的CRUD功能
+view : 视图，在这个项目中使用html+tornado的模板引擎构成，主要负责传给浏览器要渲染的html页面
+handler(Controller) : 系统的主要业务逻辑，对每个路由过来的请求进行相应的操作，同时返回页面和数据给请求
+对应下图的操作： </p>
+<p>Model Ticket</p>
+<h1 id="codingutf-8">coding:utf-8<a class="headerlink" href="#codingutf-8" title="Permanent link">&para;</a></h1>
+<p>import database</p>
+<p>class Ticket(database.DataBase):<br />
+    def from_id(self, ticketId):
+        try:
+            ticket = self.db.get(sql);
+            self.id = ticket.id
+            self.train = ticket.train
+            self.departure = ticket.departure
+            self.edeparture = ticket.edeparture
+            self.destination = ticket.destination
+            self.edestination = ticket.edestination
+            self.departureTime = ticket.departureTime
+            self.arrivalTime = ticket.arrivalTime
+            self.price = ticket.price
+            self.statu = ticket.statu
+        except:
+            return
+    def buy_ticket(self, userId):
+        if self.statu == "sold":
+            return False
+        self.db.execute("update ticket set ticket.statu = 'sold' where id = {0}".format(self.id))
+        self.db.execute("insert into orders (userId, ticketId) values ({0}, {1})".format(userId, self.id))
+        return True</p>
+<div class="codehilite"><pre><span></span>@staticmethod
+def get_all_tickets():
+    db = database.DataBase.initial_data_base()
+    tickets = db.query(sql);
+    return tickets
+
+@staticmethod
+def get_my_tickets(userId):
+    db = database.DataBase.initial_data_base()
+    tickets = db.query(sql)
+    return tickets
+</pre></div>
+
+<p>Controller Ticket</p>
+<h1 id="codingutf-8_1">coding:utf-8<a class="headerlink" href="#codingutf-8_1" title="Permanent link">&para;</a></h1>
+<p>import tornado.web<br />
+import model.ticket</p>
+<p>class TicketHandler(tornado.web.RequestHandler):<br />
+    def get(self, ticketId):
+        ticket = model.ticket.Ticket()
+        ticket.from_id(ticketId)</p>
+<div class="codehilite"><pre><span></span>    self.render(&quot;ticket.html&quot;, ticket = ticket)
+
+def post(self, ticketId):
+    if not self.get_secure_cookie(&#39;user&#39;):
+        self.render(&quot;please login!&quot;)
+
+    user = model.user.User()
+    user.from_username(self.get_secure_cookie(&#39;user&#39;))
+
+    ticket = model.ticket.Ticket()
+    ticket.from_id(ticketId)
+
+    if ticket.buy_ticket(user.id):
+        self.render(&quot;error.html&quot;, message = &quot;buy ticket success!&quot;)
+    else:
+        self.render(&quot;error.html&quot;, message = &quot;failed to buy ticket!&quot;)
+</pre></div>
+
+<p>这个是传统的web开发项目，MVC体现在在整个server-side，可以理解为，server-side是一个black box，输入是用户的请求，输出是html代码。</p>
+<p>只传输数据的web项目
+“传统”得web项目是通过传递html页面的，那么如果请求的server是一个http “数据接口”接口服务器呢？</p>
+<p>实际上很多时候，特别是在做单页面开发，或者是安卓、IOS移动端开发时候，server-side一般都是传输json数据（xml也有，不过现在大家比较喜欢json）</p>
+<p>我们接下来看下下面这个python flask的项目，这个项目额外引用了一些技术：</p>
+<p>Gevent （python 异步编程）
+sqlalchemy (python ORM)
+项目组织架构： </p>
+<p>其中，我们看用户修改个人信息的功能：</p>
+<p>Model</p>
+<h1 id="coding_utf-8">coding: utf-8<a class="headerlink" href="#coding_utf-8" title="Permanent link">&para;</a></h1>
+<p>from runtob import db<br />
+from sqlalchemy.dialects import mysql</p>
+<p>class UserProfile(db.Model):<br />
+<strong>tablename</strong> = 'user_profile'
+    userId = db.Column(db.Integer, primary_key=True)
+    nickname = db.Column(db.String(50), nullable=False)
+    gender = db.Column(mysql.ENUM('male', 'female', ''), nullable=False)
+    phone = db.Column(db.String(30), nullable=False)
+    email = db.Column(db.String(50), nullable=False)
+    avatar = db.Column(db.String(200), nullable=False)</p>
+<div class="codehilite"><pre><span></span>def __init__(self, userId, nickname=&#39;&#39;, gender=&#39;&#39;, phone=&#39;&#39;, email=&#39;&#39;, avatar=&#39;&#39;):
+    self.userId = userId
+    self.nickname = nickname
+    self.gender = gender
+    self.phone = phone
+    self.email = email
+    self.avatar = avatar
+</pre></div>
+
+<p>Controller
+@bp.route('/UpdateInformation', methods=['POST'])
+@permission
+def UpdateInformation():<br />
+    userId = request.form['userId']
+    gender = request.form['gender']
+    nickname = request.form['nickname']
+    phone = request.form['phone']
+    email = request.form['email']
+    avatar = request.form['avatar']
+    user = UserProfile.query.get(userId)
+    user.gender = {
+            '0':'male',
+            '1':'female',
+        }.get(gender, '')
+    user.phone = phone
+    user.nickname = nickname
+    user.email = email #todo 校验
+    user.avatar = avatar
+    db.session.commit()
+    return jsonify({'state': 200, 'error': ''})
+其中，我们在Model层使用了ORM技术</p>
+<p>ORM 对象关系映射</p>
+<p>是一种程序设计技术，用于实现面向对象编程语言里不同类型系统的数据之间的转换。从效果上说，它其实是创建了一个可在编程语言里使用的“虚拟对象数据库”。 在这里，我们使用了sqlalchemy，使得数据库的userprofile的表和python model中的userprofile类做了映射，从而只要对user的实例赋值然后提交则可以同步更新数据库。很大程度上减少了sql语句的编写，增强了代码的可维护性。</p>
+<p>对于Server Side MVC 的一些疑惑
+1. “三层架构”与“MVC”的区别
+很多人有这个疑惑。所谓的“三层架构”是表示层、业务逻辑层、数据层。网上对于这个问题有不少回答，我觉得都是扯淡的。 </p>
+<p>In software engineering, multitier architecture (often referred to as n-tier architecture) is a client–server architecture in which presentation, application processing, and data management functions are physically separated. The most widespread use of multitier architecture is the three-tier architecture.</p>
+<p>来自维基百科对于三层架构的解释。多层架构是软件工程中基于CS的一种架构，他将表示、应用处理和数据管理功能进行物理分离。最常见的多层架构是三层架构。</p>
+<p>以下是构架图：</p>
+<p>Web开发时候指南： 
+在Web开发领域，三层构架通常指前端浏览器渲染的网页、Server上运行的代码以及数据持久化层（一般用数据库和文件系统）</p>
+<p>表示层，实质是浏览器帮我们实现了，我们通常会忽略掉。表示层就是浏览器渲染出来的前端页面。
+业务逻辑层其实就是WebServer对于前端请求的处理
+而数据层则是使用数据库系统以及文件系统实现的数据持久化层
+当我们清晰理解MVC和三层架构的真正思想时候，就能理解到这两者的区别所在。</p>
+<ol>
+<li>CRUD 应该放在 Model 还是 Controller？
+观点1：CRUD应该放在Controller层:</li>
+</ol>
+<p>用户提交到服务器的http请求，由Controller处理，得到
+Controller负责数据业务的CRUD，并且响应
+Model 只代表实体对象，如用户，而不提供CRUD方法
+通过资源控制器（Resource Controller）实现对数据库等资源的调用
+观点2：CRUD应该放在Model层：</p>
+<p>Model 层提供数据持久化（通常是对数据库的操作）方法
+Controller 接受用户提交的http请求，当产生数据变化时候，调用Model层的方法
+Model 层将“实体的状态”通过数据库的持久化来表现
+其实，这两种说法都是对的。数据库系统和Web-Server其实是两个独立系统，这点决定了数据库系统的数据持久化实现对于Web-Server应该是透明的。</p>
+<p>对于不同的应用有不同的解决方法，但是通常来说，大家为了解决Controller过于臃肿的问题，还是会将数据的CRUD放在model层，通过Controller调用Model的方法实现CRUD。</p>
+<p>下面看一个PHP CI框架下的莉子：</p>
+<p>Model
+class MEntity extends Mx_Model {<br />
+    function insert_entry($data) {
+        &hellip;
+        database operations
+    }
+}
+Controller
+class test extends Mx_Controller {<br />
+    public function insert_entry() {
+        $this-&gt;load-&gt;model('some_model');</p>
+<div class="codehilite"><pre><span></span>    $data[&#39;foo&#39;] = $_POST[&#39;foo&#39;];
+    $data[&#39;bar&#39;] = $_POST[&#39;bar&#39;];
+
+    $this-&gt;some_model-&gt;insert_entry($data);
+
+    $this-&gt;load-&gt;view(&#39;some_view&#39;); // Tell the user the data was inserted
+}
+</pre></div>
+
+<p>}
+其中Controller是请求的入口，CI框架中，请求的URL对应为：</p>
+<p>POST: /index.php/test/insert_entry<br />
+例子中的Model包含了对数据库的操作，而在Controller中则对应地可以调用model中的代码，层次分明，逻辑清晰。</p>
+<p>Model代表了你的数据结构。通常情况下，您的Model类将包含帮助您检索、插入和更新数据库中的信息的函数。 
+视图是要被表示给用户的信息。一个视图通常是一个网页，但在CodeIgniter（CI框架），视图也可以是一个页面片段如页眉或页脚。它也可以是一个网页，或任何其他类型的“html块”。 该控制器作为中介之间的模型，视图，和需要处理的HTTP请求并生成一个网页的其他资源。</p>
+<p>接下来再看一个express+mongodb的例子： - Model (user 用户实体)</p>
+<p>require! ['mongoose']<br />
+ObjectId = mongoose.Schema.Types.ObjectId</p>
+<p>UserSchema = new mongoose.Schema {<br />
+  authenticated: Number                                 #验证状态, 1表示已验证
+  auth_code: String                                     #验证码
+  email: String,                                        #邮箱
+  password: String,                                     #密码
+  username: String,                                     #用户名
+  role: Number,                                         #角色，0为普通用户，1为管理员
+  gender: Number,                                       #性别，0汉子，1妹子，2保密
+  avatar: String,                                       #头像
+  real_name: String,                                    #真实姓名
+  phone_num: String,                                    #联系方式
+  qq: String,                                           #QQ号码
+  weixin: String,                                       #微信号
+  host_acts: [{type: ObjectId, ref:'Activity'}],        #已发布的活动
+  following_acts: [{type: ObjectId, ref: 'Activity'}],  #已关注的活动
+  joining_acts: [{type: ObjectId, ref: 'Activity'}],    #已报名的活动
+  tags: [{type: ObjectId, ref: 'Tag'}],                 #订阅的tag
+  meta: {
+    createAt: {
+      type: Date,
+      default: Date.now!
+    },
+    updateAt: {
+      type: Date,
+      default: Date.now!
+    }
+  }
+}</p>
+<p>UserSchema.pre 'save',(next)!-&gt;<br />
+  if @.isNew 
+    @.meta.createAt = @.meta.updateAt = Date.now!
+  else
+    @.meta.updateAt = Date.now!
+  next!</p>
+<p>UserSchema.statics = {<br />
+  fetch: (cb)-&gt;
+    @ .find {} .sort 'meta.updateAt' .exec cb
+  findById: (id, cb)-&gt;
+    @ .findOne {_id: id} .exec cb
+}</p>
+<p>module.exports = UserSchema<br />
+Controller (signup)
+require! {<br />
+  '../../passport'
+  User: '../../models/user'
+  Tag: '../../models/tag'
+  '../../authMail'
+  multer
+  '../../imageCropper'
+  path
+  async
+  mongoose
+}</p>
+<p>DEFAULT_AVATAR = 'images/default_avatar.png'</p>
+<p>usernameExists = (username, cb)!-&gt;<br />
+  User.find username: username, (err, docs)!-&gt;
+    if err
+      cb err
+    else
+      cb null, docs.length &gt; 0</p>
+<p>emailExists = (email, cb)!-&gt;<br />
+  User.find email: email, (err, docs)!-&gt;
+    if err
+      cb err
+    else
+      cb null, docs.length &gt; 0</p>
+<p>createUser = (data, cb)!-&gt;<br />
+  data.password = passport.hash data.password
+  data.auth_code = Math.random!toString!
+  data.authenticated = 0
+  data.role = 0
+  data.tags = data.tags.split(',')
+  data.gender = parseInt(data.gender)
+  data.avatar = DEFAULT_AVATAR
+  User.create data, (err)!-&gt; cb err, data.auth_code</p>
+<p>module.exports = (req, res)!-&gt;<br />
+  # x inputs from body
+  username = req.body.username
+  password = req.body.password
+  email = req.body.email
+  gender = req.body.gender
+  tags = req.body.tags
+  # signup
+  # check if username exists
+  usernameExists username, (err, exists)!-&gt;
+    if err
+      console.log err
+      res.status 500 .end!
+    else if exists
+      res.end 'username exists'
+    else
+      emailExists email, (err, exists)!-&gt;
+        if err
+          console.log err
+          res.status 500 .end!
+        else if exists
+          res.end 'email exists'
+        else
+          createUser {
+            username: username
+            password: password
+            email: email
+            gender: gender
+            tags: tags
+          }, (err, authCode)!-&gt;
+            if err
+              console.log err
+              res.status 500 .end!
+            else
+              authMail.send email, authCode
+              passport.signin res, username, password, (err)!-&gt;
+                if err
+                  console.log err
+                  res.status 500 .end!
+                else
+                  res.end 'ok'
+Mongodb + express + nodejs 在server-side，是一个非常好的配合。上述使用的MVC框架称为“express-mongoose-mvc”。</p>
+<p>node中的mongodb 原生支持schema，只要要在代码中定义好schema结构，运行过程之中自动生成数据持久化。这种技术叫做ODM（Object Document Mapper， 对象文档映射），类似数据关系映射。由于Nodejs的数据结构和mongodb的数据结构几乎是一样的，所以采用这个技术的融合性非常地好。</p>
+<p>同样地，对于nosql数据库，我们可以使用MVC框架进行我们代码的组织。</p>
+<p>总结Web-Server-Side的MVC架构
+Web-Server-Side是基于无连接的HTTP协议，server负责处理每个http的请求，最后写会响应给客户端。</p>
+<p>Web-Server-Side的MVC结构分为传统页面传输和现在很多应用的数据传输。</p>
+<p>对于页面传输形式整个网站的功能，前端和后台都由web-server来实现，用户请求的是html页面。在这里，View是html页面。</p>
+<p>对于现在很多应用传输json或者xml数据，其实是省略了View层。在MVC的初始设计中，是为了解决“图形化”用户交互系统的设计，所以，从严格的意义上来说，这样的web-server并不是MVC架构。但是我们依然可以借鉴MVC的思想为我们清晰组织代码。</p>
+<p>在Web-Server中Controller实质上就是路由处理，可以分为路由表和具体的路由功能。Model是实体，是这个系统定义的关键抽象类，一般地，应该提供数据库的CRUD方法，也可以尝试使用ORM技术与数据库表结构对接。</p>
+<p>Client-Side的MVC
+As client technologies have matured, frameworks such as AngularJS, EmberJS, JavaScriptMVC and Backbone have been created that allow the MVC components to execute partly on the client (also see Ajax).</p>
+<p>维基百科的第二段讲述了，现代web技术的进步，区别于传统的依赖web服务端传输大段大段的数据，web开发者意识到，在前端的js中可以做很多事情。</p>
+<p>html 代码并不是每次都需要传输整个文档：完全可以只传输部分，或者只传输数据，然后通过js代码填充到对应的位置即可
+在某些需求中，用户希望不要每次操作都将整个页面刷新，比如需求是单页面应用，SPA（single page application）
+甚至，前端可以不需要后台服务器传输任何的html页面，前端完全可以自行根据服务端的数据渲染出html页面
+某安卓端应用，或者IOS端应用需要调用http接口，这时候我们不能够返回html页面（事实上可以用webview返回，但是理解应用开发就知道这样做很不好）
+对于第一个需求，就出现了Ajax请求，请求服务器的时候，不需要刷新整个页面，而是委托js代码去请求，然后返回之后，js代码通过操作页面的dom元素动态地将后端数据拿回到前端显示。</p>
+<p>然而当页面的逻辑复杂起来的时候，你会发现代码组织毫无章法，对于所有事件，几乎都是使用事件-&gt;元素操作-&gt;请求-&gt;返回数据-&gt;元素操作。</p>
+<p>之前写的YOJ中查询提交代码记录，查询评测报告的前端代码。</p>
+<p>需求就是，点击提交记录的按钮之后，弹出模态框，模态框中显示代码的具体内容。 点击提交评测报告按钮，弹出模态框，模态框中显示代码的具体内容。</p>
+<p>$(document).ready( function () {
+    $("body").on("click", ".source", function(event) {
+        target = $(event.target);
+        runid = target.data("runid");
+        uid = target.data("uid");
+        language = target.data("language");
+            $.get(
+            "s-getcode", 
+            {
+                language : language,
+                runid : runid,
+                uid : uid
+            },
+            function(data,status) {
+                $("#codecontent").text(data)
+                $("#myModal").modal().show();
+            });
+    });</p>
+<div class="codehilite"><pre><span></span>$(&quot;body&quot;).on(&quot;click&quot;, &quot;.report&quot;, function(event) {
+    target = $(event.target);
+    runid = target.data(&quot;runid&quot;);
+        $.get(
+        &quot;\s-getreport&quot;, 
+        {
+            runid : runid
+        },
+        function(data,status) {
+            $(&quot;#codecontent1&quot;).text(data)
+            $(&quot;#myModal1&quot;).modal().show();
+        });
+});
+</pre></div>
+
+<p>});
+在处理简单逻辑时候时候，我们这样做完全没有问题。但是当业务需求多起来的时候，这样做代码就会显得杂乱无章，难以维护。</p>
+<p>现在在引入前端MVC概念时候，我们引用一种面向对象的设计模式：观察者模式</p>
+<p>观察者模式是很好地实现Web前端MVC的一种设计模式（pattern）。简单来说就是观察者订阅一些事件，也就是“暴露”自己事件监听的接口，当其他环境下的对象状态改变时可以调用notify方法来通知观察者状态改变，观察者随即改变自己的状态适应这个改变。</p>
+<p>在前端中，我们的MVC框架是这样的：</p>
+<p>一个主事件流程：</p>
+<p>用户操作view，这个操作被发送到Controller进行处理
+Controller 根据业务逻辑，对Model（数据实体）进行修改，这时候Controller有可能会修改View的内容
+Model根据Controller对自己的调用修改自己的状态，这个状态修改之后，Model通知View做出相应的变化
+我们来看一个Jquery的莉子：</p>
+<p>这里有一段html</p>
+<p><head><br />
+  <link rel="stylesheet" href="./style.css" media="screen" title="no title" charset="utf-8">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script type="text/javascript" src="./mvc.js"></script>
+</head></p>
+<div class="row container">  
+    <div class="col-xs-4">
+        <select id="list" class="form-control" size="10"></select>
+    </div>
+    <div class="col-xs-8">
+        <button id="plusBtn" class="btn btn-default btn-block">+</button>
+        <button id="minusBtn" class="btn btn-default btn-block">-</button>
+    </div>
+</div>
+
+<p>大概的功能就是实现这个列表的增、删。</p>
+<p>function Event(sender) {<br />
+    this._sender = sender;
+    this._listeners = [];
+}</p>
+<p>Event.prototype = {<br />
+    attach: function (listener) {
+        this._listeners.push(listener);
+    },
+    notify: function (args) {
+        var index;</p>
+<div class="codehilite"><pre><span></span>    for (index = 0; index &lt; this._listeners.length; index += 1) {
+        this._listeners[index](this._sender, args);
+    }
+}
+</pre></div>
+
+<p>};</p>
+<p>/**
+ * The Model. Model stores items and notifies
+ * observers about changes.
+ */
+function ListModel(items) {<br />
+    this._items = items;
+    this._selectedIndex = -1;</p>
+<div class="codehilite"><pre><span></span>this.itemAdded = new Event(this);
+this.itemRemoved = new Event(this);
+this.selectedIndexChanged = new Event(this);
+</pre></div>
+
+<p>}</p>
+<p>ListModel.prototype = {<br />
+    getItems: function () {
+        return [].concat(this._items);
+    },</p>
+<div class="codehilite"><pre><span></span>addItem: function (item) {
+    this._items.push(item);
+    this.itemAdded.notify({
+        item: item
+    });
+},
+
+removeItemAt: function (index) {
+    var item;
+
+    item = this._items[index];
+    this._items.splice(index, 1);
+    this.itemRemoved.notify({
+        item: item
+    });
+    if (index === this._selectedIndex) {
+        this.setSelectedIndex(-1);
+    }
+},
+
+getSelectedIndex: function () {
+    return this._selectedIndex;
+},
+
+setSelectedIndex: function (index) {
+    var previousIndex;
+
+    previousIndex = this._selectedIndex;
+    this._selectedIndex = index;
+    this.selectedIndexChanged.notify({
+        previous: previousIndex
+    });
+}
+</pre></div>
+
+<p>};</p>
+<p>/**
+ * The View. View presents the model and provides
+ * the UI events. The controller is attached to these
+ * events to handle the user interraction.
+ */
+function ListView(model, elements) {<br />
+    this._model = model;
+    this._elements = elements;</p>
+<div class="codehilite"><pre><span></span>this.listModified = new Event(this);
+this.addButtonClicked = new Event(this);
+this.delButtonClicked = new Event(this);
+
+var _this = this;
+
+// attach model listeners
+this._model.itemAdded.attach(function () {
+    _this.rebuildList();
+});
+this._model.itemRemoved.attach(function () {
+    _this.rebuildList();
+});
+
+// attach listeners to HTML controls
+this._elements.list.change(function (e) {
+    _this.listModified.notify({
+        index: e.target.selectedIndex
+    });
+});
+this._elements.addButton.click(function () {
+    _this.addButtonClicked.notify();
+});
+this._elements.delButton.click(function () {
+    _this.delButtonClicked.notify();
+});
+</pre></div>
+
+<p>}</p>
+<p>ListView.prototype = {<br />
+    show: function () {
+        this.rebuildList();
+    },</p>
+<div class="codehilite"><pre><span></span>rebuildList: function () {
+    var list, items, key;
+
+    list = this._elements.list;
+    list.html(&#39;&#39;);
+
+    items = this._model.getItems();
+    for (key in items) {
+        if (items.hasOwnProperty(key)) {
+            list.append($(&#39;&lt;option&gt;&#39; + items[key] + &#39;&lt;/option&gt;&#39;));
+        }
+    }
+    this._model.setSelectedIndex(-1);
+}
+</pre></div>
+
+<p>};</p>
+<p>/**
+ * The Controller. Controller responds to user actions and
+ * invokes changes on the model.
+ */
+function ListController(model, view) {<br />
+    this._model = model;
+    this._view = view;</p>
+<div class="codehilite"><pre><span></span>var _this = this;
+
+this._view.listModified.attach(function (sender, args) {
+    _this.updateSelected(args.index);
+});
+
+this._view.addButtonClicked.attach(function () {
+    _this.addItem();
+});
+
+this._view.delButtonClicked.attach(function () {
+    _this.delItem();
+});
+</pre></div>
+
+<p>}</p>
+<p>ListController.prototype = {<br />
+    addItem: function () {
+        var item = window.prompt('Add item:', '');
+        if (item) {
+            this._model.addItem(item);
+        }
+    },</p>
+<div class="codehilite"><pre><span></span>delItem: function () {
+    var index;
+
+    index = this._model.getSelectedIndex();
+    if (index !== -1) {
+        this._model.removeItemAt(this._model.getSelectedIndex());
+    }
+},
+
+updateSelected: function (index) {
+    this._model.setSelectedIndex(index);
+}
+</pre></div>
+
+<p>};</p>
+<p>$(function () {
+    var model = new ListModel(['PHP', 'NodeJs']),
+        view = new ListView(model, {
+            'list': $('#list'),
+                'addButton': $('#plusBtn'),
+                'delButton': $('#minusBtn')
+        }),
+        controller = new ListController(model, view);</p>
+<div class="codehilite"><pre><span></span>view.show();
+</pre></div>
+
+<p>});
+当然可以把这部分改成异步的：</p>
+<p>Event.prototype = {<br />
+    attach: function (listener) {
+        this._listeners.push(listener);
+    },
+    notify: function (args) {
+        var index;
+        for (index = 0; index &lt; this._listeners.length; index += 1) {
+          // async
+          (function(listener, sender, args) {
+            setTimeout(function() {
+              listener(sender, args);
+            }, 0);
+          })(this._listeners[index], this._sender, args);
+          // this._listeners<a href="../this._sender, args">index</a>;
+        }
+    }
+};
+这就是前端MVC的主要思想。Model和View从某种意义上是实时同步的。</p>
+<p>跪下奉上莫冠钊大神的前端MVC代码例子：link</p>
+<p>eventbus.ls这个是观察者模式实现的关键</p>
+<p>其中的“事件总线”和观察者模式的subject是一致的</p>
+<p>更多与MVC相关
+C++/Java 图形界面应用
+web前端前端的很多框架
+总结
+MVC是一种开发思想，应该用更加抽象的层次去理解。其实在任何项目中，不用MVC也不会怀孕。设计模式只是一种思维方法使得你在组织大型代码的时候不至于手忙脚乱。</p>
+<p>MVC在存在着不少观点的争论，在这些争论的背后的实质其实是应用环境的不同，或者是应用方式不一样。</p>
+<p>综合来讲，只要是实用于自己的项目的设计模式就是好的。</p>
+<p>主要参考资料
+MVC Wikipedia   </p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../../.." title="主页" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                主页
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../front-end/javascript/JS%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS原型链什么鬼" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                JS原型链什么鬼
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/ghostbody" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
