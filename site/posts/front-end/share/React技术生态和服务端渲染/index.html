@@ -1,0 +1,1523 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
+    
+    
+      
+        <title>吴家荣大佬-React技术生态和服务端渲染 - Ye Jiaqi Site</title>
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application-769c285a91.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../../assets/css/style.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../../../.." title="Ye Jiaqi Site" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  大前端
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  分享会
+                </span>
+              
+            
+            吴家荣大佬-React技术生态和服务端渲染
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Ye Jiaqi Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      架构相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        架构相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      设计模式
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        设计模式
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../architecture/design-pattern/MVC%E8%A7%A3%E8%AF%BB/" title="MVC解读" class="md-nav__link">
+      MVC解读
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../algorithmn/prove-binary-search-is-better/" title="证明二分查找优于三分查找、四分查找" class="md-nav__link">
+      证明二分查找优于三分查找、四分查找
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      大前端
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        大前端
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      angular
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        angular
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angular/AngularJS%E6%BA%90%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB%281%29/" title="AngularJS源代码阅读(1) —— angularjs 沉思" class="md-nav__link">
+      AngularJS源代码阅读(1) —— angularjs 沉思
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      javasctipt
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        javasctipt
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../javascript/JS%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS原型链什么鬼" class="md-nav__link">
+      JS原型链什么鬼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../javascript/JS%E9%97%AD%E5%8C%85%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS闭包什么鬼" class="md-nav__link">
+      JS闭包什么鬼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../javascript/JS%E7%9A%84this%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS的this什么鬼" class="md-nav__link">
+      JS的this什么鬼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../javascript/JS%E5%B8%B8%E8%A7%81%E5%A4%A7%E5%9D%91/" title="JS常见大坑" class="md-nav__link">
+      JS常见大坑
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3">
+      分享会
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        分享会
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        吴家荣大佬-React技术生态和服务端渲染
+      </label>
+    
+    <a href="./" title="吴家荣大佬-React技术生态和服务端渲染" class="md-nav__link md-nav__link--active">
+      吴家荣大佬-React技术生态和服务端渲染
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a_hello_world_of_react" title="A hello world of react" class="md-nav__link">
+    A hello world of react
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsx" title="JSX" class="md-nav__link">
+    JSX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_dom_vs_dom" title="React DOM vs. DOM" class="md-nav__link">
+    React DOM vs. DOM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_1" title="React组件的生命周期" class="md-nav__link">
+    React组件的生命周期
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a_game_demo_of_react" title="A game demo of react" class="md-nav__link">
+    A game demo of react
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_2" title="React生态" class="md-nav__link">
+    React生态
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reactreact-router" title="React生态：react-router" class="md-nav__link">
+    React生态：react-router
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactflux" title="React生态：flux" class="md-nav__link">
+    React生态：flux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactui" title="React生态：UI组件库" class="md-nav__link">
+    React生态：UI组件库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactreact_native" title="React生态：React Native" class="md-nav__link">
+    React生态：React Native
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="服务端渲染" class="md-nav__link">
+    服务端渲染
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="前端渲染存在的问题" class="md-nav__link">
+    前端渲染存在的问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#universal_app" title="Universal app" class="md-nav__link">
+    Universal app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server_side_rendering" title="Server Side Rendering" class="md-nav__link">
+    Server Side Rendering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      旧文档
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        旧文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      数图作业
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        数图作业
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Quantization-and-Scaling/" title="Quantization and Scaling" class="md-nav__link">
+      Quantization and Scaling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Filtering%281%29/" title="Filtering1" class="md-nav__link">
+      Filtering1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Filtering%282%29/" title="Filtering2" class="md-nav__link">
+      Filtering2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Histogram-Equalization/" title="Histogram Equalization" class="md-nav__link">
+      Histogram Equalization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Fourier-Transformation/" title="Fourier Transformation" class="md-nav__link">
+      Fourier Transformation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/stero-matching/" title="Stero Matching" class="md-nav__link">
+      Stero Matching
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+    
+    <label class="md-nav__link" for="nav-5-2">
+      以前的项目
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-2">
+        以前的项目
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/YOJ/" title="YOJ" class="md-nav__link">
+      YOJ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/simple-sinew/" title="Simple Sinew" class="md-nav__link">
+      Simple Sinew
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Floater/" title="Floater" class="md-nav__link">
+      Floater
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Asentence/" title="Asentence" class="md-nav__link">
+      Asentence
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      出过的习题
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        出过的习题
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/FlowChart-and-PseudoCode/" title="程序流程图和伪代码" class="md-nav__link">
+      程序流程图和伪代码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Memory-Error-Summary-in-c%2B%2B/" title="内存错误总结" class="md-nav__link">
+      内存错误总结
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/SimpleList/" title="简单链表" class="md-nav__link">
+      简单链表
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+    
+    <label class="md-nav__link" for="nav-5-4">
+      面经
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-4">
+        面经
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Tencent-interview/" title="腾讯实习面试" class="md-nav__link">
+      腾讯实习面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Huawei-interview/" title="华为实习面试" class="md-nav__link">
+      华为实习面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../old/Netease-interview/" title="网易实习面试" class="md-nav__link">
+      网易实习面试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a_hello_world_of_react" title="A hello world of react" class="md-nav__link">
+    A hello world of react
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsx" title="JSX" class="md-nav__link">
+    JSX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_dom_vs_dom" title="React DOM vs. DOM" class="md-nav__link">
+    React DOM vs. DOM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_1" title="React组件的生命周期" class="md-nav__link">
+    React组件的生命周期
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a_game_demo_of_react" title="A game demo of react" class="md-nav__link">
+    A game demo of react
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_2" title="React生态" class="md-nav__link">
+    React生态
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reactreact-router" title="React生态：react-router" class="md-nav__link">
+    React生态：react-router
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactflux" title="React生态：flux" class="md-nav__link">
+    React生态：flux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactui" title="React生态：UI组件库" class="md-nav__link">
+    React生态：UI组件库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactreact_native" title="React生态：React Native" class="md-nav__link">
+    React生态：React Native
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="服务端渲染" class="md-nav__link">
+    服务端渲染
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="前端渲染存在的问题" class="md-nav__link">
+    前端渲染存在的问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#universal_app" title="Universal app" class="md-nav__link">
+    Universal app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server_side_rendering" title="Server Side Rendering" class="md-nav__link">
+    Server Side Rendering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="react">React技术生态和服务端渲染<a class="headerlink" href="#react" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>@auth 吴家荣 <a href="https://github.com/wujr5">https://github.com/wujr5</a></p>
+<p>这篇文章是我在Matrix做内部分享的具体内容。分享时间：2016年12月24日 上午10:30，地点：中山大学数据科学与计算机学院 A319。分享PPT：<a href="https://wujiarong.com/sliders/2016-12-24.html">React技术生态和服务端渲染</a>。此文章是倾向于讲稿的，因此口语化可能比较严重。</p>
+</blockquote>
+<h2 id="a_hello_world_of_react">A hello world of react<a class="headerlink" href="#a_hello_world_of_react" title="Permanent link">&para;</a></h2>
+<p>在开始之前，我们先对React有一个直观的认识。</p>
+<p>首先明确两点：</p>
+<ul>
+<li>React是一个View层的库</li>
+<li>Browser端的内容，万变不离其宗，最终都要变成JS，CSS，HTML在浏览器端被解析或执行</li>
+</ul>
+<p>下面的代码是演示程序的基本结构。</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/react@latest/dist/react.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/react-dom@latest/dist/react-dom.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/babel-standalone@6.15.0/babel.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/babel&quot;</span><span class="p">&gt;</span>
+      <span class="c">&lt;!--</span> <span class="nx">Your</span> <span class="nx">babel</span> <span class="nx">react</span> <span class="nx">code</span> <span class="nx">goes</span> <span class="nx">here</span> <span class="o">--&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+      <span class="c1">// Your javascript code goes here</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+<p><strong>JavaScript写法</strong></p>
+<blockquote>
+<p><code>JavaScript写法</code>这个说法可能不准确，先姑且这样说。大概意思是不经过预处理的JS代码。</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="nx">ReactDom</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="s1">&#39;Hello World!&#39;</span><span class="p">),</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+
+<p><strong>Babel+jsx写法</strong></p>
+<div class="codehilite"><pre><span></span>ReactDom.render(
+  &lt;h1&gt;Hello World!&lt;/h1&gt;,
+  document.getElementById(&#39;root&#39;)
+);
+</pre></div>
+
+<p><strong>效果</strong></p>
+<iframe height='265' scrolling='no' title='ZpvBNJ' src='//codepen.io/gaearon/embed/ZpvBNJ/?height=265&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/gaearon/pen/ZpvBNJ/'>ZpvBNJ</a> by Dan Abramov (<a href='http://codepen.io/gaearon'>@gaearon</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+<p>上面两种写法的效果是一样的，区别就是后者需要经过Babel进行预处理，把<code>JSX</code>代码转化成能在浏览器端运行的<code>JS</code>代码，代码放置的地方也不一样，前者放在<code>&lt;script type=&quot;text/babel&quot;&gt;&lt;/script&gt;</code>内，后者放在<code>&lt;script type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code>内。</p>
+<p>React是前端View层的库，它可以很容易地跟其他<code>MV*</code>框架结合使用，本身不涉及数据管理、状态管理等。从上面的代码中可以看到一个大概，它的做法是，生成一个<code>React Dom</code>，也就是虚拟DOM，最后把生成的真正的DOM插入到指定的DOM Tree节点中。</p>
+<p>这里解析一下虚拟DOM。实现了虚拟DOM的库或架构，可能有不同的实现方案，但大概思路是：通过 <a href="https://github.com/Matt-Esch/virtual-dom#element-creation">element creation</a> 操作，构建虚拟DOM树<code>（virtual dom tree）</code>，然后把虚拟DOM树<code>render</code>成真正的DOM，最后把它插入到<code>DOM Tree</code>的某个节点中。虚拟DOM技术，还会记录虚拟DOM的状态，当由于某些事件或操作而导致状态发生改变的时候，虚拟DOM会通过 <a href="https://github.com/Matt-Esch/virtual-dom#diff-computation">diff computation</a> 操作高效低计算出发生改变的地方，然后通过 <a href="https://github.com/Matt-Esch/virtual-dom#patch-operations">patch operations</a> 操作来应用改变，最小代价地触发浏览器的重绘或重排。</p>
+<h2 id="jsx">JSX<a class="headerlink" href="#jsx" title="Permanent link">&para;</a></h2>
+<p>初学者对于上面的<code>Babel + JSX</code>写法可能有点疑惑。<code>JSX</code>可以理解为某种意义上的文本，允许你在<code>JS</code>代码里面写携带<code>HTML</code>标签的代码，然而这些标签以及标签内的元素既不是字符串也不是<code>HTML</code>。</p>
+<p>原生的EcmaScript是不支持<code>JSX</code>的，因此真正应用<code>JSX</code>之前，需要预处理一下，转化成为等效的JS代码。在这里，充当预处理器作用的是<code>Babel</code>。很容易想到，<code>Babel</code>在处理<code>JSX</code>的时候，其实是将它转化成使用<code>JS</code>相关的用于DOM的创建或操作的代码。</p>
+<h2 id="react_dom_vs_dom">React DOM vs. DOM<a class="headerlink" href="#react_dom_vs_dom" title="Permanent link">&para;</a></h2>
+<p>不可否认，React的火热一定程度上得益于大厂效应，但React确实有过人之处。其中最引人瞩目的一点是，React DOM（也就是React方式的虚拟DOM）与原生DOM的比较。</p>
+<p>虚拟DOM的创建和渲染，都是在前端完成的，运行在真正的DOM在浏览器产生和呈现之前，这个时间是<code>React的运行时</code>。相对于直接的HTML文本代码，React多了一个虚拟DOM生成和渲染的时间。这个时间，在不同机器的不同浏览器上，都有差异。除此以外，由于在内存里面存储虚拟DOM的内容、状态等数据，React的内存占用量也会比DOM要大。</p>
+<p>对于前端来说，浏览器响应用户事件后，非常昂贵的操作是，浏览器的重绘和重排。</p>
+<ul>
+<li>重绘：重绘是一个元素外观的改变所触发的浏览器行为，例如改变visibility、outline、背景色等属性。浏览器会根据元素的新属性重新绘制，使元素呈现新的外观。重绘不会带来重新布局，并不一定伴随重排。</li>
+<li>重排：当DOM的变化影响了元素的几何属性（宽或高），浏览器需要重新计算元素的几何属性，同样其他元素的几何属性和位置也会因此受到影响。浏览器会使渲染树中受到影响的部分失效，并重新构造渲染树。这个过程称为重排。每次重排，必然会导致重绘。<blockquote>
+<p>导致重排的情况：
+  <div class="codehilite"><pre><span></span>1. 添加或者删除可见的DOM元素
+2. 元素位置改变
+3. 元素尺寸改变
+4. 元素内容改变（例如：一个文本被另一个不同尺寸的图片替代）
+5. 页面渲染初始化（这个无法避免）
+7. 浏览器窗口尺寸改变
+</pre></div></p>
+</blockquote>
+</li>
+</ul>
+<p>很明显，相对于渲染时间和内存占用，提高前端性能更为核心的任务是，尽可能地减少重绘和重排的次数。React的虚拟DOM技术和各个生命周期及其钩子函数正是用来解决上述问题的。</p>
+<h2 id="react_1">React组件的生命周期<a class="headerlink" href="#react_1" title="Permanent link">&para;</a></h2>
+<p>下面是React组件的常用的写法，类内的函数都是React的钩子函数，每个函数都对应React组件一个生命周期。</p>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="nx">react</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">ExampleComponent</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+
+  <span class="c1">// Mounting</span>
+
+  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// do something initialized, set default props or initial state</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentWillMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// do something before component mounting</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// return the jsx code, it will be the component&#39;s dom content, if state changes, it will be rerun</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// do something after component mounting</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Updating</span>
+
+  <span class="nx">componentWillRecieveProps</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// do something before a mounted component receives new props</span>
+  <span class="p">}</span>
+
+  <span class="nx">shouldComponentUpdate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// do something before rendering when new props or state are being received</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentWillUpdate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// do something before rendering when new props or state are being received</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentDidUpdate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// do something after updating occurs</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Unmounting</span>
+
+  <span class="nx">componentWillUnmount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// do something before a component is unmounted and destroyed</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+<p><strong>关键点</strong></p>
+<ul>
+<li>组件的<code>props</code>，<code>state</code>非常重要，组件的动态内容主要依赖这两个属性</li>
+<li>改变<code>props</code>的方式：改变父级元素传递的<code>props</code>、直接改变<code>this.prpos</code></li>
+<li>改变<code>state</code>的方式：通过组件的<code>setState</code>函数改变、</li>
+<li>组件的<code>state</code>变化，会引起组件的<code>rerender</code></li>
+<li>组件有多种组合方式，同级组合、父子组合等</li>
+<li>组件在不同的生命周期，可以触发不同的钩子函数</li>
+</ul>
+<p>通过灵活使用组合方式、组件的生命周期函数，借助React高效的更新和渲染方式，可以在前端做动态性、表现力都很强的单页面应用、多页面应用、H5应用等。</p>
+<h2 id="a_game_demo_of_react">A game demo of react<a class="headerlink" href="#a_game_demo_of_react" title="Permanent link">&para;</a></h2>
+<p>我们来看一个使用React来做的俄罗斯方块游戏的Demo。</p>
+<p><a href="https://github.com/chvin/react-tetris">github: 用React、Redux、Immutable做俄罗斯方块</a></p>
+<p><a href="https://chvin.github.io/react-tetris/">Demo</a></p>
+<p>关键技术：React, Redux, Immutable, Webpack, Babel, Web Audio</p>
+<h2 id="react_2">React生态<a class="headerlink" href="#react_2" title="Permanent link">&para;</a></h2>
+<p>由于React是前端View层的库，使用方式十分灵活，可以跟现有的很多库或框架结合使用。也因此衍生了React的技术生态。我们可以通过这个页面一窥究竟：<a href="https://github.com/facebook/react/wiki/Complementary-Tools">Complementary Tools</a></p>
+<p><img alt="" src="http://ww1.sinaimg.cn/large/ed796d65gw1fb1lfmh6wxj210a9k6e85.jpg" /></p>
+<p>我所能想到的React的使用方式有：</p>
+<ul>
+<li>传统页面应用 or MV*：react + others library or framework</li>
+<li>SPA：react + react-router</li>
+<li>SPA + flux：react + react-router + flux库（Redux等）</li>
+<li>React Native开发跨平台移动应用</li>
+<li>Universal App：Server Side Rendering</li>
+</ul>
+<h3 id="reactreact-router">React生态：react-router<a class="headerlink" href="#reactreact-router" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://github.com/ReactTraining/react-router/raw/master/logo/vertical@2x.png" /></p>
+<p>react的前端路由，可以结合redux使用，是利用React做SPA的不可或缺的技术。实现方式：</p>
+<ul>
+<li>基于HTML5 history API</li>
+<li>基于前端<code>#字符串</code></li>
+</ul>
+<p>与其他SPA框架实现思路类似。</p>
+<h3 id="reactflux">React生态：flux<a class="headerlink" href="#reactflux" title="Permanent link">&para;</a></h3>
+<p>几个关键点：</p>
+<ul>
+<li>facebook提出的flux更多是一种设计模式，而不是框架</li>
+<li>flux有多重实现方案，redux是其中之一</li>
+<li>思路：单向数据流</li>
+<li>关键点：<code>dispatcher</code>，<code>store</code>，<code>action</code>，<code>reducer</code>，<code>view</code></li>
+<li><code>store</code>可以管理react组件的状态，当<code>store</code>改变的时候，会最低代价地更新react组件</li>
+</ul>
+<blockquote>
+<p>Flux is the application architecture that Facebook uses for building client-side web applications. It complements React's composable view components by utilizing a unidirectional data flow. It's more of a pattern rather than a formal framework, and you can start using Flux immediately without a lot of new code.</p>
+<p><em>From <a href="https://facebook.github.io/flux/docs/in-depth-overview.html">Flux: In Depth Overview</a></em></p>
+</blockquote>
+<p>关键思想：</p>
+<p><img alt="" src="https://github.com/facebook/flux/raw/master/docs/img/flux-diagram-white-background.png" /></p>
+<p><strong>Redux</strong></p>
+<blockquote>
+<p>Redux is a predictable state container for JavaScript apps.</p>
+</blockquote>
+<p>Redux是一个可预测的状态容器，是flux思想的一种实现方案。</p>
+<blockquote>
+<p>Redux 的灵感来源于 Flux 的几个重要特性。和 Flux 一样，Redux 规定，将模型的更新逻辑全部集中于一个特定的层（Flux 里的 store，Redux 里的 reducer）。Flux 和 Redux 都不允许程序直接修改数据，而是用一个叫作 “action” 的普通对象来对更改进行描述。</p>
+<p>而不同于 Flux ，Redux 并没有 dispatcher 的概念。原因是它依赖纯函数来替代事件处理器。纯函数构建简单，也不需额外的实体来管理它们。你可以将这点看作这两个框架的差异或细节实现，取决于你怎么看 Flux。Flux 常常被表述为 (state, action) =&gt; state。从这个意义上说，Redux 无疑是 Flux 架构的实现，且得益于纯函数而更为简单。</p>
+<p>和 Flux 的另一个重要区别，是 Redux 设想你永远不会变动你的数据。你可以很好地使用普通对象和数组来管理 state ，而不是在多个 reducer 里变动数据。正确且简便的方式是，你应该在 reducer 中返回一个新对象来更新 state， 同时配合 object spread 运算符提案 或一些库，如 Immutable。</p>
+<p>虽然出于性能方面的考虑，写不纯的 reducer 来变动数据在技术上是可行的，但我们并不鼓励这么做。不纯的 reducer 会使一些开发特性，如时间旅行、记录/回放或热加载不可实现。此外，在大部分实际应用中，这种数据不可变动的特性并不会带来性能问题，就像 Om 所表现的，即使对象分配失败，仍可以防止昂贵的重渲染和重计算。而得益于 reducer 的纯度，应用内的变化更是一目了然。</p>
+</blockquote>
+<h3 id="reactui">React生态：UI组件库<a class="headerlink" href="#reactui" title="Permanent link">&para;</a></h3>
+<p>UI有很多组件库，这里是官方列举的组件库资源：（更新于2016/12/24）</p>
+<ul>
+<li><strong><a href="https://mobiscroll.com/color-picker">Color Picker</a></strong> Color picker control with single and multiple select</li>
+<li><strong><a href="https://mobiscroll.com/responsive-calendar">Responsive Calendar</a></strong> Responsive Calendar for mobile, tablet and desktop</li>
+<li><strong><a href="https://mobiscroll.com/mobile-date-and-time-picker">Mobile date &amp; time picker control</a></strong> Cross platfrom mobile date &amp; time picker control for React.</li>
+<li><strong><a href="https://mobiscroll.com">Mobiscroll</a></strong> UI components for mobile web and hybrid apps.</li>
+<li><strong><a href="https://www.ag-grid.com">ag-Grid</a></strong> Advanced data grid / data table for React.</li>
+<li><strong><a href="http://grommet.io">Grommet</a></strong> The most advanced open source UX framework for enterprise applications.</li>
+<li><strong><a href="https://github.com/taobaofed/react-web">React Web</a></strong> A framework for building web apps with React.</li>
+<li><strong><a href="https://github.com/tleunen/react-mdl">React Mdl</a></strong> React Components for Material Design Lite.</li>
+<li><strong><a href="https://github.com/amazeui/amazeui-react">Amaze UI React</a> (in Chinese):</strong> <a href="https://github.com/allmobilize/amazeui">Amaze UI</a> components built with React.</li>
+<li><strong><a href="https://github.com/nikgraf/belle/">Belle</a>:</strong> Configurable React Components with great UX</li>
+<li><strong><a href="http://khan.github.io/react-components/">Khan Academy's component library</a></strong></li>
+<li><strong><a href="http://elemental-ui.com">Elemental UI</a>:</strong> A UI toolkit for React websites and apps, themeable and composed of individually packaged components</li>
+<li><strong><a href="http://madscript.com/halogen">Halogen</a>:</strong> A collection of highly customizable loading spinner animations with React.</li>
+<li><strong><a href="https://github.com/stevoland/react-bootstrap">react-bootstrap</a>:</strong> Bootstrap 3 components built with React.</li>
+<li><strong><a href="https://github.com/AllenFang/react-bootstrap-table">react-bootstrap-table</a>:</strong> It's a react table for Bootstrap.</li>
+<li><strong><a href="https://github.com/akiroom/react-bootstrap-dialog">react-bootstrap-dialog</a>:</strong> React Dialog component for react-bootstrap, instead of <code>window.alert</code> or <code>window.confirm</code></li>
+<li><strong><a href="https://github.com/kjda/react-topui">Topcoat UI Components</a>:</strong> Topcoat UI Components built with react.</li>
+<li><strong><a href="https://github.com/akiran/react-foundation-apps">react-foundation-apps</a>:</strong> Foundation Apps components built with React</li>
+<li><strong><a href="http://nnajm.github.io/orb/">orb</a>:</strong> React pivot grid.</li>
+<li><strong><a href="https://github.com/plaxdan/react-topcoat">react-topcoat</a>:</strong> Topcoat components built with React.</li>
+<li><strong><a href="https://github.com/akiran/react-slick">react-slick</a>:</strong> Carousel component built with React</li>
+<li><strong><a href="https://github.com/martinandert/react-lorem-component">react-lorem-component</a>:</strong> Lorem Ipsum placeholder component.</li>
+<li><strong><a href="https://github.com/wingspan/wingspan-forms">wingspan-forms</a>:</strong> React library for dynamic forms &amp; grids; widgets provided by KendoUI.</li>
+<li><strong><a href="https://github.com/martinandert/react-translate-component">react-translate-component</a>:</strong> React component for i18n.</li>
+<li><strong><a href="http://newforms.readthedocs.org/en/latest/">newforms</a>:</strong> Form-handling library which renders to <code>React.DOM</code> components on the client and the server.</li>
+<li><strong><a href="https://github.com/akiran/react-highlight">react-highlight</a>:</strong> React component for syntax highlighting</li>
+<li><strong><a href="https://github.com/akiran/react-responsive-mixin">react-responsive-mixin</a>:</strong> Mixin to develop responsive react components</li>
+<li><strong><a href="https://github.com/chenglou/react-chosen">react-chosen</a>:</strong> React wrapper for Chosen jQuery.</li>
+<li><strong><a href="https://github.com/JedWatson/react-select">react-select</a>:</strong> Native React Select / Multiselect input field, similar to Selectize / Chosen / Select2</li>
+<li><strong><a href="https://github.com/jsdir/react-ladda">react-ladda</a>:</strong> React wrapper for Ladda buttons.</li>
+<li><strong><a href="https://github.com/jeroencoumans/react-scroll-components">react-scroll-components</a>:</strong> A set of components and mixins that react to page scrolling.</li>
+<li><strong><a href="http://prometheusresearch.github.io/react-forms/">react-forms</a>:</strong> Form rendering and validation for React</li>
+<li><strong><a href="https://github.com/Volicon/valuelink">valuelink</a>:</strong> Full-featured two-way data binding and forms validation with extended React links.</li>
+<li><strong><a href="https://github.com/gcanti/tcomb-form">tcomb-form</a>:</strong> Automatically generate form markup, automatic labels and inline validation from a domain model</li>
+<li><strong><a href="https://github.com/chenglou/react-treeview">react-treeview</a>:</strong> Easy, light, flexible tree view.</li>
+<li><strong><a href="https://github.com/neodon/react-multiselect">react-multiselect</a>:</strong> Filter and select from a list of items.</li>
+<li><strong><a href="https://github.com/Hacker0x01/react-datepicker">react-date-picker</a>:</strong> A simple and reusable datepicker component for React.</li>
+<li><strong><a href="https://github.com/andreypopp/react-textarea-autosize">react-textarea-autosize</a>:</strong> Like <code>&lt;textarea /&gt;</code> but resizes automatically to fit all its content.</li>
+<li><strong><a href="https://github.com/mschipperheyn/react-growable-textarea">react-growable-textarea</a>:</strong> Resizes <code>&lt;textarea /&gt;</code> to fit all its content using a css shim (no javascript calculations).</li>
+<li><strong><a href="https://github.com/JedWatson/react-input-autosize">react-input-autosize</a>:</strong> Like <code>&lt;input /&gt;</code> but resizes automatically to fit all its content.</li>
+<li><strong><a href="https://www.npmjs.org/package/react-timeago">React-TimeAgo</a></strong> A minimal live updating Time Ago component that smartly converts any time to a ‘ago’ or ‘from now’ format and keeps it updated.</li>
+<li><strong><a href="http://iamdanfox.github.io/react-maps/">react-maps</a></strong> Embed Google Maps. Supports markers, polylines and programmatic mutation.</li>
+<li><strong><a href="http://material-ui.com">material-ui</a></strong> A set of React Components that implement Google's Material Design.</li>
+<li><strong><a href="https://github.com/sm-react/storybook-addon-material-ui">storybook-addon-material-ui</a></strong> A storybook addon for material-ui</li>
+<li><strong><a href="http://github.com/ant-design/ant-design">Ant Design of React</a></strong> An enterprise-class UI design language and React-based implementation.</li>
+<li><strong><a href="https://github.com/JedWatson/react-tappable">react-tappable</a></strong> A Tappable React Component that provides native-feeling onTap events for mobile React apps</li>
+<li><strong><a href="https://github.com/jakemmarsh/react-tour-guide">react-tour-guide</a></strong>A ReactJS mixin to give new users a popup-based tour of your application</li>
+<li><strong><a href="https://github.com/liamzebedee/reactjs-contenteditable">react-contentEditable</a></strong> Example component for contentEditable elements</li>
+<li><strong><a href="https://github.com/gaearon/react-dnd">react-dnd</a></strong> Flexible HTML5 drag-and-drop mixin for React with full DOM control</li>
+<li><strong><a href="https://github.com/moroshko/react-autosuggest">react-autosuggest</a></strong> WAI-ARIA compliant React autosuggest component</li>
+<li><strong><a href="https://github.com/gaearon/react-document-title">react-document-title</a></strong> Declarative, nested, stateful, isomorphic document.title for React</li>
+<li><strong><a href="https://github.com/yuanyan/react-image">react-image</a>:</strong> Like <code>&lt;img /&gt;</code> and Enhanced Image Component for React.</li>
+<li><strong><a href="https://github.com/brycedorn/react-intense">react-intense</a>:</strong> A component for viewing large images up close</li>
+<li><strong><a href="https://github.com/yuanyan/react-mq">react-mq</a>:</strong> Easy Media Query Helper for React.</li>
+<li><strong><a href="https://github.com/yuanyan/react-timesheet">react-timesheet</a>:</strong> Visualize your data and events with sexy time sheet component.</li>
+<li><strong><a href="https://github.com/gfazioli/react-switch-button">react-switch-button</a>:</strong> Beautiful React Switch button component</li>
+<li><strong><a href="https://github.com/gfazioli/react-amiga-guru-meditation">react-amiga-guru-meditation</a>:</strong> React JS Class to display a Amiga Guru Meditation Tribute</li>
+<li><strong><a href="https://github.com/pburtchaell/react-notification">react-notification</a>:</strong> Snackbar style notifications</li>
+<li><strong><a href="https://github.com/damusnet/react-swipe-views">react-swipe-views</a>:</strong> React Swipe Views</li>
+<li><strong><a href="https://github.com/felixrieseberg/React-Spreadsheet-Component">react-spreadsheet</a>:</strong> React Spreadsheets / Editable tables with Excel-Style keyboard input and navigation</li>
+<li><strong><a href="https://github.com/felixrieseberg/React-Dropzone">react-dropzone</a>:</strong> React Dropzone for File-Uploads</li>
+<li><strong><a href="https://github.com/erikschlegel/React-Twitter-Typeahead">react-twitter-typeahead</a>:</strong> React auto-suggestion component</li>
+<li><strong><a href="https://borisyankov.github.io/react-sparklines/">react-sparklines</a>:</strong> Beautiful and expressive sparklines component</li>
+<li><strong><a href="https://github.com/andrewhathaway/Winterfell">Winterfell</a>:</strong> Generate complex, validated and extendable JSON-based forms in React</li>
+<li><strong><a href="https://furqanzafar.github.io/react-selectize/">react-selectize</a>:</strong> A stateless &amp; flexible Select component, designed as a drop in replacement for React.DOM.Select, inspired by Selectize </li>
+<li><strong><a href="https://github.com/gilbarbara/react-joyride">react-joyride</a>:</strong> Create walkthroughs and guided tours for your ReactJS apps.</li>
+<li><strong><a href="https://github.com/stampit-org/react-stamp">react-stamp</a>:</strong> Composables for React.</li>
+<li><strong><a href="https://github.com/dschalk/mobservable-react-buttons">mobservable-react-buttons</a>:</strong> These are rollover buttons with some extra functionality. A more elaborate demo is running at <a href="http://schalk.ninja"><a href="http://schalk.ninja">http://schalk.ninja</a></a> but I don't presently have a repo available.</li>
+<li><strong><a href="http://uxco.re/components/calendar/">UXCore</a> (in Chinese):</strong> <a href="http://uxco.re/components/calendar/">UXCore</a> UXCore components built with React.</li>
+<li><strong><a href="https://reactstrap.github.io/">reactstrap</a>:</strong> Simple Bootstrap 4 components built with <a href="http://tether.io/">tether</a></li>
+<li><strong><a href="https://onsen.io/v2/react.html">Onsen UI React Components</a>:</strong> UI components for hybrid mobile apps with both Material Design for Android and flat design for iOS.</li>
+<li><strong><a href="https://github.com/zxdong262/react-pagenav">react-pagenav</a>:</strong> react pagenav component. [<a href="http://html5beta.com/apps/react-pagenav.html">demo</a>]</li>
+<li><strong><a href="https://github.com/Amazing-Space-Invader/react-amazing-grid">React Amazing Grid</a></strong> Flex grid with inline styles.</li>
+<li><strong><a href="https://arendjr.github.io/selectivity/">Selectivity</a>:</strong> Modular and light-weight selection library.</li>
+<li><strong><a href="https://github.com/marionebl/react-jogwheel">react-jogwheel</a></strong>: Take control of your CSS keyframe animations with React</li>
+<li><strong><a href="http://wijmo.com/blog/how-to-use-wijmo-controls-in-reactjs-apps/">Wijmo React Interop</a></strong>: How to use Wijmo controls in ReactJS apps.</li>
+<li><strong><a href="http://demos.wijmo.com/5/React/FlexGridIntro/FlexGridIntro/">Wijmo FlexGrid for React</a></strong>: A high-performance datagrid that is small and extensible with ReactJS support.</li>
+<li><strong><a href="http://demos.wijmo.com/5/React/FlexChartIntro/FlexChartIntro/">Wijmo FlexChart for React</a></strong>: A full-featured chart control with ReactJS support.</li>
+<li><strong><a href="http://demos.wijmo.com/5/React/InputIntro/InputIntro/">Wijmo Input controls for React</a></strong>: A set of form input controls (AutoComplete, InputDate, InputNumber, InputMask, etc) with ReactJS support.</li>
+<li><strong><a href="http://demos.wijmo.com/5/React/GaugeIntro/GaugeIntro/">Wijmo Gauges for React</a></strong>: Linear and radial gauges and a bullet graph with ReactJS support.</li>
+<li><strong><a href="http://react.semantic-ui.com/">Semantic-ui</a></strong>: The official Semantic-UI-React integration, Advanced components and declarative UI.</li>
+<li><strong><a href="https://www.npmjs.com/package/markdown-to-jsx">markdown-to-jsx</a></strong>: compiles markdown into safe React JSX without using dangerous escape hatches</li>
+<li><strong><a href="https://github.com/kirillstepkin/chartify">chartify</a></strong>: Ultra lightweight and customizable React.js chart component</li>
+<li><strong><a href="https://www.npmjs.com/package/react-sigma">react-sigma</a></strong>: Lightweight but powerful library for drawing network graphs</li>
+</ul>
+<h3 id="reactreact_native">React生态：React Native<a class="headerlink" href="#reactreact_native" title="Permanent link">&para;</a></h3>
+<p><a href="https://facebook.github.io/react-native/">React Native</a> 是一个可以让你仅仅使用JS就能写跨平台移动应用的库。</p>
+<p>写法与写React非常类似。同时可以结合Native的代码一起构建Native Application。</p>
+<div class="codehilite"><pre><span></span>import React, { Component } from &#39;react&#39;;
+import { Text, View } from &#39;react-native&#39;;
+
+class WhyReactNativeIsSoGreat extends Component {
+  render() {
+    return (
+      &lt;View&gt;
+        &lt;Text&gt;
+          If you like React on the web, you&#39;ll like React Native.
+        &lt;/Text&gt;
+        &lt;Text&gt;
+          You just use native components like &#39;View&#39; and &#39;Text&#39;,
+          instead of web components like &#39;div&#39; and &#39;span&#39;.
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    );
+  }
+}
+</pre></div>
+
+<div class="codehilite"><pre><span></span>import React, { Component } from &#39;react&#39;;
+import { Image, ScrollView, Text } from &#39;react-native&#39;;
+
+class AwkwardScrollingImageWithText extends Component {
+  render() {
+    return (
+      &lt;ScrollView&gt;
+        &lt;Image source={{uri: &#39;https://i.chzbgr.com/full/7345954048/h7E2C65F9/&#39;}} /&gt;
+        &lt;Text&gt;
+          On iOS, a React Native ScrollView uses a native UIScrollView.
+          On Android, it uses a native ScrollView.
+
+          On iOS, a React Native Image uses a native UIImageView.
+          On Android, it uses a native ImageView.
+
+          React Native wraps the fundamental native components, giving you
+          the performance of a native app, plus the clean design of React.
+        &lt;/Text&gt;
+      &lt;/ScrollView&gt;
+    );
+  }
+}
+</pre></div>
+
+<h2 id="_1">服务端渲染<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>前端框架的运行时是在前端进行的。也就是说从页面加载完成，到用户看到完整的页面，中间有一个执行过程，而这个执行时间的长短，跟应用的复杂度有关，也跟框架的实现方式有关。React的渲染时间与其他框架的渲染时间，对比如下：</p>
+<p><img alt="" src="https://camo.githubusercontent.com/098f7ef99f6121e377868dbee21d95f657e3e8f8/687474703a2f2f6176616c6f6e6a732e636f64696e672e6d652f7374796c65732f706572666f726d616e63652e6a7067" /></p>
+<blockquote>
+<p>from <a href="https://github.com/RubyLouvre/avalon">avalon</a></p>
+</blockquote>
+<p>直观的体验就是，如果渲染时间过长，会有一种白屏或卡顿的感觉。</p>
+<p>服务端渲染，就是这个问题的一种解决方案。我们再看一下前端渲染存在的其他问题。</p>
+<h3 id="_2">前端渲染存在的问题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://nerds.airbnb.com/wp-content/uploads/2013/11/isomorphic-client-side-mvc.png" /></p>
+<ul>
+<li>SEO问题</li>
+<li>性能问题（加载时间、打包大小、解析渲染等）</li>
+</ul>
+<h3 id="universal_app">Universal app<a class="headerlink" href="#universal_app" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Isomorphism</strong> is the functional aspect of seamlessly switching between client- and server-side rendering without losing state. <strong>Universal</strong> is a term used to emphasize the fact that a particular piece of JavaScript code is able to run in multiple environments.</p>
+</blockquote>
+<p>Isomorphism: not losing state, rendering everywhere</p>
+<p>Universal: no duplication, example: <code>Lodash</code>, uesed everywhere</p>
+<h3 id="server_side_rendering">Server Side Rendering<a class="headerlink" href="#server_side_rendering" title="Permanent link">&para;</a></h3>
+<p><strong>React的做法</strong></p>
+<p>要思考的问题：</p>
+<ol>
+<li>路由问题</li>
+<li>状态问题</li>
+<li>数据预请求问题</li>
+</ol>
+<p>react的做法：</p>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">renderToString</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-dom/server&#39;</span><span class="p">;</span>
+</pre></div>
+
+<p>react + react-router + redux的做法：</p>
+<div class="codehilite"><pre><span></span>import { renderToString } from &#39;react-dom/server&#39;;
+
+// a peice of code
+renderToString(
+  &lt;Provider store={ store }&gt;
+    &lt;RouterContext { ...props } /&gt;
+  &lt;/Provider&gt;
+);
+
+// a peice of code
+match({ routes, location }, (error, redirectLocation, renderProps) =&gt; {
+  if (error) {
+    res.status(500).send(error.message);
+  } else if (redirectLocation) {
+    res.status(302).redirect(redirectLocation.pathname + redirectLocation.search);
+  } else if (renderProps) {
+    serverSideRender(
+      renderProps,
+      pugText,
+      store
+    ).then(function (html) {
+      res.status(200).send(html);
+    }, function (error2) {
+      res.status(500).send(JSON.stringify(error2));
+    });
+  } else {
+    res.status(404).send();
+  }
+});
+</pre></div>
+
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/hakimel/reveal.js/">HTML Presentation Framework: Reveal.js</a></li>
+<li><a href="https://objectpartners.com/2015/11/19/comparing-react-js-performance-vs-native-dom/">Comparing React.js performance vs. native DOM</a></li>
+<li><a href="http://web.jobbole.com/83164/">高性能JavaScript 重排与重绘</a></li>
+<li><a href="http://kb.cnblogs.com/page/169820/">浏览器的重绘与重排</a></li>
+<li><a href="https://gist.github.com/Raynos/8414846">Virtual DOM and diffing algorithm</a></li>
+<li><a href="https://github.com/Matt-Esch/virtual-dom">virtual-dom</a></li>
+<li><a href="http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/">Isomorphic JavaScript: The Future of Web Apps</a></li>
+<li><a href="https://medium.com/@ghengeveld/isomorphism-vs-universal-javascript-4b47fb481beb#.wkh0bwcze">Isomorphism vs Universal JavaScript</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../javascript/JS%E5%B8%B8%E8%A7%81%E5%A4%A7%E5%9D%91/" title="JS常见大坑" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                JS常见大坑
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../old/Quantization-and-Scaling/" title="Quantization and Scaling" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Quantization and Scaling
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/ghostbody" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
