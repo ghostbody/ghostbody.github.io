@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-09-27</lastmod>
+     <lastmod>2018-03-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -22,14 +22,30 @@
     
         
     <url>
+     <loc>/posts/algorithmn/prove-binary-search-is-better/</loc>
+     <lastmod>2018-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc></loc>
      <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/posts/front-end/share/React技术生态和服务端渲染/</loc>
-     <lastmod>2017-09-27</lastmod>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         

@@ -16,7 +16,7 @@
     
     
       
-        <title>JS的this什么鬼 - Ye Jiaqi Site</title>
+        <title>AngularJS源代码阅读(1) —— angularjs 沉思 - Ye Jiaqi Site</title>
       
     
     
@@ -79,11 +79,11 @@
                 </span>
               
                 <span class="md-header-nav__parent">
-                  javasctipt
+                  angular
                 </span>
               
             
-            JS的this什么鬼
+            AngularJS源代码阅读(1) —— angularjs 沉思
           
         </span>
       </div>
@@ -271,10 +271,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
     
     <label class="md-nav__link" for="nav-4-1">
       angular
@@ -290,11 +292,116 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../angular/AngularJS%E6%BA%90%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB%281%29/" title="AngularJS源代码阅读(1) —— angularjs 沉思" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        AngularJS源代码阅读(1) —— angularjs 沉思
+      </label>
+    
+    <a href="./" title="AngularJS源代码阅读(1) —— angularjs 沉思" class="md-nav__link md-nav__link--active">
       AngularJS源代码阅读(1) —— angularjs 沉思
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="前言" class="md-nav__link">
+    前言
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="时代浪潮" class="md-nav__link">
+    时代浪潮
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="偏见" class="md-nav__link">
+    偏见
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="我的偏见：回答，选择使用哪个前端框架是否重要？" class="md-nav__link">
+    我的偏见：回答，选择使用哪个前端框架是否重要？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="反思" class="md-nav__link">
+    反思
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angularjs" title="为什么要阅读angularjs的源代码？" class="md-nav__link">
+    为什么要阅读angularjs的源代码？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="我打算怎么阅读源代码？" class="md-nav__link">
+    我打算怎么阅读源代码？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="读懂：从核心概念出发，看实现方式和思想" class="md-nav__link">
+    读懂：从核心概念出发，看实现方式和思想
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="感悟：批判式地阅读和反思" class="md-nav__link">
+    感悟：批判式地阅读和反思
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mark" title="mark 参考阅读的地方" class="md-nav__link">
+    mark 参考阅读的地方
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -307,12 +414,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
     
     <label class="md-nav__link" for="nav-4-2">
       javasctipt
@@ -330,7 +435,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../JS%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS原型链什么鬼" class="md-nav__link">
+    <a href="../../javascript/JS%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS原型链什么鬼" class="md-nav__link">
       JS原型链什么鬼
     </a>
   </li>
@@ -342,7 +447,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../JS%E9%97%AD%E5%8C%85%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS闭包什么鬼" class="md-nav__link">
+    <a href="../../javascript/JS%E9%97%AD%E5%8C%85%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS闭包什么鬼" class="md-nav__link">
       JS闭包什么鬼
     </a>
   </li>
@@ -352,115 +457,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        JS的this什么鬼
-      </label>
-    
-    <a href="./" title="JS的this什么鬼" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../javascript/JS%E7%9A%84this%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS的this什么鬼" class="md-nav__link">
       JS的this什么鬼
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#this" title="对象方法中调用this" class="md-nav__link">
-    对象方法中调用this
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" title="函数内部使用" class="md-nav__link">
-    函数内部使用
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#new" title="new 当中进行使用" class="md-nav__link">
-    new 当中进行使用
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#callapply_bind_this" title="使用 call、apply 或 bind 改变 this" class="md-nav__link">
-    使用 call、apply 或 bind 改变 this
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="箭头函数" class="md-nav__link">
-    箭头函数
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="总结" class="md-nav__link">
-    总结
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#this_1" title="this丢失" class="md-nav__link">
-    this丢失
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" title="全局作用域污染" class="md-nav__link">
-    全局作用域污染
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" title="练习" class="md-nav__link">
-    练习
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -470,7 +471,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../JS%E5%B8%B8%E8%A7%81%E5%A4%A7%E5%9D%91/" title="JS常见大坑" class="md-nav__link">
+    <a href="../../javascript/JS%E5%B8%B8%E8%A7%81%E5%A4%A7%E5%9D%91/" title="JS常见大坑" class="md-nav__link">
       JS常见大坑
     </a>
   </li>
@@ -855,23 +856,65 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this" title="对象方法中调用this" class="md-nav__link">
-    对象方法中调用this
+  <a href="#_1" title="前言" class="md-nav__link">
+    前言
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" title="函数内部使用" class="md-nav__link">
-    函数内部使用
+  <a href="#_2" title="时代浪潮" class="md-nav__link">
+    时代浪潮
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="偏见" class="md-nav__link">
+    偏见
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="我的偏见：回答，选择使用哪个前端框架是否重要？" class="md-nav__link">
+    我的偏见：回答，选择使用哪个前端框架是否重要？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="反思" class="md-nav__link">
+    反思
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angularjs" title="为什么要阅读angularjs的源代码？" class="md-nav__link">
+    为什么要阅读angularjs的源代码？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="我打算怎么阅读源代码？" class="md-nav__link">
+    我打算怎么阅读源代码？
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#new" title="new 当中进行使用" class="md-nav__link">
-    new 当中进行使用
+  <a href="#_7" title="读懂：从核心概念出发，看实现方式和思想" class="md-nav__link">
+    读懂：从核心概念出发，看实现方式和思想
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="感悟：批判式地阅读和反思" class="md-nav__link">
+    感悟：批判式地阅读和反思
   </a>
   
 </li>
@@ -882,49 +925,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#callapply_bind_this" title="使用 call、apply 或 bind 改变 this" class="md-nav__link">
-    使用 call、apply 或 bind 改变 this
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="箭头函数" class="md-nav__link">
-    箭头函数
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="总结" class="md-nav__link">
-    总结
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#this_1" title="this丢失" class="md-nav__link">
-    this丢失
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" title="全局作用域污染" class="md-nav__link">
-    全局作用域污染
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" title="练习" class="md-nav__link">
-    练习
+  <a href="#mark" title="mark 参考阅读的地方" class="md-nav__link">
+    mark 参考阅读的地方
   </a>
   
 </li>
@@ -944,263 +946,110 @@
               
                 
                 
-                <h1 id="know_thisuse_this">Know this,use this!<a class="headerlink" href="#know_thisuse_this" title="Permanent link">&para;</a></h1>
-<p>摘录自：<a href="https://mp.weixin.qq.com/s?__biz=MzI4MzQxMzY5MQ==&amp;mid=2247483781&amp;idx=1&amp;sn=f4b664e2d0e7db327d0f0cdd60e43e93&amp;mpshare=1&amp;scene=1&amp;srcid=0905AtkpBcgaqKV11awXnx1p#rd">link</a></p>
+                <h1 id="angularjs1_angularjs">AngularJS源代码阅读(1) angularjs 沉思<a class="headerlink" href="#angularjs1_angularjs" title="Permanent link">&para;</a></h1>
+<p><img src="/posts/front-end/angular/01-angularjs.png"></p>
+<h2 id="_1">前言<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>由于团队前后端分离选型比较早，工作中一直使用Angularjs进行web前端开发。在Angularjs一出来的时代，是红极一时的明星框架。他开创了前端一个新的时代。对比团队在之前使用Jquery+Bootstrap的年代时候的开发技术，Angularjs让团队的开发效率大大提高。</p>
+<p>在Angularjs极盛一时的年代，对于SPA(single page application)首选的框架就是angularjs。当你还在写JQuery的时候，为各种dom操作苦恼的时候，Angularjs的helloworld例子会让你眼前一亮。紧接着，双向数据绑定、视图和数据模型自动更新、依赖注入、服务化以及最让人心动的指令（directive）都让人怦然心动，重新认识前端开发。</p>
+<h2 id="_2">时代浪潮<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>今天，是2018年3月17日。从angularjs开发到现在已经8年多了。在这期间，特别是最近，前端界的发展可谓是汹涌澎湃、日新月异。目前我们日常听到的框架有以下几个:</p>
+<p><img alt="" src="../../../../posts/front-end/angular/03-react-angular-vue.png" /></p>
+<ul>
+<li>React</li>
+<li>Vue</li>
+<li>Anuglar</li>
+</ul>
+<p>对于这些框架的评价，在社区中有很多各种各样的说法。也有不少商业互喷的，张口就说抄袭我的之类的。而对于angularjs这个框架，则是一个饱受人们诟病的、被批评最多的以及“被抛弃”的前端框架。</p>
+<p><img alt="" src="../../../../posts/front-end/angular/04-angular-run-to-react.png" /></p>
+<h2 id="_3">偏见<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>接触过一些前端的从业者、或者是社区人员包括我自身在内，对于angularjs这个框架都存在不少的差评。当工作的项目组提供重构想法的时候，我首先提出了强烈地替换框架的想法。甚至乎连Google大佬，都直接放弃了他的“先天不足”的angularjs儿子，转而生了一个“更有才华”的“二胎”——angular2+。虽然官方在迁移框架上花了很大的心思，但是也不能弥补“生态”的破坏和旧框架使用者的痛苦。</p>
+<p>在看到别的大佬们都开始写vue，并且拥有先进的前端开发工具、具备超级爽的开发体验之后，感觉非常落寞，无缘于这个精彩的前端发展时代。</p>
+<p><img alt="" src="../../../../posts/front-end/angular/02-juewang.png" /></p>
+<h2 id="_4">我的偏见：回答，选择使用哪个前端框架是否重要？<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>经过仔细思考，我的回答：重要！非常重要！不可否认的重要！</p>
+<p>我反对继续在团队推广使用angularjs（angular 1.x）的主要原因：</p>
+<ul>
+<li>生态系统：<ul>
+<li>先进的UI框架（比如antd）、技术对angularjs的支持程度远不及angular2、react、vue的程度，或者直接就不支持angularjs。难以整合先进技术。</li>
+<li>社区：<strong>我们甚至没有很便捷的办法，使用开源社区提供的ant design组件。angularjs出现新的问题，或者发现bug，修复的速度会越来越慢，且google把大部分angularjs开发全部都调走去开发angular</strong>。新版本，届时angularjs将进入为期4年的LTS。LTS结束之后，意味着angularjs的真正过时。大家都去搞angular2，vue，react了，angular的大佬一直邀请（催促）我们大家，赶紧上angular2的车。</li>
+</ul>
+</li>
+<li>
+<p>人员：</p>
+<ul>
+<li>对于前端团队：AngularJS 的流行度，是否能保证我们能足够容易地招到会 AngularJS 的人，愿意写angularjs的人？</li>
+<li>对于非前端专业团队，但是需要进行前端开发的：angularjs复杂的、over-engineered的概念是否能够让大部分人员迅速投入到前端开发（还要考虑不断新来的人员），并且满足产品的大部分需求？</li>
+</ul>
+</li>
+<li>
+<p>框架自身缺陷：</p>
+<ul>
+<li>谷歌的抛弃：虽然目前angularjs（angular 1.x）仍然有在维护，主要是bug修复。如果angularjs（angular 1.x）不是有严重缺陷，google的开发人员不会毫不留情的抛弃，将整套框架重写且拒绝向前兼容。我觉得谷歌的angular产品欠了全世界程曾经痴迷追求angular的程序员（比如我 = =）</li>
+<li>执行效率低下，2000个watcher以上就会出现明显的卡顿</li>
+<li>不支持SSR</li>
+<li>假的angular.module, 全都是全局的泡沫，根本没有隔离</li>
+<li>复杂的，在中小型应用中，根本不需要的概念：<ul>
+<li>组件的隐式引用，在html中使用的组件不需要进行依赖注入或者显式引用</li>
+<li>service、factory、provider 多余的概念，很多时候用不上</li>
+<li>让新人非常迷惑的 directive里面的controller，link，compile函数</li>
+</ul>
+</li>
+<li>与很多新技术的隔阂，导致很难、或者说我们需要做很大努力去引入新技术<ul>
+<li>模块化：最蛋疼的是angularjs自带的angular.module是坑中之王</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>个人认为，angularjs（angular 1.x）：</p>
+<ul>
+<li>不应该继续被推广，老系统继续进行维护</li>
+<li>新项目，如cdn的前端项目使用vue作为开发框架。作为部门前端开发经验比较多的我们，在很大程度上应该某种程度上给予vue的相关支持，并且形成技术规范。</li>
+</ul>
+<h2 id="_5">反思<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>我思考的一些问题。</p>
+<ul>
+<li>套用某大佬的话：一个之前2015用angular写的应用，难道在2018就不能运行？—— 否</li>
+<li>angularjs真的这么差吗？我真的深入了解他吗？</li>
+<li>我有没有办法通过更加深入了解这个框架，以及其全新的angular2，享受生态系统提供的好处</li>
+<li>我是否能够无缝引入现代的前端开发技术，比如ES6、webpack等？</li>
+<li>我能否对angularjs的逻辑、概念做抽象，做到web框架无关？</li>
+</ul>
+<p>我认为能在当时做出这个框架，并且火起来，在其中必定有闪耀之处。我们不能带着过分的偏见对待技术的发展。</p>
 <blockquote>
-<p>this应该是一个讨论了很久的话题了。其中，关于this的文章，在很多的博客当中也有很多介绍，但是，以前我都是一知半解的去了解它，就是看博客当中，只介绍了一些情况下的 this 的使用方式，但是也并没有自己去做过总结。刚好是在掘金当中有看到一篇关于this的一些详细文章，文末会附上链接以及英文原文，这里纯粹是自己进行一个总结，以后方便自己进行回顾以及加深印象。希望这篇文章对于你了解this有一定的帮助，文末还有一些练习题噢~希望真的对你们有帮助。(因为写项目过程中，一直被 this 坑过，却找了很久的 bug ，我真是 乐了狗)</p>
+<p>尤大：我们是站在巨人的肩膀上的
+我：angularjs其实是巨人的一部分</p>
 </blockquote>
-<p>在了解this之前，相信大家都应该会知道作用域这个知识点的存在，函数在创建之后，会构建自己的执行环境以及作用域，这是一开始就确定了。但是实际的上下文(context)环境，也可以理解为就是this，它是动态确定的，即在函数运行时才确定this所指向的对象，而非声明时所指向的对象。</p>
-<p>关于this，总结起来，主要有以下几个途径能够被运用到。</p>
-<h2 id="this">对象方法中调用this<a class="headerlink" href="#this" title="Permanent link">&para;</a></h2>
-<p>如果函数被当中对象的一个方法进行调用，则this值指向该对象。
-<div class="codehilite"><pre><span></span>var person = {
-    name: &#39;Alice&#39;,
-    sayName: function() {
-        alert(&#39;welcome &#39; + this.name);
-    }
-}
-
-person.sayName();    // this == person, alert: &#39;welcome Alice&#39;
-</pre></div>
-在这里，函数的this指向该对象(即 person)；但是有一点需要注意，就是当对象的方法被赋予给一个变量时，其则变为了函数触发，此时的this为 window 或者 undefined(严格模式下)，如下：
-<div class="codehilite"><pre><span></span>var name = &#39;Bob&#39;;
-var person;    // 即上面的定义，此不拓展详细，直接使用
-
-var say = person.sayName;    // this == window || undefined
-say();    // &#39;welcome Bob&#39; || throw an error: Cannot read property &#39;name&#39; of undefined(...)
-</pre></div></p>
-<h2 id="_1">函数内部使用<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>在函数内部当中使用了 this，即函数被当做方法使用，不同于 1 当中作为对象的方法使用，此时调用，是在全局作用域下进行调用，即在window下进行调用，由定义可以知道，在全局作用域下声明一个函数，其自动加为window的一个属性。this此时名正言顺的会指向window，严格模式下为 undefined
-<div class="codehilite"><pre><span></span>function sayThis() {
-    alert(this == window);// true
-}
-</pre></div>
-结合第一点，函数作为对象的一个方法使用，这里存在一个小坑，即闭包，啥是闭包，这个在这里就不扯开了，最简单的理解就是 Function that returns function，如果不理解什么是闭包的话，可以去翻翻 《JavaScript 高级程序设计》第七章关于闭包的相关内容。第一点当中存在一个小坑，就是将对象的方法赋予给一个变量的时候，其变为函数触发，此时的 this 实际上是指向 window(非严格模式)。</p>
-<p>那么，当函数中返回一个函数，此时在对象当中调用该方法，其就相当于是函数触发，此时的 this，在不做任何上下文绑定的前提之下，其指向 window(非严格模式)。
-<div class="codehilite"><pre><span></span>var name = &#39;Bob&#39;,
-    person = {
-        name: &#39;Alice&#39;,
-        sayName: function() {
-            console.log(this === person);    // true
-            return function() {
-                console.log(this === person);    // false
-                console.log(this === window);    // true
-                console.log(this.name);          // Bob
-            };
-        }
-    };
-
-person.sayName()();
-</pre></div>
-当然，要解决这个问题的方法，很简单，就是给他绑定一个上下文。
-<div class="codehilite"><pre><span></span>var name = &#39;Bob&#39;,
-    person = {
-        name: &#39;Alice&#39;,
-        sayName: function() {
-            console.log(this === person);// true
-            return function() {
-                console.log(this === person);    // true
-                console.log(this === window);    // false
-                console.log(this.name);          // Alice
-            }.bind(this);
-        }
-    };
-
-person.sayName()();
-</pre></div></p>
-<h3 id="new">new 当中进行使用<a class="headerlink" href="#new" title="Permanent link">&para;</a></h3>
-<p>我们知道在使用 new 方法创建对象的时候，会经过如下这些个过程：
-创建对象，将 this 值赋予新的对象
-调用构造函数，为 this 添加属性和方法
-返回 this 给当前的对象
-<div class="codehilite"><pre><span></span>function Person(name, age) {
-    this.name = name;
-    this.age = age;
-}
-
-var person1 = new Person(&#39;Alice&#39;, 29);
-console.log(person1.name);    // Alice
-</pre></div>
-这里要记得使用 new 运算符，否则，其只能算是普通的调用，而不是创建一个新的实例对象。而当做普通函数调用的话，实际上即 第 2 种情况下，对函数普通调用，此时的 this 指向 window
-<div class="codehilite"><pre><span></span>function Person(name, age) {
-    this.name = name;
-    this.age = age;
-    return this;
-}
-
-var person1 = Person(&#39;Alice&#39;, 29);
-console.log(person1.name);    // Alice
-console.log(window.name);     // Alice
-console.log(person1 === window);    // true
-</pre></div>
-这是正常情况下，this 会正确返回并且指向该对象，但是在构造函数当中，如果返回了一个对象，那么 this 会指向返回的那个对象。
-<div class="codehilite"><pre><span></span>function Person(name, age) {
-    this.name = name;
-    this.age = age;
-    return {
-        name: &#39;Bob&#39;
-    };
-}
-
-var person1 = new Person(&#39;Alice&#39;);
-console.log(person1.name);    // Bobconsole.log(person1.age);// undefined
-</pre></div>
-题外话，类似的，联想到 var a = new Person()，则 a instanceof Person一定返回 true吗？留给你们想一想咯。</p>
-<h2 id="callapply_bind_this">使用 call、apply 或 bind 改变 this<a class="headerlink" href="#callapply_bind_this" title="Permanent link">&para;</a></h2>
-<p>在引用类型 Function当中，函数存在两个方法属性，call 和 apply，在 ECMAScript5当中，加入了 bind 方法。题外话，他们三者区别，应该都知道了吧，不知道的加紧补习呀。
-<div class="codehilite"><pre><span></span>var name = &#39;Bob&#39;;var person = {
-    name: &#39;Alice&#39;,
-    age: 29
-}
-
-function sayName() {
-    console.log(this.name);
-}
-
-sayName.call(person);    // Alice
-</pre></div>
-这里是使用了 call 方法来改变了 this的执行环境，至于使用 apply，效果一样，只是二者差别在于传入参数的不同。
-<div class="codehilite"><pre><span></span>func.call(context, arg1, arg2, ...)
-func.apply(context, [arg1, arg2, ...])
-</pre></div>
-使用 bind 方法进行上下文的改变，bind 方法与 call 和 apply有着本质的不同，其不同点是，bind()函数返回的是一个新的函数，即方法，而后两者则都是立即执行函数，使用的时候即调用了该函数，返回方法操作的结果。</p>
-<p>并且，使用 bind()方法创建的 上下文，其为永久的上下文环境，不可修改，即使是使用 call 或者 apply方法，也无法修改 this 所指向的值。
-<div class="codehilite"><pre><span></span>var name = &#39;Bob&#39;;
-var person = {
-    name: &#39;Alice&#39;,
-    age: 29
-}
-function sayName() {
-    console.log(this.name);
-}
-
-var say = sayName.bind(person);
-say();        // Alice
-sayName();    // Bob
-</pre></div></p>
-<h2 id="_2">箭头函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>箭头函数并不创建其自身的上下文，其上下文 this，取决于其在定义时的外部函数。</p>
-<p>并且，箭头函数拥有静态的上下文，即一次绑定之后，便不可再修改，即使是用了 第 4 种用途当中的改变上下文的方法，也不为之动容。
-<div class="codehilite"><pre><span></span>var num = [1, 2, 3];
-
-(function() {
-    var showNumber = () =&gt; {
-        console.log(this === num);    // true
-        console.log(this);            // [1, 2, 3]
-    }
-    console.log(this === num);        // true
-    showNumber();                     // true &amp;&amp; [1, 2, 3]
-    showNumber.call([1, 2]);          // true &amp;&amp; [1, 2, 3]
-    showNumber.apply([1, 2]);         // true &amp;&amp; [1, 2, 3]
-    showNumber.bind([1, 2])();        // true &amp;&amp; [1, 2, 3]
-}).call(num);
-</pre></div>
-由于箭头函数的外部决定上下文以及静态上下文等的特性，不太建议使用箭头函数在全局环境下来定义方法，因为不能通过其他方法改变其上下文。这很蛋疼。
-<div class="codehilite"><pre><span></span>function Period (hours, minutes) {    this.hours = hours;
-    this.minutes = minutes;
-}
-Period.prototype.format = () =&gt; {
-    console.log(this === window);    // =&gt; true
-    return this.hours + &#39; hours and &#39; + this.minutes + &#39; minutes&#39;;
-};
-var walkPeriod = new Period(2, 30);
-console.log(walkPeriod.hours);
-walkPeriod.format();    // =&gt; &#39;undefined hours and undefined minutes&#39;
-</pre></div>
-此时的 this 实际上是指向了 window，所以 this.hours 和 this.minutes实际上没有声明的，故为 undefined。</p>
-<p>在全局环境下，还是选用 函数表达式 来进行函数的定义，可以保证正确的上下文环境
-<div class="codehilite"><pre><span></span>function Period (hours, minutes) {
-    this.hours = hours;
-    this.minutes = minutes;
-}
-Period.prototype.format = function() {
-    console.log(this === walkPeriod);    // =&gt; true
-    return this.hours + &#39; hours and &#39; + this.minutes + &#39; minutes&#39;;
-};
-var walkPeriod = new Period(2, 30);
-walkPeriod.format(); // &#39;2 hours and 30 minutes&#39;
-</pre></div></p>
-<h2 id="_3">总结<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>this可以说是javascript设计给大家的坑，他的指向令人迷惑，饱受意义。作为前端开发，需要充分理解this的含义，以及他在不同情形下的指向，才能真正避免踩坑。总结一下最常见的坑：</p>
-<h3 id="this_1">this丢失<a class="headerlink" href="#this_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;gzyejiaqi&#39;</span><span class="p">,</span>
-  <span class="nx">sayName</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;My name is &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
-    <span class="p">})</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-<p>此时发生了this丢失的问题，</p>
-<p>解决方案1: that</p>
-<div class="codehilite"><pre><span></span>person = {
-  name: &#39;gzyejiaqi&#39;,
-  sayName: function () {
-    var that = this  // 保存this
-    setTimeout(function() {
-      console.log(&#39;My name is &#39; + that.name)
-    })
-  }
-}
-
-person.sayName()  // &quot;my name is gzyejiaqi&quot;
-</pre></div>
-
-<p>解决办法2: 箭头函数</p>
-<div class="codehilite"><pre><span></span>person = {
-  name: &#39;gzyejiaqi&#39;,
-  sayName: function () {
-    setTimeout(() =&gt; {
-      console.log(&#39;My name is &#39; + this.name)
-    })
-  }
-}
-
-person.sayName()  // &quot;my name is gzyejiaqi&quot;
-</pre></div>
-
-<h3 id="_4">全局作用域污染<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p><div class="codehilite"><pre><span></span>function Person(name, age) {
-    this.name = name;
-    this.age = age;
-}
-</pre></div>
-上述函数应该通过new进行实例化，但是注意的是，这个函数同样可以使用普通函数的执行方式进行执行。<strong>这样执行的后果是，this指向的是全局命名空间(browser下是window, node下是global)，会产生全局命名污染</strong>。这也是javascript饱受批评的一点。</p>
-<div class="codehilite"><pre><span></span>Person(&#39;gzyejiaqi&#39;. &#39;18&#39;)
-console.log(window.name)  // gzyejiaqi
-console.log(window.age)  // 18
-</pre></div>
-
-<h2 id="_5">练习<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>// 练习1
-var func = (function(a) {
-    this.a = a;
-    return function(a) {
-        a += this.a;
-        return a;
-    }
-})(function(a, b) {
-    return a;
-}(1, 2))
-
-func(4) // ?
-// 练习2
-var x = 10,
-    foo = {
-        x: 20,
-        bar: function() {
-            var x = 30;
-            return this.x;
-        }
-    }
-
-console.log(foo.bar());
-console.log((foo.bar)());
-console.log((foo.bar = foo.bar)());
-console.log((foo.bar, foo.bar)());
-</pre></div>
+<h2 id="angularjs">为什么要阅读angularjs的源代码？<a class="headerlink" href="#angularjs" title="Permanent link">&para;</a></h2>
+<p>带着上述思考，一方面更加学习代码框架的设计思想实现、另一方面更加了解框架考虑升级</p>
+<h2 id="_6">我打算怎么阅读源代码？<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_7">读懂：从核心概念出发，看实现方式和思想<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>在阅读源代码同时，打开angularjs的api文档，顺便过一下那些复杂的概念。</p>
+<p>阅读时候，主要寻找框架核心的东西。</p>
+<ul>
+<li>Scope、Provider等</li>
+<li>angular 是如何启动的</li>
+<li>双向数据绑定</li>
+<li>如何编译模板</li>
+<li>各个常用的directive的实现</li>
+</ul>
+<h3 id="_8">感悟：批判式地阅读和反思<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>为什么给用户如此多的概念，那些概念是over-engineered的</li>
+<li>性能问题的根因调查，到底digest是怎么写的</li>
+<li>设计的接口是否合理</li>
+<li>创新：思考如何结合实际项目，将老框架的angularjs迁移到新的angular</li>
+<li>以及其他问题</li>
+</ul>
+<h2 id="mark">mark 参考阅读的地方<a class="headerlink" href="#mark" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.angularjs.org/">angularjs api docs</a></li>
+<li>迁移到新技术，增强模块化：<a href="https://github.com/xufei/blog/issues/29">angular1,x 沉思录：AngularJS和ES6的结合</a></li>
+<li><a href="https://github.com/kuitos/kuitos.github.io/issues/34">angular1.x + ES 风格指南</a></li>
+<li><a href="https://github.com/xufei/blog/issues/8">关于angular2 的一切</a></li>
+<li><a href="https://github.com/xufei/blog/issues/17">angular1.x 沉思录: 模块机制</a></li>
+<li><a href="https://www.quirksmode.org/blog/archives/2015/01/the_problem_wit.html">The Problem of Angular</a></li>
+</ul>
                 
                   
                 
@@ -1219,7 +1068,7 @@ console.log((foo.bar, foo.bar)());
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../JS%E9%97%AD%E5%8C%85%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS闭包什么鬼" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../../algorithmn/prove-binary-search-is-better/" title="证明二分查找优于三分查找、四分查找" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1228,19 +1077,19 @@ console.log((foo.bar, foo.bar)());
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                JS闭包什么鬼
+                证明二分查找优于三分查找、四分查找
               </span>
             </div>
           </a>
         
         
-          <a href="../JS%E5%B8%B8%E8%A7%81%E5%A4%A7%E5%9D%91/" title="JS常见大坑" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../javascript/JS%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS原型链什么鬼" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                JS常见大坑
+                JS原型链什么鬼
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
