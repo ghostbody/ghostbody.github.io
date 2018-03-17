@@ -23,7 +23,7 @@ for (var i = 0; i < 10; i++) {
 这个函数看上去应该输出0 , 1 , 2, 3, 4, 5, 6, 7, 8, 9，但是实际上执行会发现输出了10个10
 
 为什么？
-
+****
 ## 闭包
 
 js闭包最简单的解释：函数x返回函数y，y中所有的外层变量（包括x的变量）形成闭包。在y中可以使用外层所有的变量，并且y引用的x中的变量将会与函数y共存亡，即使x已经运行完毕被销毁。
@@ -42,7 +42,7 @@ function inner
 
 Example:
 
-```
+```js
 function p () {
   print x
 }
@@ -95,7 +95,69 @@ count() // Uncaught ReferenceError: value is not defined
 
 ## 函数作用域
 
-## 应用
+要点：
+
+- 每个javascript的**函数**会产生一个新的作用域
+- 作用域决定变量的可访问性
+- 在一个函数内部定义的局部变量是不能在函数外访问的
+- 相反，在一个函数内定义的变量可以在函数内被访问
+
+Example：
+
+```js
+function f () {
+  var x = 1
+  // 函数内部可以访问到x
+  function g () {
+    var y = x  // 函数内部的函数也可以访问到变量
+  }
+  console.log(x)
+}
+```
+
+### var变量提升
+
+注意`var`声明的变量具有变量提升的特性，在函数作用域中无论在何处声明，处处可使用。但是按照规范一般都先声明再进行使用。
+
+Example：
+
+```js
+function f () {
+  // 变量提升，此处不是全局变量
+  x = 1
+  console.log(x)
+  var x
+}
+```
+
+### var非块级作用域
+
+看以下例子
+
+```js
+function f () {
+  var arr = [1,2,3,4,5]
+  for (var x of arr) {
+    // loop
+  }
+  console.log(x) // 5
+
+  if (true) {
+    var y = 5  // 不存在块级作用域
+  }
+  console.log(y) // 5
+}
+```
+
+### es6 let的块级作用域
+
+## 解决问题
+
+循环异步调用问题解决
+
+### 使用var, 函数作用域
+
+### 使用let, 块级作用域
 
 ## 内存泄漏问题
 

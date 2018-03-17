@@ -4,12 +4,18 @@ pages:
   - 架构相关:
     - 设计模式:
         - MVC解读: 'posts/architecture/design-pattern/MVC解读.md'
+  - 算法:
+    - 证明二分查找优于三分查找、四分查找: 'posts/algorithmn/prove-binary-search-is-better.md'
   - 大前端:
+    - angular:
+        - AngularJS源代码阅读(1) —— angularjs 沉思: 'posts/front-end/angular/AngularJS源代码阅读(1).md'
     - javasctipt:
         - JS原型链什么鬼: 'posts/front-end/javascript/JS原型链什么鬼.md'
         - JS闭包什么鬼: 'posts/front-end/javascript/JS闭包什么鬼.md'
         - JS的this什么鬼: 'posts/front-end/javascript/JS的this什么鬼.md'
-    - React技术生态和服务端渲染: 'posts/front-end/share/React技术生态和服务端渲染.md'
+        - JS常见大坑: 'posts/front-end/javascript/JS常见大坑.md'
+    - 分享会:
+        - 吴家荣大佬-React技术生态和服务端渲染: 'posts/front-end/share/React技术生态和服务端渲染.md'
   - 旧文档:
     - 数图作业:
         - Quantization and Scaling: 'posts/old/Quantization-and-Scaling.md'

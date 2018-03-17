@@ -8,6 +8,11 @@
 
 Software Engineer
 
+- 一个经常写前端的假运维
+- 写写前端之后，又写写后端的传说中的全栈
+- 一个喜欢Python的优雅男人
+- 算法不是很好，正在努力补习
+
 ## Contact Me
 
 - Email : [423093883@qq.com](mailto:423093883@qq.com)
