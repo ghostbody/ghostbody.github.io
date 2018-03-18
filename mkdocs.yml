@@ -9,6 +9,7 @@ pages:
   - 大前端:
     - angular:
         - AngularJS源代码阅读(1) —— angularjs 沉思: 'posts/front-end/angular/AngularJS源代码阅读(1).md'
+        - AngularJS源代码阅读(2) —— 项目结构: 'posts/front-end/angular/AngularJS源代码阅读(2).md'
     - javasctipt:
         - JS原型链什么鬼: 'posts/front-end/javascript/JS原型链什么鬼.md'
         - JS闭包什么鬼: 'posts/front-end/javascript/JS闭包什么鬼.md'
