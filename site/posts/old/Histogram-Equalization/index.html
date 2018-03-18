@@ -1,0 +1,1114 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
+    
+    
+      
+        <title>Histogram Equalization - Ye Jiaqi Site</title>
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-769c285a91.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/style.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../../.." title="Ye Jiaqi Site" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  旧文档
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  数图作业
+                </span>
+              
+            
+            Histogram Equalization
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Ye Jiaqi Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      架构相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        架构相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      设计模式
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        设计模式
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/design-pattern/MVC%E8%A7%A3%E8%AF%BB/" title="MVC解读" class="md-nav__link">
+      MVC解读
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithmn/prove-binary-search-is-better/" title="证明二分查找优于三分查找、四分查找" class="md-nav__link">
+      证明二分查找优于三分查找、四分查找
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      大前端
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        大前端
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      angular
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        angular
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/angular/AngularJS%E6%BA%90%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB%281%29/" title="AngularJS源代码阅读(1) —— angularjs 沉思" class="md-nav__link">
+      AngularJS源代码阅读(1) —— angularjs 沉思
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/angular/AngularJS%E6%BA%90%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB%282%29/" title="AngularJS源代码阅读(2) —— 项目结构" class="md-nav__link">
+      AngularJS源代码阅读(2) —— 项目结构
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      javasctipt
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        javasctipt
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/javascript/JS%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS原型链什么鬼" class="md-nav__link">
+      JS原型链什么鬼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/javascript/JS%E9%97%AD%E5%8C%85%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS闭包什么鬼" class="md-nav__link">
+      JS闭包什么鬼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/javascript/JS%E7%9A%84this%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS的this什么鬼" class="md-nav__link">
+      JS的this什么鬼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/javascript/JS%E5%B8%B8%E8%A7%81%E5%A4%A7%E5%9D%91/" title="JS常见大坑" class="md-nav__link">
+      JS常见大坑
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      范式
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        范式
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/paradigms/pure-function/" title="函数式编程中的纯函数" class="md-nav__link">
+      函数式编程中的纯函数
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      调研
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        调研
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/survey/ant-design-componets-management/" title="antd生态下的react组件管理" class="md-nav__link">
+      antd生态下的react组件管理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      分享会
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        分享会
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/share/React%E6%8A%80%E6%9C%AF%E7%94%9F%E6%80%81%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93/" title="吴家荣大佬-React技术生态和服务端渲染" class="md-nav__link">
+      吴家荣大佬-React技术生态和服务端渲染
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      旧文档
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        旧文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1" checked>
+    
+    <label class="md-nav__link" for="nav-5-1">
+      数图作业
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        数图作业
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Quantization-and-Scaling/" title="Quantization and Scaling" class="md-nav__link">
+      Quantization and Scaling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Filtering%281%29/" title="Filtering1" class="md-nav__link">
+      Filtering1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Filtering%282%29/" title="Filtering2" class="md-nav__link">
+      Filtering2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Histogram Equalization
+      </label>
+    
+    <a href="./" title="Histogram Equalization" class="md-nav__link md-nav__link--active">
+      Histogram Equalization
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#histogram_equalization_in_color_domain" title="Histogram Equalization in Color Domain:" class="md-nav__link">
+    Histogram Equalization in Color Domain:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" title="Github:" class="md-nav__link">
+    Github:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference:" class="md-nav__link">
+    Reference:
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fourier-Transformation/" title="Fourier Transformation" class="md-nav__link">
+      Fourier Transformation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stero-matching/" title="Stero Matching" class="md-nav__link">
+      Stero Matching
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+    
+    <label class="md-nav__link" for="nav-5-2">
+      以前的项目
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-2">
+        以前的项目
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../YOJ/" title="YOJ" class="md-nav__link">
+      YOJ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../simple-sinew/" title="Simple Sinew" class="md-nav__link">
+      Simple Sinew
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Floater/" title="Floater" class="md-nav__link">
+      Floater
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Asentence/" title="Asentence" class="md-nav__link">
+      Asentence
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      出过的习题
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        出过的习题
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FlowChart-and-PseudoCode/" title="程序流程图和伪代码" class="md-nav__link">
+      程序流程图和伪代码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Memory-Error-Summary-in-c%2B%2B/" title="内存错误总结" class="md-nav__link">
+      内存错误总结
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SimpleList/" title="简单链表" class="md-nav__link">
+      简单链表
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+    
+    <label class="md-nav__link" for="nav-5-4">
+      面经
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-4">
+        面经
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tencent-interview/" title="腾讯实习面试" class="md-nav__link">
+      腾讯实习面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Huawei-interview/" title="华为实习面试" class="md-nav__link">
+      华为实习面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Netease-interview/" title="网易实习面试" class="md-nav__link">
+      网易实习面试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#histogram_equalization_in_color_domain" title="Histogram Equalization in Color Domain:" class="md-nav__link">
+    Histogram Equalization in Color Domain:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" title="Github:" class="md-nav__link">
+    Github:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference:" class="md-nav__link">
+    Reference:
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Histogram Equalization</h1>
+                
+                <p>Image filtering, in as much as possible to retain the details of image under the target image noise suppression, is indispensable in image preprocessing operation, the treatment effect is good or bad will directly affect the validity and reliability of the subsequent image processing and analysis.</p>
+<p>Histogram equalization is a method in image processing of contrast adjustment using the image's histogram.</p>
+<p>Suppose that we have a image with histogram H1, our goal is to output a histogram of uniform distribution. In the process of uniforming, two conditions must be satisfied:</p>
+<ol>
+<li>The output function should be Non-Decreasing.</li>
+<li>The output function F' should satisfy  0 &lt;= F' &lt;= L-1 (L is the gray level of F)</li>
+</ol>
+<p>For continues function:</p>
+<span>\[
+  s = T(r) \  (0 \leq r \leq 1)
+\]</span><p>According to the two conditions, we have:</p>
+<span>\[
+  r = T^{-1}(s) \  (0 \leq s \leq 1)
+\]</span><p>According to probability theory:</p>
+<span>\[
+P_s(s) = P_r(r) |\frac{dr}{ds}|
+\]</span><p>We need to have a uniform distribution, so we let:</p>
+<span>\[
+  P_s(s) = 1
+\]</span><span>\[
+  \therefore |\frac {dr}{ds}| = |\frac {1}{P_r(r)}|
+\]</span><span>\[
+  P_r(r)dr = dT(r)
+\]</span><p>For T&reg;, there can be a possible answer:</p>
+<span>\[
+T(r) = \int_0^r P_r(\omega) d \omega
+\]</span><p>Now, we can get T&reg;, and T&reg; is exactly the cdf(cumulative distribution function).</p>
+<p><strong>Note that, in the condition of discrete, it may not work exactly.</strong></p>
+<p>Origin Image:</p>
+<p><img class="img-responsive"  src="https://github.com/ghostbody/Image-Processing/blob/master/project2/code/14.png?raw=true"></p>
+<p>Origin Histogram:</p>
+<p><img class="img-responsive"  src="https://github.com/ghostbody/Image-Processing/blob/master/project2/code/originHist.png?raw=true"></p>
+<p>After Equalization:</p>
+<p><img class="img-responsive"  src="https://github.com/ghostbody/Image-Processing/blob/master/project2/code/outImage.png?raw=true"></p>
+<p><img class="img-responsive"
+src="https://github.com/ghostbody/Image-Processing/blob/master/project2/code/newHist.png?raw=true"></p>
+<p>The result in fact looks better than the origin one.By this method, the brightness can be better distributed on the histogram. This can be used to enhance the contrast of the contrast without affecting the overall contrast, histogram equalization by effectively expanding the common brightness to achieve this function.</p>
+<p>Let’s put the origin image and the output image together.</p>
+<p>It strongly shows that the first image is much better than the second one since after the histogram equalization processing, the original relatively small pixel gray level will be allocated to other gray, the pixel is relatively concentrated, after processing gray range, contrast, large, clarity, so can effectively enhance the image.</p>
+<p>Histogram equalization is a method to adjust the contrast in the field of image processing. This method is usually used to increase the local contrast of many images, especially when the contrast of the useful data of the image is very close. By this method, the brightness can be better distributed on the histogram. This can be used to enhance the contrast of the contrast without affecting the overall contrast, histogram equalization by effectively expanding the common brightness to achieve this function.</p>
+<p><strong>Implement Details</strong></p>
+<p>The target to get a histogram equalization is the same to get a corresponding relation between gray_value_old and gray_value_new .
+The core algorithm of histogram equalization is to calculate such a table(array) for the image.</p>
+<span>\[
+s = T(r) = \sum_0^r p_r(i),0\leq r \leq 255
+\]</span><div class="codehilite"><pre><span></span>  fx[i] = 255 * sum([hist[j] for j in range(i+1)]) / (width * height)
+</pre></div>
+
+<p>Note that fx indicates the corresponding relation table(array) for the origin image. And sum is function to calculate the formula above.
+And also note that I implicitly do a scaling in the calculating.
+Next it’s very easy, just traverse the array and then assign the table value for the new image.</p>
+<div class="codehilite"><pre><span></span>  new_img[x, y] = fx[old_img[x, y]]
+</pre></div>
+
+<p>Happily , we got the histogram equalization result and then we can draw the histogram again and the result.</p>
+<p><br></p>
+<h2 id="histogram_equalization_in_color_domain">Histogram Equalization in Color Domain:<a class="headerlink" href="#histogram_equalization_in_color_domain" title="Permanent link">&para;</a></h2>
+<p>Color histogram equalization is actually the image of one or more color channels for gray histogram equalization operations, common in the following ways:</p>
+<p>Statistics of all RGB color channels of the histogram of the data and do a balanced operation, and then according to the balance of the mapping table to replace the G, B, R channel color value.</p>
+<p>R, G, B color channels of the data and do a balanced operation, and then according to the R, B, G mapping table to replace the R, G, B channel color value.</p>
+<p>Calculate the luminance channel by using the average value of the or the RGB, then calculate the histogram of the luminance channel and do a balanced operation, then replace the G, B, R channel color values by the mapping table.</p>
+<p>Histogram equalization is a non-linear process. Channel splitting and equalizing each channel separately is not the proper way for equalization of contrast. Equalization involves Intensity values of the image not the color components. So for a simple RGB color image, HE should not be applied individually on each channel. Rather, it should be applied such that intensity values are equalized without disturbing the color balance of the image. So, the first step is to convert the color space of the image from RGB into one of the color space which separates intensity values from color components.</p>
+<p>We can learn from it from another point.
+If process the R, G, B channels separately, it will only have the information from R,G,B separately. If we usethe whole average, it use all the information from R,G,B.</p>
+<p><strong>Reference:</strong></p>
+<p><em>From Wikipedia</em></p>
+<blockquote>
+<p>The above describes histogram equalization on a grayscale image. However it can also be used on color images by applying the same method separately to the Red, Green and Blue components of the RGB color values of the image. However, applying the same method on the Red, Green, and Blue components of an RGB image may yield dramatic changes in the image’s color balance since therelative distributions of the color channels change as a result of applying the algorithm. However, if the image is first converted to another color space, Lab color space, or HSL/HSV color space in particular, then the algorithm can be applied to the luminance or value channel without resulting in changes to the hue and saturation of the image.[4] There are several histogram equalization methods in 3D space. Trahanias and Venetsanopoulos applied histogram equalization in 3D color space[5]</p>
+<p>However, it results in “whitening” where the probability of bright pixels are higher than that of dark ones.[6] Han et al. proposed to use a new cdf defined by the iso-luminance plane, which results in uniform gray distribution.[7]</p>
+</blockquote>
+<p>Original Image:</p>
+<p><img class="img-responsive"
+src="https://github.com/ghostbody/Image-Processing/blob/master/project4/task3/me.jpg?raw=true"></p>
+<p>Histogram Equalization using independent histogram:</p>
+<p><img class="img-responsive"
+src="https://github.com/ghostbody/Image-Processing/blob/master/project4/task3/output1.png?raw=true"></p>
+<p>You can see, the image doesn't be enhanced. However, it become ugly.</p>
+<p>Histogram Equalization using average histogram:</p>
+<p><img class="img-responsive"
+src="https://github.com/ghostbody/Image-Processing/blob/master/project4/task3/output2.png?raw=true"></p>
+<p>You can also use HSI to do Histogram Equalization, which is a proper way.</p>
+<p><br></p>
+<p><strong>Suppose that you have performed histogram equalization on a digital image. Will a second pass of histogram equalization (on the histogram-equalized image) produce exactly the same result as the first pass?Prove your answer.</strong></p>
+<p>It is equivalent to all of the same number of pixels on the gray level, no matter how many times you have a number of histogram equalization, he has not changed.</p>
+<p>Prove:</p>
+<p>Assume that the first pass of histogram equalization result in gray level s.</p>
+<p>First Pass:</p>
+<span>\[
+s = T_1(r) = \int_0^r p_r(\omega)d\omega, 0\leq r \leq 1
+\]</span><p>According to probability theory:</p>
+<span>\[
+P_s(s) = P_r(r) \frac{dr}{ds}
+\]</span><p>Second Pass:</p>
+<span>\[
+t = \int_0^s P_s(\omega)d\omega, 0\leq s \leq 1
+\]</span><span>\[
+t = \int_0^r P_r(\omega)\frac{d\omega}{dr}dr = \int_0^r P_r(\omega)d\omega, 0\leq r \leq 1
+\]</span><p><span>\(<span>\(\therefore\)</span>\)</span> it's no sense to have a second pass histogram equalization</p>
+<p><br></p>
+<h2 id="github">Github:<a class="headerlink" href="#github" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/ghostbody/Image-Processing"><a href="https://github.com/ghostbody/Image-Processing">https://github.com/ghostbody/Image-Processing</a></a></p>
+<h2 id="reference">Reference:<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Acharya and Ray, Image Processing: Principles and Applications, Wiley-Interscience 2005 ISBN 0-471-71998-6</li>
+<li>Russ, The Image Processing Handbook: Fourth Edition, CRC 2002 ISBN 0-8493-2532-3</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Filtering%282%29/" title="Filtering2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Filtering2
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Fourier-Transformation/" title="Fourier Transformation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Fourier Transformation
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/ghostbody" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
