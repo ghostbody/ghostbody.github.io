@@ -16,7 +16,7 @@
     
     
       
-        <title>JS常见大坑 - Ye Jiaqi Site</title>
+        <title>AngularJS源代码阅读(2) —— 项目结构 - Ye Jiaqi Site</title>
       
     
     
@@ -79,11 +79,11 @@
                 </span>
               
                 <span class="md-header-nav__parent">
-                  javasctipt
+                  angular
                 </span>
               
             
-            JS常见大坑
+            AngularJS源代码阅读(2) —— 项目结构
           
         </span>
       </div>
@@ -271,10 +271,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
     
     <label class="md-nav__link" for="nav-4-1">
       angular
@@ -292,9 +294,64 @@
 
 
   <li class="md-nav__item">
-    <a href="../../angular/AngularJS%E6%BA%90%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB%281%29/" title="AngularJS源代码阅读(1) —— angularjs 沉思" class="md-nav__link">
+    <a href="../AngularJS%E6%BA%90%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB%281%29/" title="AngularJS源代码阅读(1) —— angularjs 沉思" class="md-nav__link">
       AngularJS源代码阅读(1) —— angularjs 沉思
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        AngularJS源代码阅读(2) —— 项目结构
+      </label>
+    
+    <a href="./" title="AngularJS源代码阅读(2) —— 项目结构" class="md-nav__link md-nav__link--active">
+      AngularJS源代码阅读(2) —— 项目结构
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="基本信息" class="md-nav__link">
+    基本信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="目录结构" class="md-nav__link">
+    目录结构
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -307,12 +364,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
     
     <label class="md-nav__link" for="nav-4-2">
       javasctipt
@@ -330,7 +385,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../JS%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS原型链什么鬼" class="md-nav__link">
+    <a href="../../javascript/JS%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS原型链什么鬼" class="md-nav__link">
       JS原型链什么鬼
     </a>
   </li>
@@ -342,7 +397,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../JS%E9%97%AD%E5%8C%85%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS闭包什么鬼" class="md-nav__link">
+    <a href="../../javascript/JS%E9%97%AD%E5%8C%85%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS闭包什么鬼" class="md-nav__link">
       JS闭包什么鬼
     </a>
   </li>
@@ -354,7 +409,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../JS%E7%9A%84this%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS的this什么鬼" class="md-nav__link">
+    <a href="../../javascript/JS%E7%9A%84this%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS的this什么鬼" class="md-nav__link">
       JS的this什么鬼
     </a>
   </li>
@@ -364,97 +419,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        JS常见大坑
-      </label>
-    
-    <a href="./" title="JS常见大坑" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../javascript/JS%E5%B8%B8%E8%A7%81%E5%A4%A7%E5%9D%91/" title="JS常见大坑" class="md-nav__link">
       JS常见大坑
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" title="原型链" class="md-nav__link">
-    原型链
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#typeofnull" title="typeof(null)" class="md-nav__link">
-    typeof(null)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" title="忽略原型链属性" class="md-nav__link">
-    忽略原型链属性
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#forin" title="for...in 操作" class="md-nav__link">
-    for...in 操作
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example" title="Example: 忽视原型链属性导致的错误" class="md-nav__link">
-    Example: 忽视原型链属性导致的错误
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example_forof" title="Example: for...of用法" class="md-nav__link">
-    Example: for...of用法
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="实力懵逼的原型链关系" class="md-nav__link">
-    实力懵逼的原型链关系
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -830,68 +799,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="原型链" class="md-nav__link">
-    原型链
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#typeofnull" title="typeof(null)" class="md-nav__link">
-    typeof(null)
+  <a href="#_1" title="基本信息" class="md-nav__link">
+    基本信息
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" title="忽略原型链属性" class="md-nav__link">
-    忽略原型链属性
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="目录结构" class="md-nav__link">
+    目录结构
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#forin" title="for...in 操作" class="md-nav__link">
-    for...in 操作
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example" title="Example: 忽视原型链属性导致的错误" class="md-nav__link">
-    Example: 忽视原型链属性导致的错误
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example_forof" title="Example: for...of用法" class="md-nav__link">
-    Example: for...of用法
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="实力懵逼的原型链关系" class="md-nav__link">
-    实力懵逼的原型链关系
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -910,209 +834,189 @@
               
                 
                 
-                  <h1>JS常见大坑</h1>
-                
-                <ol>
-<li>原型链<ul>
-<li>typeof(null)</li>
-</ul>
-</li>
-<li>this指向懵逼<ul>
-<li>构造函数错误调用，非new调用</li>
-</ul>
-</li>
-<li>promise</li>
-<li>布尔值和类型转换<ul>
-<li>"" == 0</li>
-<li>"", {}, [], null, undefined, NaN</li>
-<li>[0] == false, Boolean([0]), [''], ['0'], [null], [undefined]</li>
-<li>var b = 10 + 20 + 'abc' + 'cd'</li>
-<li>console.log(false == '0');</li>
-<li>console.log(null == undefined);</li>
-<li>console.log(" trn" == 0);</li>
-<li>console.log('' == 0);</li>
-<li>Number和parseInt<ul>
-<li>Number(false) 0</li>
-<li>Number(true) 1</li>
-<li>Number(undefined) NaN</li>
-<li>Number(null) 0</li>
-<li>Number("5.5 ") 5.5</li>
-<li>Number("56 ") 56</li>
-<li>Number("5.6.7 ") NaN</li>
-<li>Number(new Object()) NaN</li>
-<li>Number(100) 100</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>数字精度<ul>
-<li>Math.pow(2,53) +1 === Math.pow(2,53) // true</li>
-<li>0.1+0.2!=0.3和9999999999999999 == 10000000000000000;</li>
-</ul>
-</li>
-<li>字符串<ul>
-<li>3..toString;</li>
-<li>replace 只替换一个</li>
-</ul>
-</li>
-<li>默认全局声明</li>
-<li>var 变量提升</li>
-<li>函数作用域</li>
-<li>分号问题</li>
-<li>es6<ul>
-<li>运行时支持问题<ul>
-<li>Chrome旧版本与严格模式限制</li>
-<li>node旧版本不支持</li>
-<li>babel is not es6</li>
-</ul>
-</li>
-<li>var let = 1</li>
-<li>let 块级作用域、临时死区、不存在变量提升、不允许重复声明</li>
-<li>箭头函数返回字面量的object</li>
-<li>箭头函数不能作为构造函数</li>
-</ul>
-</li>
-<li>lodash &amp; angular<ul>
-<li>副作用函数，和非副作用的函数</li>
-<li>字符串解析</li>
-<li>isObject 不一样逻辑</li>
-</ul>
-</li>
-<li>Date类使用的时间戳和unix的差别</li>
-</ol>
-<h2 id="_1">原型链<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="typeofnull">typeof(null)<a class="headerlink" href="#typeofnull" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="k">typeof</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;Object&#39;</span> <span class="c1">// true!</span>
-</pre></div>
-
-<p>错误的判断对象</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">a</span> <span class="o">===</span> <span class="s1">&#39;Object&#39;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// ...</span>
-<span class="p">}</span>
-</pre></div>
-
-<p>所以使用typeof判断对象的正确使用方法</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">a</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">a</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// 注意函数也是object...</span>
-    <span class="c1">// ...</span>
-<span class="p">}</span>
-</pre></div>
-
-<h3 id="_2">忽略原型链属性<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">sumUp</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="kd">let</span> <span class="nx">content</span> <span class="o">=</span> <span class="s2">&quot;providing constructor for your classes. A class contains constructors that are invoked to create objects from the class blueprint&quot;</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">word</span> <span class="k">of</span> <span class="nx">content</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">sumUp</span><span class="p">[</span><span class="nx">word</span><span class="p">])</span> <span class="p">{</span>
-        <span class="nx">sumUp</span><span class="p">[</span><span class="nx">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">sumUp</span><span class="p">[</span><span class="nx">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sumUp</span><span class="p">)</span>
-</pre></div>
-
-<div class="codehilite"><pre><span></span>{ providing: 1,
-  constructor: &#39;function Object() { [native code] }1&#39;,
-  for: 1,
-  your: 1,
-  &#39;classes.&#39;: 1,
-  A: 1,
-  class: 2,
-  contains: 1,
-  constructors: 1,
-  that: 1,
-  are: 1,
-  invoked: 1,
-  to: 1,
-  create: 1,
-  objects: 1,
-  from: 1,
-  the: 1,
-  blueprint: 1 }
-</pre></div>
-
-<div class="codehilite"><pre><span></span>let sumUp = Object.create(null)
-</pre></div>
-
-<h3 id="forin">for&hellip;in 操作<a class="headerlink" href="#forin" title="Permanent link">&para;</a></h3>
-<p>运维开发写python写的比较多。但是在python中的for in 和js中的for in 不是同一个含义。</p>
-<div class="admonition info">
-<p class="admonition-title">for&hellip;in循环定义</p>
-<p>for&hellip;in 循环只遍历可枚举属性。像 Array和 Object使用内置构造函数所创建的对象都会继承自Object.prototype和String.prototype的不可枚举属性，例如 String 的 indexOf()  方法或 Object的toString()方法。循环将遍历对象本身的所有可枚举属性，以及对象从其构造函数原型中继承的属性（更接近原型链中对象的属性覆盖原型属性）。</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">可枚举属性</p>
-<p>可枚举属性是指那些内部 “可枚举” 标志设置为 true 的属性
-默认标记为true情况：
-    - 字面量方式定义的属性
-    - 直接的赋值的属性</p>
-</div>
-<h4 id="example">Example: 忽视原型链属性导致的错误<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="k">in</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">ele</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">x</span><span class="p">]</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ele</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// 1</span>
-<span class="c1">// 2</span>
-<span class="c1">// 3</span>
-<span class="c1">// 4</span>
-<span class="c1">// 5</span>
-</pre></div>
-
-<div class="codehilite"><pre><span></span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{}</span>
-
-<span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="k">in</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">ele</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">x</span><span class="p">]</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ele</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// 1</span>
-<span class="c1">// 2</span>
-<span class="c1">// 3</span>
-<span class="c1">// 4</span>
-<span class="c1">// 5</span>
-<span class="c1">// test &lt;-- wrong!</span>
-</pre></div>
-
-<p>数组遍历推荐使用 for&hellip;of&hellip;</p>
-<div class="admonition note">
-<p class="admonition-title">语法</p>
-<div class="codehilite"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="nx">variable</span> <span class="k">of</span> <span class="nx">iterable</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//statements</span>
-    <span class="p">}</span>
-</pre></div>
-
-</div>
-<h4 id="example_forof">Example: for&hellip;of用法<a class="headerlink" href="#example_forof" title="Permanent link">&para;</a></h4>
-<p>可以理解为真正的js类似python的for each循环</p>
-<div class="codehilite"><pre><span></span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">vlaue</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span>
-
-<span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="k">of</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-<h3 id="_3">实力懵逼的原型链关系<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+                <h1 id="angularjs2">AngularJS源代码阅读(2) 项目结构<a class="headerlink" href="#angularjs2" title="Permanent link">&para;</a></h1>
+<p><img src="/posts/front-end/angular/01-angularjs.png"></p>
+<h2 id="_1">基本信息<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>typeof null // Object ???</code></li>
-<li><code>Object instanceof Object // true</code></li>
-<li><code>Function instanceof Object // true ???</code></li>
-<li><code>Object instanceof Function // true ???</code></li>
-<li><code>Function instanceof Function // true ???</code></li>
-<li><code>Function.prototype instanceof Object // true</code></li>
-<li><code>Function.prototype instanceof Function // ture ???</code></li>
-<li><code>Object.__proto__.__proto__.constructor == Object // true ???</code></li>
-<li><code>Function.constructor === Function // true ???</code></li>
+<li>项目地址：<a href="https://github.com/angular/angular.js">https://github.com/angular/angular.js</a></li>
+<li>最新版本：1.6.9</li>
 </ul>
-<p>还是判断一个变量是不是对象，使用instanceof</p>
+<h2 id="_2">目录结构<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>├─benchmarks                # 压力测试指标相关
+├─css
+├─docs                      # 文档
+├─i18n                      # i18n相关
+├─logs
+├─scripts                   # 项目脚本
+├─test                      # 测试相关
+├─src                       # 源代码
+│  │  .eslintrc.json        # eslint 代码风格控制
+│  │  angular.bind.js       # bind jqlite
+│  │  Angular.js            # window.angular 的用户接口
+│  │  angular.prefix
+│  │  angular.suffix
+│  │  AngularPublic.js      # 将angular的接口暴露
+│  │  apis.js
+│  │  jqLite.js
+│  │  loader.js             # angular.module在这里定义，函数是setupModuleLoader
+│  │  loader.prefix
+│  │  loader.suffix
+│  │  minErr.js             # 错误处理，在angularjs出错时候可以提供丰富的错误信息
+│  │  module.prefix
+│  │  module.suffix
+│  │  publishExternalApis.js
+│  │  shallowCopy.js
+│  │  stringify.js
+│  │
+│  ├─auto
+│  │      injector.js       # 核心，angular依赖注入管理，provider
+│  │
+│  ├─ng
+│  │  │  anchorScroll.js
+│  │  │  animate.js
+│  │  │  animateCss.js
+│  │  │  animateRunner.js
+│  │  │  browser.js
+│  │  │  cacheFactory.js
+│  │  │  compile.js             # 核心，compile实现
+│  │  │  controller.js          # 核心，controller实现，虽然代码非常短
+│  │  │  cookieReader.js
+│  │  │  document.js
+│  │  │  exceptionHandler.js
+│  │  │  filter.js
+│  │  │  forceReflow.js
+│  │  │  http.js
+│  │  │  httpBackend.js
+│  │  │  interpolate.js
+│  │  │  interval.js
+│  │  │  jsonpCallbacks.js
+│  │  │  locale.js
+│  │  │  location.js
+│  │  │  log.js
+│  │  │  parse.js
+│  │  │  q.js                   # 核心，angular异步库
+│  │  │  raf.js
+│  │  │  rootElement.js
+│  │  │  rootScope.js           # 核心，Scope实现
+│  │  │  sanitizeUri.js
+│  │  │  sce.js
+│  │  │  sniffer.js
+│  │  │  templateRequest.js
+│  │  │  testability.js
+│  │  │  timeout.js
+│  │  │  urlUtils.js
+│  │  │  window.js
+│  │  │
+│  │  ├─directive
+│  │  │      a.js
+│  │  │      attrs.js
+│  │  │      directives.js
+│  │  │      form.js
+│  │  │      input.js
+│  │  │      ngBind.js
+│  │  │      ngChange.js
+│  │  │      ngClass.js
+│  │  │      ngCloak.js
+│  │  │      ngController.js        # 核心，常用angular指令
+│  │  │      ngCsp.js
+│  │  │      ngEventDirs.js
+│  │  │      ngIf.js                # 核心，常用anuglar指令
+│  │  │      ngInclude.js
+│  │  │      ngInit.js
+│  │  │      ngList.js
+│  │  │      ngModel.js             # 核心，常用angular指令，双向数据绑定
+│  │  │      ngModelOptions.js
+│  │  │      ngNonBindable.js
+│  │  │      ngOptions.js
+│  │  │      ngPluralize.js
+│  │  │      ngRepeat.js            # 核心，常用anuglar指令
+│  │  │      ngShowHide.js
+│  │  │      ngStyle.js
+│  │  │      ngSwitch.js
+│  │  │      ngTransclude.js
+│  │  │      script.js
+│  │  │      select.js
+│  │  │      validators.js
+│  │  │
+│  │  └─filter
+│  │          filter.js
+│  │          filters.js
+│  │          limitTo.js
+│  │          orderBy.js
+│  │
+│  ├─ngAnimate
+│  │      .eslintrc.json
+│  │      animateChildrenDirective.js
+│  │      animateCss.js
+│  │      animateCssDriver.js
+│  │      animateJs.js
+│  │      animateJsDriver.js
+│  │      animateQueue.js
+│  │      animation.js
+│  │      module.js
+│  │      ngAnimateSwap.js
+│  │      rafScheduler.js
+│  │      shared.js
+│  │
+│  ├─ngAria
+│  │      aria.js
+│  │
+│  ├─ngComponentRouter
+│  │      Router.js
+│  │
+│  ├─ngCookies
+│  │      cookies.js
+│  │      cookieWriter.js
+│  │
+│  ├─ngLocale
+│  │
+│  ├─ngMessageFormat
+│  │      .eslintrc.json
+│  │      messageFormatCommon.js
+│  │      messageFormatInterpolationParts.js
+│  │      messageFormatParser.js
+│  │      messageFormatSelector.js
+│  │      messageFormatService.js
+│  │
+│  ├─ngMessages
+│  │      messages.js
+│  │
+│  ├─ngMock
+│  │      .eslintrc.json
+│  │      angular-mocks.js
+│  │      browserTrigger.js
+│  │
+│  ├─ngParseExt
+│  │      module.js
+│  │      ucd.js
+│  │
+│  ├─ngResource
+│  │      resource.js
+│  │
+│  ├─ngRoute
+│  │  │  .eslintrc.json
+│  │  │  route.js
+│  │  │  routeParams.js
+│  │  │
+│  │  └─directive
+│  │          ngView.js
+│  │
+│  ├─ngSanitize
+│  │  │  .eslintrc.json
+│  │  │  sanitize.js
+│  │  │
+│  │  └─filter
+│  │          linky.js
+│  │
+│  └─ngTouch
+│      │  .eslintrc.json
+│      │  swipe.js
+│      │  touch.js
+│      │
+│      └─directive
+│              ngSwipe.js
+│
+</pre></div>
                 
                   
                 
@@ -1131,7 +1035,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../JS%E7%9A%84this%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS的this什么鬼" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../AngularJS%E6%BA%90%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB%281%29/" title="AngularJS源代码阅读(1) —— angularjs 沉思" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1140,19 +1044,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                JS的this什么鬼
+                AngularJS源代码阅读(1) —— angularjs 沉思
               </span>
             </div>
           </a>
         
         
-          <a href="../../share/React%E6%8A%80%E6%9C%AF%E7%94%9F%E6%80%81%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93/" title="吴家荣大佬-React技术生态和服务端渲染" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../javascript/JS%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%BB%80%E4%B9%88%E9%AC%BC/" title="JS原型链什么鬼" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                吴家荣大佬-React技术生态和服务端渲染
+                JS原型链什么鬼
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
