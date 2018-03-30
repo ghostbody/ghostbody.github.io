@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -10,9 +13,22 @@
       
       
       
-        <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -20,30 +36,22 @@
       
     
     
-      <script src="../../../assets/javascripts/modernizr-1df76c4e58.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/application-769c285a91.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="../../../assets/css/style.css">
-    
     
   </head>
-  
-  
-  
   
     <body>
   
@@ -61,48 +69,46 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <a href="../../.." title="Ye Jiaqi Site" class="md-icon md-icon--home md-header-nav__button">
-          </a>
-        
+        <a href="../../.." title="Ye Jiaqi Site" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  旧文档
-                </span>
-              
-                <span class="md-header-nav__parent">
-                  数图作业
-                </span>
-              
+              <span class="md-header-nav__topic">
+                Ye Jiaqi Site
+              </span>
+              <span class="md-header-nav__topic">
+                Fourier Transformation
+              </span>
             
-            Fourier Transformation
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search">
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -111,6 +117,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -119,6 +126,8 @@
 </header>
     
     <div class="md-container">
+      
+        
       
       
       <main class="md-main">
@@ -130,9 +139,11 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    
-      <i class="md-icon md-icon--home md-nav__button"></i>
-    
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
     Ye Jiaqi Site
   </label>
   
@@ -376,6 +387,18 @@
   <li class="md-nav__item">
     <a href="../../front-end/javascript/JS%E5%B8%B8%E8%A7%81%E5%A4%A7%E5%9D%91/" title="JS常见大坑" class="md-nav__link">
       JS常见大坑
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/javascript/%E4%B8%80%E9%81%93JS%E7%A5%9E%E9%9D%A2%E8%AF%95%E9%A2%98/" title="一道JS神面试题" class="md-nav__link">
+      一道JS神面试题
     </a>
   </li>
 
@@ -979,9 +1002,15 @@
 <li>Apply scaling.</li>
 </ol>
 <p>In fact, I use only one function for DFT and IDF because:</p>
-<span>\[
+<div>
+<div class="MathJax_Preview">
 MN f^* (x,y) = F^* (u,v)
-\]</span><div class="codehilite"><pre><span></span>  def dft2d(img, flags):
+</div>
+<script type="math/tex; mode=display">
+MN f^* (x,y) = F^* (u,v)
+</script>
+</div>
+<div class="codehilite"><pre><span></span>  def dft2d(img, flags):
       if flags == 1:
           return Fdft2d(img)
       elif flags == -1:
@@ -991,12 +1020,24 @@ MN f^* (x,y) = F^* (u,v)
 </pre></div>
 
 <p>At the first, I treated the 2d Fourier transform using 1d method, which is:</p>
-<span>\[
+<div>
+<div class="MathJax_Preview">
 F(u,v) = \frac{1}{MN}\sum_{x=0}^{M-1}\sum_{y=0}^{N-1}f(x,y)e^{-2j\pi (\frac{ux}{M} + \frac{vy}{N})}
-\]</span><p>The time complexity of the transform algorithm is O(n^4) which is too slow and I use almost 24 hours to run the program using python. After that I ask a question and I get the answer.</p>
-<span>\[
+</div>
+<script type="math/tex; mode=display">
+F(u,v) = \frac{1}{MN}\sum_{x=0}^{M-1}\sum_{y=0}^{N-1}f(x,y)e^{-2j\pi (\frac{ux}{M} + \frac{vy}{N})}
+</script>
+</div>
+<p>The time complexity of the transform algorithm is O(n^4) which is too slow and I use almost 24 hours to run the program using python. After that I ask a question and I get the answer.</p>
+<div>
+<div class="MathJax_Preview">
 F(u,v) = \frac{1}{MN}\sum_{x=0}^{M-1}e^{-2j\pi \frac{ux}{M}}\sum_{y=0}^{N-1}f(x,y)e^{-2j\pi \frac{vy}{N}}
-\]</span><p>Because the Fourier transform is linear and can divided into two steps for implement. First, calculate Fourier transform for cols and then for the rows. Surprised and luckily, its time complexity is O(n^3) which can be done in few minutes.</p>
+</div>
+<script type="math/tex; mode=display">
+F(u,v) = \frac{1}{MN}\sum_{x=0}^{M-1}e^{-2j\pi \frac{ux}{M}}\sum_{y=0}^{N-1}f(x,y)e^{-2j\pi \frac{vy}{N}}
+</script>
+</div>
+<p>Because the Fourier transform is linear and can divided into two steps for implement. First, calculate Fourier transform for cols and then for the rows. Surprised and luckily, its time complexity is O(n^3) which can be done in few minutes.</p>
 <p>The core algorithm is:</p>
 <div class="codehilite"><pre><span></span>    for u in xrange(height):
       for v in xrange(width):
@@ -1025,13 +1066,31 @@ src="https://github.com/ghostbody/Image-Processing/blob/master/project3/code/Inv
 <li>According to Symmetry, the points in the dialog is at the same value.</li>
 <li>We have the following equation:</li>
 </ol>
-<span>\[
+<div>
+<div class="MathJax_Preview">
 X_k = \sum_{n=0}^{N-1}x_n \cdot e^{-i2\pi kn/N}
-\]</span><span>\[
+</div>
+<script type="math/tex; mode=display">
+X_k = \sum_{n=0}^{N-1}x_n \cdot e^{-i2\pi kn/N}
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">
  = \sum_{m=0}^{N/2-1} x_{2m}\cdot e^{-i2\pi k(2m)/N} + \sum_{m=0}^{N/2-1}x_{2m+1}\cdot e^{-i2\pi k(2m+1)/N}
-\]</span><span>\[
+</div>
+<script type="math/tex; mode=display">
+ = \sum_{m=0}^{N/2-1} x_{2m}\cdot e^{-i2\pi k(2m)/N} + \sum_{m=0}^{N/2-1}x_{2m+1}\cdot e^{-i2\pi k(2m+1)/N}
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">
  = \sum_{m=0}^{N/2-1} x_{2m}\cdot e^{-i2\pi km/(N/2)} + e^{-i2\pi k/N}\sum_{m=0}^{N/2-1}x_{2m+1}\cdot e^{-i2\pi km/(N/2)}
-\]</span><p>We split a single DFT into two smaller DFT. One odd, one even. So far, we have not save computational overhead, each part contains (n / 2) of N amount of computation, in general, is n.</p>
+</div>
+<script type="math/tex; mode=display">
+ = \sum_{m=0}^{N/2-1} x_{2m}\cdot e^{-i2\pi km/(N/2)} + e^{-i2\pi k/N}\sum_{m=0}^{N/2-1}x_{2m+1}\cdot e^{-i2\pi km/(N/2)}
+</script>
+</div>
+<p>We split a single DFT into two smaller DFT. One odd, one even. So far, we have not save computational overhead, each part contains (n / 2) of N amount of computation, in general, is n.</p>
 <p>There is a question “However, your implementation may be limited to images whose sizes are integer powers of 2”, and we can simply padding the image to powers of 2. I have two methods for the users:</p>
 <ol>
 <li>Padding the image to powers of 2.</li>
@@ -1076,7 +1135,7 @@ src="https://github.com/ghostbody/Image-Processing/blob/master/project3/code/FFo
 <p><img class="img-responsive"
 src="https://github.com/ghostbody/Image-Processing/blob/master/project3/code/FInverseFourier.png?raw=true"></p>
 <h2 id="github">Github<a class="headerlink" href="#github" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/ghostbody/Image-Processing"><a href="https://github.com/ghostbody/Image-Processing">https://github.com/ghostbody/Image-Processing</a></a></p>
+<p><a href="https://github.com/ghostbody/Image-Processing">https://github.com/ghostbody/Image-Processing</a></p>
                 
                   
                 
@@ -1132,9 +1191,9 @@ src="https://github.com/ghostbody/Image-Processing/blob/master/project3/code/FIn
       <div class="md-footer-copyright">
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -1154,10 +1213,9 @@ src="https://github.com/ghostbody/Image-Processing/blob/master/project3/code/FIn
       
     </div>
     
-      <script src="../../../assets/javascripts/application-c35428f87f.js"></script>
+      <script src="../../../assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

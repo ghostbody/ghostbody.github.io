@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -10,9 +13,22 @@
       
       
       
-        <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
     
     
       
@@ -20,30 +36,22 @@
       
     
     
-      <script src="../../../assets/javascripts/modernizr-1df76c4e58.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/application-769c285a91.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.6525f7f6.css">
       
     
     
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="../../../assets/css/style.css">
-    
     
   </head>
-  
-  
-  
   
     <body>
   
@@ -61,44 +69,46 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <a href="../../.." title="Ye Jiaqi Site" class="md-icon md-icon--home md-header-nav__button">
-          </a>
-        
+        <a href="../../.." title="Ye Jiaqi Site" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  算法
-                </span>
-              
+              <span class="md-header-nav__topic">
+                Ye Jiaqi Site
+              </span>
+              <span class="md-header-nav__topic">
+                证明二分查找优于三分查找、四分查找
+              </span>
             
-            证明二分查找优于三分查找、四分查找
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search">
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -107,6 +117,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -115,6 +126,8 @@
 </header>
     
     <div class="md-container">
+      
+        
       
       
       <main class="md-main">
@@ -126,9 +139,11 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    
-      <i class="md-icon md-icon--home md-nav__button"></i>
-    
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
     Ye Jiaqi Site
   </label>
   
@@ -424,6 +439,18 @@
   <li class="md-nav__item">
     <a href="../../front-end/javascript/JS%E5%B8%B8%E8%A7%81%E5%A4%A7%E5%9D%91/" title="JS常见大坑" class="md-nav__link">
       JS常见大坑
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../front-end/javascript/%E4%B8%80%E9%81%93JS%E7%A5%9E%E9%9D%A2%E8%AF%95%E9%A2%98/" title="一道JS神面试题" class="md-nav__link">
+      一道JS神面试题
     </a>
   </li>
 
@@ -922,18 +949,48 @@
 <li>比较middle是否等于target</li>
 <li>比较middle是否小于target</li>
 </ul>
-<p>单次查找平均比较次数：<span>\(\frac{1 + 2}{2} = \frac{3}{2}\)</span></p>
-<span>\[
+<p>单次查找平均比较次数：<span><span class="MathJax_Preview">\frac{1 + 2}{2} = \frac{3}{2}</span><script type="math/tex">\frac{1 + 2}{2} = \frac{3}{2}</script></span></p>
+<div>
+<div class="MathJax_Preview">
 T(1) = 1 
-\]</span><span>\[
+</div>
+<script type="math/tex; mode=display">
+T(1) = 1 
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">
   T(n) = T(\frac{n}{2}) + \frac{3}{2}
-\]</span><span>\[
+</div>
+<script type="math/tex; mode=display">
+  T(n) = T(\frac{n}{2}) + \frac{3}{2}
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">
   T(\frac{n}{2}) = T(\frac{n}{4}) + \frac{3}{2}
-\]</span><span>\[
+</div>
+<script type="math/tex; mode=display">
+  T(\frac{n}{2}) = T(\frac{n}{4}) + \frac{3}{2}
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">
 T(n) = T(\frac{n}{4}) + \frac{3}{2} \cdot 2
-\]</span><span>\[
+</div>
+<script type="math/tex; mode=display">
+T(n) = T(\frac{n}{4}) + \frac{3}{2} \cdot 2
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">
 \therefore T(n) = T(1) + \frac{3}{2} \cdot \log_2{n} = 1 + \frac{3}{2} \cdot \log_2{n}
-\]</span><h2 id="_3">对于三分查找：<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+</div>
+<script type="math/tex; mode=display">
+\therefore T(n) = T(1) + \frac{3}{2} \cdot \log_2{n} = 1 + \frac{3}{2} \cdot \log_2{n}
+</script>
+</div>
+<h2 id="_3">对于三分查找：<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>存在的比较情况：</p>
 <ul>
 <li>比较middle是否等于target_1</li>
@@ -941,29 +998,77 @@ T(n) = T(\frac{n}{4}) + \frac{3}{2} \cdot 2
 <li>比较middle是否等于target_2</li>
 <li>比较middle是否小于target_2</li>
 </ul>
-<p>单次查找平均比较次数：<span>\(\frac{1 + 2 + 3 + 4}{4} = \frac{5}{2}\)</span></p>
-<span>\[
+<p>单次查找平均比较次数：<span><span class="MathJax_Preview">\frac{1 + 2 + 3 + 4}{4} = \frac{5}{2}</span><script type="math/tex">\frac{1 + 2 + 3 + 4}{4} = \frac{5}{2}</script></span></p>
+<div>
+<div class="MathJax_Preview">
 T(1) = 1 
-\]</span><span>\[
+</div>
+<script type="math/tex; mode=display">
+T(1) = 1 
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">
   T(n) = T(\frac{n}{3}) + \frac{5}{2}
-\]</span><span>\[
+</div>
+<script type="math/tex; mode=display">
+  T(n) = T(\frac{n}{3}) + \frac{5}{2}
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">
   T(\frac{n}{3}) = T(\frac{n}{9}) + \frac{5}{2}
-\]</span><span>\[
+</div>
+<script type="math/tex; mode=display">
+  T(\frac{n}{3}) = T(\frac{n}{9}) + \frac{5}{2}
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">
 T(n) = T(\frac{n}{9}) + \frac{5}{2} \cdot 2
-\]</span><span>\[
+</div>
+<script type="math/tex; mode=display">
+T(n) = T(\frac{n}{9}) + \frac{5}{2} \cdot 2
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">
 \therefore T(n) = T(1) + \frac{5}{2} \cdot \log_3{n} = 1 + \frac{5}{2} \cdot \log_3{n}
-\]</span><h2 id="_4">对比：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<span>\[
+</div>
+<script type="math/tex; mode=display">
+\therefore T(n) = T(1) + \frac{5}{2} \cdot \log_3{n} = 1 + \frac{5}{2} \cdot \log_3{n}
+</script>
+</div>
+<h2 id="_4">对比：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div>
+<div class="MathJax_Preview">
  1 + \frac{3}{2} \cdot \log_2{n} &lt; 1 + \frac{5}{2} \cdot \log_3{n}
-\]</span><p>所以，二分查找优于三分查找。</p>
+</div>
+<script type="math/tex; mode=display">
+ 1 + \frac{3}{2} \cdot \log_2{n} < 1 + \frac{5}{2} \cdot \log_3{n}
+</script>
+</div>
+<p>所以，二分查找优于三分查找。</p>
 <p>对于x分查找</p>
 <p>单次平均比较次数：</p>
-<span>\[
+<div>
+<div class="MathJax_Preview">
 x - \frac{1}{2}
-\]</span><p>平均比较次数</p>
-<span>\[
+</div>
+<script type="math/tex; mode=display">
+x - \frac{1}{2}
+</script>
+</div>
+<p>平均比较次数</p>
+<div>
+<div class="MathJax_Preview">
 f(x) = 1 + (x-\frac{1}{2})\cdot\log_x{n}
-\]</span><p>可以证明 <span>\(f(x)\)</span>在<span>\((2,+\infty)\)</span>是增函数，从而证明二分查找由于n分查找<span>\((n &gt; 2)\)</span></p>
+</div>
+<script type="math/tex; mode=display">
+f(x) = 1 + (x-\frac{1}{2})\cdot\log_x{n}
+</script>
+</div>
+<p>可以证明 <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>在<span><span class="MathJax_Preview">(2,+\infty)</span><script type="math/tex">(2,+\infty)</script></span>是增函数，从而证明二分查找由于n分查找<span><span class="MathJax_Preview">(n &gt; 2)</span><script type="math/tex">(n > 2)</script></span></p>
                 
                   
                 
@@ -1019,9 +1124,9 @@ f(x) = 1 + (x-\frac{1}{2})\cdot\log_x{n}
       <div class="md-footer-copyright">
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -1041,10 +1146,9 @@ f(x) = 1 + (x-\frac{1}{2})\cdot\log_x{n}
       
     </div>
     
-      <script src="../../../assets/javascripts/application-c35428f87f.js"></script>
+      <script src="../../../assets/javascripts/application.cae2244d.js"></script>
       
-      
-      <script>app.initialize({url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
